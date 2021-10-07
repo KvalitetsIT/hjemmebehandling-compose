@@ -1,0 +1,43 @@
+version: '2.1'
+
+networks:
+  rim:
+    driver: bridge
+
+services:
+  # keycloak:
+  #   image: jboss/keycloak:15.0.2
+  #   environment:
+  #      - KEYCLOAK_USER=rim
+  #      - KEYCLOAK_PASSWORD=Test1234
+  #      - KEYCLOAK_LOGLEVEL=DEBUG
+  #      - PROXY_ADDRESS_FORWARDING=true
+  #      - KEYCLOAK_IMPORT=/tmp/test-realm.json
+  #   volumes:
+  #      - ./realms/test-realm.json:/tmp/test-realm.json
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - rim
+
+  samlsp:
+     image: kvalitetsit/kitcaddy:1.2.22
+     volumes:
+       - ./medarbejder-web/certificates/medarbejder-web.cert:/sp/sp.cer
+       - ./medarbejder-web/certificates/medarbejder-web.pem:/sp/sp.pem
+       - ./medarbejder-web/config.json:/config/config.json
+     command: -config /config/config.json
+     ports:
+      - "9090:8585"
+     networks:
+      - rim
+
+  mongo:
+     image: mongo:3.6
+     networks:
+      - rim
+  
+  medarbejder-web:
+     image: kvalitetsit/rim-medarbejder-web:dev
+     networks:
+      - rim
