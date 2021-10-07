@@ -36,7 +36,12 @@ services:
      image: mongo:3.6
      networks:
       - rim
-  
+
+  medarbejder-bff:
+     image: kvalitetsit/rim-medarbejder-bff:dev
+     networks:
+      - rim
+      
   medarbejder-web:
      image: kvalitetsit/rim-medarbejder-web:dev
      networks:
