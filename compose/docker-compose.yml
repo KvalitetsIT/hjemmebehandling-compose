@@ -5,7 +5,7 @@ networks:
     driver: bridge
 
 services:
-  samlsp:
+   samlsp:
      image: kvalitetsit/kitcaddy:1.2.22
      volumes:
        - ./medarbejder-web/certificates/medarbejder-web.cert:/sp/sp.cer
@@ -17,17 +17,32 @@ services:
      networks:
       - rim
 
-  mongo:
+   mongo:
      image: mongo:3.6
      networks:
       - rim
 
-  medarbejder-bff:
+   medarbejder-bff:
      image: kvalitetsit/rim-medarbejder-bff:dev
      networks:
       - rim
-      
-  medarbejder-web:
+
+   medarbejder-web:
      image: kvalitetsit/rim-medarbejder-web:dev
      networks:
       - rim
+
+   hapi-server:
+     image: hapiproject/hapi:latest
+     networks:
+      - rim
+
+   hapi-server-initializer:
+     image: alpine:3.11.5
+     depends_on:
+       - hapi-server
+     networks:
+      - rim
+     volumes:
+      - ./hapi-server-initializer:/hapi-server-initializer
+     command: "/hapi-server-initializer/init.sh"
