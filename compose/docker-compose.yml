@@ -23,12 +23,12 @@ services:
       - rim
 
    medarbejder-bff:
-     image: kvalitetsit/rim-medarbejder-bff:dev
+     image: kvalitetsit/rim-medarbejder-bff:6f7a0b5292a1273e4d51afc7c03b2d82ff5bbe07
      networks:
       - rim
 
    medarbejder-web:
-     image: kvalitetsit/rim-medarbejder-web:dev
+     image: kvalitetsit/rim-medarbejder-web:6ac4ca3df1c923dcc8b3441b7c64f1371fd00dc8
      networks:
       - rim
 
@@ -36,6 +36,11 @@ services:
      image: hapiproject/hapi:latest
      networks:
       - rim
+     environment:
+       - SPRING_CONFIG_LOCATION=file:///data/hapi/application.yaml
+       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
+     volumes:
+       - ./hapi-server/application.yaml:/data/hapi/application.yaml
 
    hapi-server-initializer:
      image: alpine:3.11.5

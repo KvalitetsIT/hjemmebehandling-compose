@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanDefinition xmlns="http://hl7.org/fhir">
+    <id value="plandefinition-1"/>
+    <text>bla</text>
+    <identifier>
+        <use value="official"/>
+        <value value="ChlamydiaScreening_CDS_UsingCommon"/>
+    </identifier>
+    <version value="2.0.0"/>
+    <title value="Chalmydia Screening CDS Example Using Common"/>
+    <status value="draft"/>
+    <date value="2015-07-22"/>
+    <description value="Chlamydia Screening CDS Example Using Common"/>
+    <topic>
+        <text value="Chlamydia Screening Extended"/>
+    </topic>
+    <action>
+        <title value="Yet another action ..."/>
+        <condition>
+            <kind value="applicability"/>
+            <expression>
+                <language value="text/cql"/>
+                <expression value="NoScreening"/>
+            </expression>
+        </condition>
+        <timingTiming>
+            <repeat>
+                <dayOfWeek value="mon"/>
+            </repeat>
+        </timingTiming>
+        <definitionCanonical value="Questionnaire/questionnaire-1"/>
+    </action>
+</PlanDefinition>

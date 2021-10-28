@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
+    <id value="careplan-1"/>
+    <subject>
+        <reference value="Patient/patient-1"/>
+    </subject>
+    <period>
+        <start value="2021-10-18"/>
+    </period>
+    <activity>
+        <detail>
+            <instantiatesCanonical value="Questionnaire/questionnaire-1"/>
+            <status value="not-started"/>
+            <scheduledTiming>
+                <repeat>
+                    <dayOfWeek value="mon"/>
+                </repeat>
+            </scheduledTiming>
+        </detail>
+    </activity>
+</CarePlan>
