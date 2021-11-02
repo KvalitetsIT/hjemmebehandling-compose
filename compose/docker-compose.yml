@@ -32,6 +32,7 @@ services:
      networks:
       - rim
 
+   # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
    rm-cpr-service:
      image: kvalitetsit/rm-cpr-service:0.2.0
      environment:
