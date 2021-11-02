@@ -32,6 +32,23 @@ services:
      networks:
       - rim
 
+   rm-cpr-service:
+     image: kvalitetsit/rm-cpr-service:0.2.0
+     environment:
+      - CPR_ENDPOINT=http://rm-cpr-service-mock:8080
+      - DEBUG_LOGGING=true
+     networks:
+      - rim
+     ports:
+      - "8081:8080"
+
+   rm-cpr-service-mock:
+     image: kvalitetsit/rm-cpr-service-mock-backend:0.2.0
+     environment:
+      - DEBUG_LOGGING=true
+     networks:
+      - rim
+     
    hapi-server:
      image: hapiproject/hapi:latest
      networks:
