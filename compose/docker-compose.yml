@@ -6,12 +6,12 @@ networks:
 
 services:
    medarbejder-bff:
-     image: kvalitetsit/rim-medarbejder-bff:a2e2fb62c65dce616cd23f1bc8e243bc028b8277
+     image: kvalitetsit/hjemmebehandling-medarbejder-bff:4706728c6a59acc64917fe86b7418ac798c3f770
      networks:
       - rim
 
    medarbejder-web:
-     image: kvalitetsit/rim-medarbejder-web:a0a1a2d859d38e9d7e38852d3a75a8a55b8d5d88
+     image: kvalitetsit/hjemmebehandling-medarbejder-web:61a87bc428be358f23a0ba4d257e8f8bcdf4c40f
      ports:
       - 3000:3000
      environment:
