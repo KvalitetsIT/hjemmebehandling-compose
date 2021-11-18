@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Generated from unit test - manual pasted into file -->
+
+<Questionnaire xmlns="http://hl7.org/fhir">
+   <language value="da-DK"></language>
+   <status value="active"></status>
+   <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+         <valueCoding>
+            <system value="http://unitsofmeasure.org"></system>
+            <code value="Cel"></code>
+            <display value="grader Celsius"></display>
+         </valueCoding>
+      </extension>
+      <linkId value="temperature"></linkId>
+      <code>
+         <system value="urn:oid:1.2.208.176.2.1"></system>
+         <code value="NPU08676"></code>
+         <display value="Legeme temp.;Pt"></display>
+      </code>
+      <text value="Indtast din morgen temperatur?"></text>
+      <type value="quantity"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="For at få den korrekte værdi skal der være en rektal temperatur dvs. målt i endetarmen"></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+         <valueCoding>
+            <system value="http://unitsofmeasure.org"></system>
+            <code value="mg/L"></code>
+            <display value="milligram per liter"></display>
+         </valueCoding>
+      </extension>
+      <linkId value="crp"></linkId>
+      <code>
+         <system value="urn:oid:1.2.208.176.2.1"></system>
+         <code value="NPU19748"></code>
+         <display value="C-reaktivt protein [CRP];P"></display>
+      </code>
+      <text value="Indtast den målte CRP værdi"></text>
+      <type value="quantity"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="CRP er et udtryk for infektion/betændelse."></text>
+         <type value="display"></type>
+      </item>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="CRP måles på det udleverede apparat. Se den vedlagte instruktion."></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <linkId value="antibiotika"></linkId>
+      <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"></text>
+      <type value="boolean"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="Hvis du får antibiotika på pumpe skal du svare nej hvis der har været problemer med indløb."></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <linkId value="helbredstilstand"></linkId>
+      <text value="Er din helbredstilstand værre idag sammenlignet med igår?"></text>
+      <type value="boolean"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="Hvis den er uændret fra i går skal du svare nej."></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <linkId value="nye_symptomer"></linkId>
+      <text value="Er der kommet nye symptomer i det sidste døgn?"></text>
+      <type value="boolean"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="Nye symptomer kan være: smerter, hoste, diare, svie ved vandladning mv."></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <linkId value="udslæt"></linkId>
+      <text value="Har du udslæt?"></text>
+      <type value="boolean"></type>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"></text>
+         <type value="display"></type>
+      </item>
+   </item>
+   <item>
+      <linkId value="udslæt_2"></linkId>
+      <text value="Er dit udslæt værre idag end i går?"></text>
+      <type value="boolean"></type>
+      <enableWhen>
+         <question value="udslæt"></question>
+         <operator value="="></operator>
+         <answerBoolean value="true"></answerBoolean>
+      </enableWhen>
+      <item>
+         <linkId value="help"></linkId>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skaldu svare nej"></text>
+         <type value="display"></type>
+      </item>
+   </item>
+</Questionnaire>

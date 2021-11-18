@@ -13,6 +13,7 @@ curl -i -X PUT -d '@/hapi-server-initializer/patient-1.xml' -H 'Content-Type: ap
 
 curl -i -X PUT -d '@/hapi-server-initializer/questionnaire-1.xml' -H 'Content-Type: application/fhir+xml' http://hapi-server:8080/fhir/Questionnaire/questionnaire-1?_format=xml
 curl -i -X PUT -d '@/hapi-server-initializer/questionnaire-2.xml' -H 'Content-Type: application/fhir+xml' http://hapi-server:8080/fhir/Questionnaire/questionnaire-2?_format=xml
+curl -i -X PUT -d '@/hapi-server-initializer/questionnaire-infektionsmedicinsk1.xml' -H 'Content-Type: application/fhir+xml' http://hapi-server:8080/fhir/Questionnaire/questionnaire-infektionsmedicinsk1?_format=xml
 
 curl -i -X PUT -d '@/hapi-server-initializer/questionnaireresponse-1.xml' -H 'Content-Type: application/fhir+xml' http://hapi-server:8080/fhir/QuestionnaireResponse/questionnaireresponse-1?_format=xml
 curl -i -X PUT -d '@/hapi-server-initializer/questionnaireresponse-2.xml' -H 'Content-Type: application/fhir+xml' http://hapi-server:8080/fhir/QuestionnaireResponse/questionnaireresponse-2?_format=xml
