@@ -13,8 +13,5 @@
     <telecom>
         <value value="22648052"/>
     </telecom>
-    <telecom>
-        <value value="foo@bar.dk"/>
-    </telecom>
     <gender value="female"/>
 </Patient>

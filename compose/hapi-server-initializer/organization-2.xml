@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="organization-2"/>
+
+    <identifier>
+        <system value="1.2.208.176.1.1"/>
+        <value value="654321"/>
+    </identifier>
+    <name value="Medicinsinfektionsk Glidfane"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="+4587654321"/>
+        <use value="mobile"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="gastro@acme.org"/>
+        <use value="work"/>
+    </telecom>
+</Organization>

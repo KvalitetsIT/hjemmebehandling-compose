@@ -2,6 +2,11 @@
 
 <Questionnaire xmlns="http://hl7.org/fhir">
     <id value="questionnaire-1"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-1"/>
+        </valueReference>
+    </extension>
     <title value="Demo spørgeskema"/>
     <status value="active"/>
     <subjectType value="Patient"/>

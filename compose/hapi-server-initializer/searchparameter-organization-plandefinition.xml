@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="searchparameter-organization-plandefinition"/>
+    <url value="http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition"/>
+    <name value="Search parameter for the organization extension."/>
+    <status value="active"/>
+    <publisher value="KvalitetsIT"/>
+    <purpose value="Searching for resources by their organization (ie. access control)."/>
+
+    <code value="organization"/>
+    <base value="PlanDefinition"/>
+    <type value="reference"/>
+    <title value="Organization"/>
+    <expression value="PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')"/>
+    <xpathUsage value="normal"/>
+</SearchParameter>

@@ -3,6 +3,13 @@
 <!-- Generated from unit test - manual pasted into file -->
 
 <Questionnaire xmlns="http://hl7.org/fhir">
+   <id value="questionnaire-infektionsmedicinsk-1"></id>
+   <extension url="http://hjemmebehandling.rm.dk/organization">
+      <valueReference>
+         <reference value="Organization/organization-1"/>
+      </valueReference>
+   </extension>
+   <title value="Infektionsmedicinsk spørgeskema"/>
    <language value="da-DK"></language>
    <status value="active"></status>
    <item>

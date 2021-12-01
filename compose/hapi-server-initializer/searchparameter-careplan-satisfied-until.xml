@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="searchparameter-careplan-satisfied-until"/>
+    <url value="http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until"/>
+    <name value="Search parameter for the careplan-satisfied-until extension."/>
+    <status value="active"/>
+    <publisher value="KvalitetsIT"/>
+    <purpose value="Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe)."/>
+
+    <code value="careplan_satisfied_until"/>
+    <base value="CarePlan"/>
+    <type value="date"/>
+    <title value="CarePlan Satisfied Until"/>
+    <expression value="CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')"/>
+    <xpathUsage value="normal"/>
+</SearchParameter>

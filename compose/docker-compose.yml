@@ -17,14 +17,16 @@ services:
        - rim
 
    medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:4b7b527c1ff754d4e0a19acde2dda2d2c06e2eb1
+      image: kvalitetsit/hjemmebehandling-medarbejder-bff:7deea98e071396dc55636f5295a876fa3bd61220
       environment:
        - cpr.url=http://rm-cpr-service:8080/Patient/
+       - fhir.server.url=http://hapi-server:8080/fhir
+       - user.context.handler=DIAS
       networks:
        - rim
        
    medarbejder-web:
-     image: kvalitetsit/hjemmebehandling-medarbejder-web:f5b87f7fda54f2a2e39a669982cd5c1f1a96b853
+     image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
      ports:
       - 3000:3000
      environment:
@@ -55,17 +57,17 @@ services:
      networks:
       - rim
      environment:
-       - SPRING_CONFIG_LOCATION=file:///data/hapi/application.yaml
-       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
-     volumes:
-       - ./hapi-server/application.yaml:/data/hapi/application.yaml
- 
+       - hapi.fhir.allow_external_references=true
+       - hapi.fhir.expunge_enabled=true
+       - hapi.fhir.reuse_cached_search_results_millis=1000
+       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006 
    hapi-server-initializer:
      image: alpine:3.11.5
      depends_on:
        - hapi-server
      networks:
       - rim
+     working_dir: /hapi-server-initializer
      volumes:
       - ./hapi-server-initializer:/hapi-server-initializer
-     command: "/hapi-server-initializer/init.sh"
+     command: "./init.sh"

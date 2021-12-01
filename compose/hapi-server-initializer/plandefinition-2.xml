@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PlanDefinition xmlns="http://hl7.org/fhir">
-    <id value="plandefinition-1"/>
+    <id value="plandefinition-2"/>
     <extension url="http://hjemmebehandling.rm.dk/organization">
         <valueReference>
-            <reference value="Organization/organization-1"/>
+            <reference value="Organization/organization-2"/>
         </valueReference>
     </extension>
     <text>bla</text>
