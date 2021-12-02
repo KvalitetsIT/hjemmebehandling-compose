@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="organization-infektionsmedicinsk"/>
+    <identifier>
+        <system value="1.2.208.176.1.1"/>
+        <value value="453071000016001"/>
+    </identifier>
+    <name value="Infektionsmedicinsk Afdeling"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="+4512345678"/>
+        <use value="mobile"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="gastro@acme.org"/>
+        <use value="work"/>
+    </telecom>
+</Organization>

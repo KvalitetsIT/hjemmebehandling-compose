@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="questionnaireresponse-infektionsmedicinsk-4"/>
+    <extension url="http://hjemmebehandling.rm.dk/examination-status">
+        <valueString value="NOT_EXAMINED"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/triaging-category">
+        <valueString value="RED"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-infektionsmedicinsk"/>
+        </valueReference>
+    </extension>
+    <basedOn>
+        <reference value="CarePlan/careplan-infektionsmedicinsk-2"/>
+    </basedOn>
+    <questionnaire value="Questionnaire/questionnaire-infektionsmedicinsk-1"/>
+    <subject>
+        <reference value="Patient/patient-2"/>
+        <display value="Ford"/>
+    </subject>
+    <authored value="2021-10-20T00:00:00+01:00"/>
+    <author>
+        <reference value="Patient/patient-2"/>
+    </author>
+    <source>
+        <reference value="Patient/patient-2"/>
+    </source>
+    <item>
+        <linkId value="temperature"/>
+        <text value="Indtast din morgen temperatur?"/>
+        <answer>
+            <valueQuantity>
+                <value value="391"/>
+            </valueQuantity>
+        </answer>
+    </item>
+    <item>
+        <linkId value="crp"/>
+        <text value="Indtast den målte CRP værdi"/>
+        <answer>
+            <valueQuantity>
+                <value value="62"/>
+            </valueQuantity>
+        </answer>
+    </item>
+    <item>
+        <linkId value="antibiotika"/>
+        <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="helbredstilstand"/>
+        <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="nye_symptomer"/>
+        <text value="Er der kommet nye symptomer i det sidste døgn?"/>
+        <answer>
+            <valueBoolean value="false"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="udslæt"/>
+        <text value="Har du udslæt?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="udslæt_2"/>
+        <text value="Er dit udslæt værre idag end i går?"/>
+        <answer>
+            <valueBoolean value="false"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>
