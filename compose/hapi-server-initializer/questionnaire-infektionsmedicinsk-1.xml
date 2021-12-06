@@ -6,7 +6,7 @@
    <id value="questionnaire-infektionsmedicinsk-1"></id>
    <extension url="http://hjemmebehandling.rm.dk/organization">
       <valueReference>
-         <reference value="Organization/organization-1"/>
+         <reference value="Organization/organization-infektionsmedicinsk"/>
       </valueReference>
    </extension>
    <title value="Infektionsmedicinsk spørgeskema"/>
