@@ -33,7 +33,7 @@
         <text value="Indtast din morgen temperatur?"/>
         <answer>
             <valueQuantity>
-                <value value="391"/>
+                <value value="39"/>
             </valueQuantity>
         </answer>
     </item>
