@@ -32,7 +32,7 @@
         <text value="Indtast din morgen temperatur?"/>
         <answer>
             <valueQuantity>
-                <value value="372"/>
+                <value value="37"/>
             </valueQuantity>
         </answer>
     </item>
@@ -41,7 +41,7 @@
         <text value="Indtast den målte CRP værdi"/>
         <answer>
             <valueQuantity>
-                <value value="210"/>
+                <value value="2"/>
             </valueQuantity>
         </answer>
     </item>
