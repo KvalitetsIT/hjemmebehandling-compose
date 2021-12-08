@@ -94,3 +94,6 @@ create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchp
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
 
 echo 'Done initializing hapi-server!';
+
+echo 'Calling quit on istio sidecar proxy'
+curl -X POST http://localhost:15020/quitquitquit
