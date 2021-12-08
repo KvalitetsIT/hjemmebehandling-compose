@@ -6,7 +6,7 @@ ENV hapi_server_base_url=$hapi_server_base_url
 WORKDIR /hapi-server-initializer
 COPY ./compose/hapi-server-initializer/init-infektionsmedicinsk.sh ./init-infektionsmedicinsk.sh
 
-COPY ./compose/hapi-server-initializer/careplan-infektionsmedicinsk-1.xml /careplan-infektionsmedicinsk-1.xml
+COPY ./compose/hapi-server-initializer/careplan-infektionsmedicinsk-1.xml ./careplan-infektionsmedicinsk-1.xml
 COPY ./compose/hapi-server-initializer/careplan-infektionsmedicinsk-2.xml ./careplan-infektionsmedicinsk-2.xml
 
 COPY ./compose/hapi-server-initializer/organization-infektionsmedicinsk.xml ./organization-infektionsmedicinsk.xml
