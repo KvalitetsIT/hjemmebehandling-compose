@@ -23,7 +23,7 @@ echo 'Initializing hapi-server ...';
 function delete {
   echo 'Deleting '$1' ...'
 
-  if [ $(curl -v -s -o /dev/null -w '%{http_code}' -X DELETE $hapi_server_base_url'/fhir/'$1) -eq '200' ]
+  if [ $(curl -s -o /dev/null -w '%{http_code}' -X DELETE $hapi_server_base_url'/fhir/'$1) -eq '200' ]
   then
     echo 'successfully deleted '$1'!'
   else
@@ -36,7 +36,7 @@ function create {
 
   echo $PWD
   # Using PUT allows us to control the resource id's.
-  if $(echo $(curl -s -o /dev/null -w '%{http_code}' -X PUT -d '@./'$1 -H 'Content-Type: application/fhir+xml' $hapi_server_base_url'/fhir/'$2'?_format=xml') | grep -qE '^20(0|1)$');
+  if $(echo $(curl -v -s -o /dev/null -w '%{http_code}' -X PUT -d '@./'$1 -H 'Content-Type: application/fhir+xml' $hapi_server_base_url'/fhir/'$2'?_format=xml') | grep -qE '^20(0|1)$');
   then
     echo 'successfully created '$2'!'
   else
