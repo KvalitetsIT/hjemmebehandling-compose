@@ -10,6 +10,7 @@
         <valueDateTime value="2021-11-27T10:11:12.123Z" />
     </extension>
     <instantiatesCanonical value="PlanDefinition/plandefinition-infektionsmedicinsk-1"/>
+    <status value="active"/>
     <subject>
         <reference value="Patient/patient-2"/>
     </subject>
