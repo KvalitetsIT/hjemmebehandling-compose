@@ -36,7 +36,7 @@ function create {
 
   echo $PWD
   # Using PUT allows us to control the resource id's.
-  if $(echo $(curl -v -s -o /dev/null -w '%{http_code}' -X PUT -d '@./'$1 -H 'Content-Type: application/fhir+xml' $hapi_server_base_url'/fhir/'$2'?_format=xml') | grep -qE '^20(0|1)$');
+  if $(echo $(curl -s -o /dev/null -w '%{http_code}' -X PUT -d '@./'$1 -H 'Content-Type: application/fhir+xml' $hapi_server_base_url'/fhir/'$2'?_format=xml') | grep -qE '^20(0|1)$');
   then
     echo 'successfully created '$2'!'
   else
@@ -94,3 +94,6 @@ create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchp
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
 
 echo 'Done initializing hapi-server!';
+
+echo 'Calling quit on istio sidecar proxy'
+curl -X POST http://localhost:15020/quitquitquit
