@@ -23,7 +23,7 @@ echo 'Initializing hapi-server ...';
 function delete {
   echo 'Deleting '$1' ...'
 
-  if [ $(curl -s -o /dev/null -w '%{http_code}' -X DELETE $hapi_server_base_url'/fhir/'$1) -eq '200' ]
+  if [ $(curl -v -s -o /dev/null -w '%{http_code}' -X DELETE $hapi_server_base_url'/fhir/'$1) -eq '200' ]
   then
     echo 'successfully deleted '$1'!'
   else
