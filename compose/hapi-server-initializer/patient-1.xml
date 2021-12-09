@@ -11,6 +11,7 @@
         <given value="Jonah"/>
     </name>
     <telecom>
+        <system value="phone"/>
         <value value="22648052"/>
     </telecom>
     <gender value="female"/>

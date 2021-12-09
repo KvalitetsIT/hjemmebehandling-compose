@@ -10,6 +10,7 @@
         <given value="Ford"/>
     </name>
     <telecom>
+        <system value="phone"/>
         <value value="57585960"/>
     </telecom>
     <gender value="male"/>
