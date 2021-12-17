@@ -23,5 +23,8 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         
-    - name: Push the Docker image
+    - name: Push the tagged Docker image
       run: docker push kvalitetsit/hjemmebehandling-data-initializer:$(git rev-parse --short "$GITHUB_SHA")
+
+    - name: Push the latest Docker image
+      run: docker push kvalitetsit/hjemmebehandling-data-initializer:latest
