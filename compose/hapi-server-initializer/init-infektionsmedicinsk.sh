@@ -93,6 +93,45 @@ create 'searchparameter-organization-plandefinition.xml' 'SearchParameter/search
 create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchparameter-organization-questionnaire'
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
 
+if [ $init_test_data = 'true' ]
+then
+  echo 'Initializing test data too!'
+
+  delete 'QuestionnaireResponse/questionnaireresponse-4'
+  delete 'QuestionnaireResponse/questionnaireresponse-3'
+  delete 'QuestionnaireResponse/questionnaireresponse-2'
+  delete 'QuestionnaireResponse/questionnaireresponse-1'
+
+  delete 'CarePlan/careplan-2'
+  delete 'CarePlan/careplan-1'
+
+  delete 'PlanDefinition/plandefinition-2'
+  delete 'PlanDefinition/plandefinition-1'
+
+  delete 'Questionnaire/questionnaire-2'
+  delete 'Questionnaire/questionnaire-1'
+
+  delete 'Organization/organization-2'
+  delete 'Organization/organization-1'
+
+  create 'organization-1.xml' 'Organization/organization-1'
+  create 'organization-2.xml' 'Organization/organization-2'
+
+  create 'questionnaire-1.xml' 'Questionnaire/questionnaire-1'
+  create 'questionnaire-2.xml' 'Questionnaire/questionnaire-2'
+
+  create 'plandefinition-1.xml' 'PlanDefinition/plandefinition-1'
+  create 'plandefinition-2.xml' 'PlanDefinition/plandefinition-2'
+
+  create 'careplan-1.xml' 'CarePlan/careplan-1'
+  create 'careplan-2.xml' 'CarePlan/careplan-2'
+
+  create 'questionnaireresponse-1.xml' 'QuestionnaireResponse/questionnaireresponse-1'
+  create 'questionnaireresponse-2.xml' 'QuestionnaireResponse/questionnaireresponse-2'
+  create 'questionnaireresponse-3.xml' 'QuestionnaireResponse/questionnaireresponse-3'
+  create 'questionnaireresponse-4.xml' 'QuestionnaireResponse/questionnaireresponse-4'
+fi
+
 echo 'Done initializing hapi-server!';
 
 echo 'Calling quit on istio sidecar proxy'
