@@ -64,6 +64,7 @@ delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
 
 delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
 
+delete 'Patient/patient-infektionsmedicinsk-1'
 delete 'Patient/patient-2'
 delete 'Patient/patient-1'
 
@@ -73,6 +74,7 @@ create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infekti
 
 create 'patient-1.xml' 'Patient/patient-1'
 create 'patient-2.xml' 'Patient/patient-2'
+create 'patient-infektionsmedicinsk-1.xml' 'Patient/patient-infektionsmedicinsk-1'
 
 create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
 
