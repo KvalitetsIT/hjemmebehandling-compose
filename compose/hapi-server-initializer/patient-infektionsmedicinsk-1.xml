@@ -3,7 +3,7 @@
     <id value="patient-infektionsmedicinsk-1"/>
     <identifier>
         <system value="1.2.208.176.1.2"/>
-        <value value="1011121314"/>
+        <value value="0101010101"/>
     </identifier>
     <name>
         <family value="Jameson"/>
