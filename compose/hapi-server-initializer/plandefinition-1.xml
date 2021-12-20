@@ -52,4 +52,37 @@
             </extension>
         </extension>
     </action>
+    <action>
+        <title value="Fill out questionnaire #2"/>
+        <condition>
+            <kind value="applicability"/>
+            <expression>
+                <language value="text/cql"/>
+                <expression value="NoScreening"/>
+            </expression>
+        </condition>
+        <timingTiming>
+            <repeat>
+                <dayOfWeek value="tue"/>
+                <dayOfWeek value="thu"/>
+                <timeOfDay value="15:43"/>
+            </repeat>
+        </timingTiming>
+        <definitionCanonical value="Questionnaire/questionnaire-2"/>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="1"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="NORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <high>
+                        <value value="38.5"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+    </action>
 </PlanDefinition>
