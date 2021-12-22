@@ -17,7 +17,7 @@ services:
        - rim
 
    medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:7deea98e071396dc55636f5295a876fa3bd61220
+      image: kvalitetsit/hjemmebehandling-medarbejder-bff:69ee3659feecae5617796c7fcb4b72f364068124
       environment:
        - cpr.url=http://rm-cpr-service:8080/Patient/
        - fhir.server.url=http://hapi-server:8080/fhir
@@ -26,7 +26,7 @@ services:
        - rim
        
    medarbejder-web:
-     image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+     image: kvalitetsit/hjemmebehandling-medarbejder-web:447dce8778e0185ffce7eed06cf1d85e381263f1
      ports:
       - 3000:3000
      environment:
@@ -51,16 +51,25 @@ services:
       - DEBUG_LOGGING=true
      networks:
       - rim
-     
+
+   mariadb:
+     image: mariadb:10.7
+     environment:
+      - MARIADB_USER=hapi
+      - MARIADB_PASSWORD=hapi
+      - MARIADB_ROOT_PASSWORD=hapi
+      - MARIADB_DATABASE=hapi
+     networks:
+      - rim  
+
    hapi-server:
-     image: hapiproject/hapi:latest
+     image: kvalitetsit/hjemmebehandling-hapi-fhir-server:103467cb33b8b22d899a8c051bf691283cb3faee 
      networks:
       - rim
      environment:
-       - hapi.fhir.allow_external_references=true
-       - hapi.fhir.expunge_enabled=true
-       - hapi.fhir.reuse_cached_search_results_millis=1000
-       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006 
+       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
+       - spring.datasource.username=hapi
+       - spring.datasource.password=hapi
    hapi-server-initializer:
      image: alpine:3.11.5
      depends_on:
@@ -70,4 +79,4 @@ services:
      working_dir: /hapi-server-initializer
      volumes:
       - ./hapi-server-initializer:/hapi-server-initializer
-     command: "./init.sh"
+     command: "./init-infektionsmedicinsk.sh"
