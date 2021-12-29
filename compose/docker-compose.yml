@@ -17,16 +17,22 @@ services:
        - rim
 
    medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:69ee3659feecae5617796c7fcb4b72f364068124
+      image: kvalitetsit/hjemmebehandling-medarbejder-bff:a1d8f6f44ab15b22a7219c921a0e1e2b2dbda022
       environment:
        - cpr.url=http://rm-cpr-service:8080/Patient/
        - fhir.server.url=http://hapi-server:8080/fhir
        - user.context.handler=DIAS
+       - audit.url=http://audit-echo:8080
       networks:
        - rim
-       
+   
+   audit-echo:
+     image: mendhak/http-https-echo:21
+     networks:
+       - rim
+
    medarbejder-web:
-     image: kvalitetsit/hjemmebehandling-medarbejder-web:447dce8778e0185ffce7eed06cf1d85e381263f1
+     image: kvalitetsit/hjemmebehandling-medarbejder-web:3d4708b00f45163e7755cc7469e939a2032a8364
      ports:
       - 3000:3000
      environment:
