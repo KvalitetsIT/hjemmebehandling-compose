@@ -17,12 +17,13 @@ services:
        - rim
 
    medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:a1d8f6f44ab15b22a7219c921a0e1e2b2dbda022
+      image: kvalitetsit/hjemmebehandling-medarbejder-bff:eb5a4b2effb6c4b913f5992ba4e8e0ee2da730fd
       environment:
        - cpr.url=http://rm-cpr-service:8080/Patient/
        - fhir.server.url=http://hapi-server:8080/fhir
        - user.context.handler=DIAS
        - audit.url=http://audit-echo:8080
+       - allowed_origins=*
       networks:
        - rim
    
@@ -69,7 +70,7 @@ services:
       - rim  
 
    hapi-server:
-     image: kvalitetsit/hjemmebehandling-hapi-fhir-server:103467cb33b8b22d899a8c051bf691283cb3faee 
+     image: kvalitetsit/hjemmebehandling-hapi-fhir-server:614d9b959a48d054aa353b7ab975456f3a3b555e
      networks:
       - rim
      environment:
