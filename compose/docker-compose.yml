@@ -1,89 +1,99 @@
-version: '2.1'
+version: '3.9'
 
 networks:
-  rim:
+  hjemmebehandling:
     driver: bridge
 
 services:
-   # login med {testbruger1,testbruger2}/Test1234 
-   medarbejder-login-proxy:
-      image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
-      command: --config /oauth2-proxy.cfg
-      ports:
-       - 4180:4180
-      volumes:
+  # login med {testbruger1,testbruger2}/Test1234
+  medarbejder-login-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
+    command: --config /oauth2-proxy.cfg
+    ports:
+      - 4180:4180
+    volumes:
       - "./oauth2-proxy.cfg:/oauth2-proxy.cfg"
-      networks:
-       - rim
+    networks:
+      - hjemmebehandling
 
-   medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:eb5a4b2effb6c4b913f5992ba4e8e0ee2da730fd
-      environment:
-       - cpr.url=http://rm-cpr-service:8080/Patient/
-       - fhir.server.url=http://hapi-server:8080/fhir
-       - user.context.handler=DIAS
-       - audit.url=http://audit-echo:8080
-       - allowed_origins=*
-      networks:
-       - rim
-   
-   audit-echo:
-     image: mendhak/http-https-echo:21
-     networks:
-       - rim
+  medarbejder-bff:
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:eb5a4b2effb6c4b913f5992ba4e8e0ee2da730fd
+    environment:
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - user.context.handler=DIAS
+      - audit.url=http://audit-echo:8080
+      - allowed_origins=*
+    networks:
+      - hjemmebehandling
 
-   medarbejder-web:
-     image: kvalitetsit/hjemmebehandling-medarbejder-web:3d4708b00f45163e7755cc7469e939a2032a8364
-     ports:
+  audit-echo:
+    image: mendhak/http-https-echo:21
+    networks:
+      - hjemmebehandling
+
+  medarbejder-web:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:3d4708b00f45163e7755cc7469e939a2032a8364
+    ports:
       - 3000:3000
-     environment:
+    environment:
       - BFF_BASE_URL=http://medarbejder-bff:8080
-     networks:
-      - rim
+    networks:
+      - hjemmebehandling
 
-   # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
-   rm-cpr-service:
-     image: kvalitetsit/rm-cpr-service:0.2.0
-     environment:
+  # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
+  rm-cpr-service:
+    image: kvalitetsit/rm-cpr-service:0.2.0
+    environment:
       - CPR_ENDPOINT=http://rm-cpr-service-mock:8080
       - DEBUG_LOGGING=true
-     networks:
-      - rim
-     ports:
+    networks:
+      - hjemmebehandling
+    ports:
       - "8081:8080"
 
-   rm-cpr-service-mock:
-     image: kvalitetsit/rm-cpr-service-mock-backend:0.2.0
-     environment:
+  rm-cpr-service-mock:
+    image: kvalitetsit/rm-cpr-service-mock-backend:0.2.0
+    environment:
       - DEBUG_LOGGING=true
-     networks:
-      - rim
+    networks:
+      - hjemmebehandling
 
-   mariadb:
-     image: mariadb:10.7
-     environment:
+  hapi-server:
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:614d9b959a48d054aa353b7ab975456f3a3b555e
+    environment:
+      - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
+      - spring.datasource.username=hapi
+      - spring.datasource.password=hapi
+    depends_on:
+      - mariadb
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/fhir/metadata" ]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - hjemmebehandling
+
+  hapi-server-initializer:
+    image: alpine:3.11.5
+    depends_on:
+      hapi-server:
+        condition: service_healthy
+    working_dir: /hapi-server-initializer
+    volumes:
+      - ./hapi-server-initializer:/hapi-server-initializer
+    command: "./init-infektionsmedicinsk.sh"
+    networks:
+      - hjemmebehandling
+
+  mariadb:
+    image: mariadb:10.7
+    environment:
       - MARIADB_USER=hapi
       - MARIADB_PASSWORD=hapi
       - MARIADB_ROOT_PASSWORD=hapi
       - MARIADB_DATABASE=hapi
-     networks:
-      - rim  
-
-   hapi-server:
-     image: kvalitetsit/hjemmebehandling-hapi-fhir-server:614d9b959a48d054aa353b7ab975456f3a3b555e
-     networks:
-      - rim
-     environment:
-       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
-       - spring.datasource.username=hapi
-       - spring.datasource.password=hapi
-   hapi-server-initializer:
-     image: alpine:3.11.5
-     depends_on:
-       - hapi-server
-     networks:
-      - rim
-     working_dir: /hapi-server-initializer
-     volumes:
-      - ./hapi-server-initializer:/hapi-server-initializer
-     command: "./init-infektionsmedicinsk.sh"
+    networks:
+      - hjemmebehandling
