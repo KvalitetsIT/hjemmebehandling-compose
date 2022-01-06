@@ -5,6 +5,34 @@ networks:
     driver: bridge
 
 services:
+
+   keycloak:
+     image: jboss/keycloak:15.0.2
+     environment:
+      - DB_VENDOR=h2
+      - KEYCLOAK_USER=keycloak 
+      - KEYCLOAK_PASSWORD=keycloak
+      - KEYCLOAK_IMPORT=/tmp/test-realm.json
+     volumes:
+       - ./dias-custom-login/test-realm.json:/tmp/test-realm.json
+     ports:
+      - "8091:8080"
+     networks:
+      - rim
+      
+   dias-custom-user:
+     image: kvalitetsit/dias-custom-user-service:0.0.1
+     environment:
+      - KEYCLOAK_URL=http://keycloak:8080/auth
+      - REALM_NAME=test
+      - CLIENT_ID=test
+      - CLIENT_SECRET=43fd3a1d-1012-4e6d-8f35-83ee061668d2
+     ports:
+      - "8092:8083"
+     networks:
+      - rim
+     
+      
    # login med {testbruger1,testbruger2}/Test1234 
    medarbejder-login-proxy:
       image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
@@ -17,16 +45,19 @@ services:
        - rim
 
    medarbejder-bff:
-      image: kvalitetsit/hjemmebehandling-medarbejder-bff:7deea98e071396dc55636f5295a876fa3bd61220
+      image: kvalitetsit/hjemmebehandling-medarbejder-bff:1583b91266e1b5bc1eab7cd3698c580339267512
       environment:
        - cpr.url=http://rm-cpr-service:8080/Patient/
        - fhir.server.url=http://hapi-server:8080/fhir
        - user.context.handler=DIAS
+       - allowed_origins=*
       networks:
        - rim
+      ports:
+       - "8083:8080"
        
    medarbejder-web:
-     image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+     image: kvalitetsit/hjemmebehandling-medarbejder-web:228d4f8d247cc380fe938aee923cad50cd6d2439
      ports:
       - 3000:3000
      environment:
@@ -61,6 +92,9 @@ services:
        - hapi.fhir.expunge_enabled=true
        - hapi.fhir.reuse_cached_search_results_millis=1000
        - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006 
+     ports:
+      - "8084:8080"
+
    hapi-server-initializer:
      image: alpine:3.11.5
      depends_on:
@@ -70,4 +104,4 @@ services:
      working_dir: /hapi-server-initializer
      volumes:
       - ./hapi-server-initializer:/hapi-server-initializer
-     command: "./init.sh"
+     command: "./init-infektionsmedicinsk.sh"
