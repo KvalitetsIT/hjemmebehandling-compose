@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="searchparameter-cpr"/>
+    <url value="http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr"/>
+    <name value="Search parameter for the Patient cpr identifie."/>
+    <status value="active"/>
+    <publisher value="KvalitetsIT"/>
+    <purpose value="Searching for QuestionnarieResponses by their examination status (implemented using an extension)."/>
+
+    <code value="patient_identifier_cpr"/>
+    <base value="Patient"/>
+    <type value="string"/>
+    <title value="CPR identifier"/>
+    <expression value="Patient.identifier.value"/>
+    <xpathUsage value="normal"/>
+</SearchParameter>
