@@ -41,7 +41,7 @@
                 <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
                     <valueRange>
                         <high>
-                            <value value="37.5"/>
+                            <value value="37.4"/>
                         </high>
                     </valueRange>
                 </extension>
@@ -59,7 +59,7 @@
                             <value value="37.5"/>
                         </low>
                         <high>
-                            <value value="38.0"/>
+                            <value value="37.9"/>
                         </high>
                     </valueRange>
                 </extension>
@@ -89,7 +89,7 @@
                 <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
                     <valueRange>
                         <high>
-                            <value value="25.0"/>
+                            <value value="24.9"/>
                         </high>
                     </valueRange>
                 </extension>
@@ -107,7 +107,7 @@
                             <value value="25.0"/>
                         </low>
                         <high>
-                            <value value="50.0"/>
+                            <value value="49.9"/>
                         </high>
                     </valueRange>
                 </extension>

@@ -17,22 +17,22 @@
     </basedOn>
     <questionnaire value="Questionnaire/questionnaire-infektionsmedicinsk-1"/>
     <subject>
-        <reference value="Patient/patient-1"/>
+        <reference value="Patient/patient-infektionsmedicinsk-1"/>
         <display value="Arthur"/>
     </subject>
     <authored value="2021-10-19T00:00:00+01:00"/>
     <author>
-        <reference value="Patient/patient-1"/>
+        <reference value="Patient/patient-infektionsmedicinsk-1"/>
     </author>
     <source>
-        <reference value="Patient/patient-1"/>
+        <reference value="Patient/patient-infektionsmedicinsk-1"/>
     </source>
     <item>
         <linkId value="temperature"/>
         <text value="Indtast din morgen temperatur?"/>
         <answer>
             <valueQuantity>
-                <value value="37"/>
+                <value value="37.2"/>
             </valueQuantity>
         </answer>
     </item>
@@ -41,7 +41,7 @@
         <text value="Indtast den målte CRP værdi"/>
         <answer>
             <valueQuantity>
-                <value value="2"/>
+                <value value="21.0"/>
             </valueQuantity>
         </answer>
     </item>
