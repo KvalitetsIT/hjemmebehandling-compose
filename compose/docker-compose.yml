@@ -17,13 +17,15 @@ services:
       - hjemmebehandling
 
   medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:eb5a4b2effb6c4b913f5992ba4e8e0ee2da730fd
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:32778b3ed2bd7e4bbad4ee74100de0f2edb430bf
     environment:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
       - user.context.handler=DIAS
       - audit.url=http://audit-echo:8080
       - allowed_origins=*
+    ports:
+      - 8090:8080
     networks:
       - hjemmebehandling
 
