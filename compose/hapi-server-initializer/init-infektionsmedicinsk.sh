@@ -51,6 +51,7 @@ delete 'SearchParameter/searchparameter-organization-plandefinition'
 delete 'SearchParameter/searchparameter-organization-careplan'
 delete 'SearchParameter/searchparameter-examination-status'
 delete 'SearchParameter/searchparameter-careplan-satisfied-until'
+delete 'SearchParameter/searchparameter-cpr'
 
 delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-4'
 delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-3'
@@ -94,6 +95,7 @@ create 'searchparameter-organization-careplan.xml' 'SearchParameter/searchparame
 create 'searchparameter-organization-plandefinition.xml' 'SearchParameter/searchparameter-organization-plandefinition'
 create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchparameter-organization-questionnaire'
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
+create 'searchparameter-cpr.xml' 'SearchParameter/searchparameter-cpr'
 
 if [ $init_test_data = 'true' ]
 then
