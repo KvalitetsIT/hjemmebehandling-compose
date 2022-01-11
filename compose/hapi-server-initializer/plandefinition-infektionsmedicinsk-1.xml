@@ -44,8 +44,11 @@
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
                 <valueRange>
+                    <low>
+                        <value value="36.5"/>
+                    </low>                     
                     <high>
-                        <value value="37.4"/>
+                        <value value="37.5"/>
                     </high>
                 </valueRange>
             </extension>
@@ -63,7 +66,7 @@
                         <value value="37.5"/>
                     </low>
                     <high>
-                        <value value="37.9"/>
+                        <value value="38.0"/>
                     </high>
                 </valueRange>
             </extension>
@@ -80,6 +83,9 @@
                     <low>
                         <value value="38.0"/>
                     </low>
+                    <high>
+                        <value value="43.0"/>
+                    </high>
                 </valueRange>
             </extension>
         </extension>
@@ -92,8 +98,11 @@
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
                 <valueRange>
+                    <low>
+                        <value value="0"/>
+                    </low>
                     <high>
-                        <value value="24.9"/>
+                        <value value="25.0"/>
                     </high>
                 </valueRange>
             </extension>
@@ -111,7 +120,7 @@
                         <value value="25.0"/>
                     </low>
                     <high>
-                        <value value="49.9"/>
+                        <value value="50.0"/>
                     </high>
                 </valueRange>
             </extension>
@@ -128,6 +137,9 @@
                     <low>
                         <value value="50.0"/>
                     </low>
+                    <high>
+                        <value value="120.0"/>
+                    </high>
                 </valueRange>
             </extension>
         </extension>
