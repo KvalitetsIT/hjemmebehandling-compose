@@ -45,6 +45,9 @@ function create {
   fi
 }
 
+delete 'ValueSet/valueset-npu-infektionsmedicinsk'
+delete 'CodeSystem/codesystem-npu-dk'
+
 delete 'SearchParameter/searchparameter-organization-questionnaireresponse'
 delete 'SearchParameter/searchparameter-organization-questionnaire'
 delete 'SearchParameter/searchparameter-organization-plandefinition'
@@ -96,6 +99,9 @@ create 'searchparameter-organization-plandefinition.xml' 'SearchParameter/search
 create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchparameter-organization-questionnaire'
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
 create 'searchparameter-cpr.xml' 'SearchParameter/searchparameter-cpr'
+
+create 'codesystem-npu-dk.xml' 'CodeSystem/codesystem-npu-dk'
+create 'valueset-npu-infektionsmedicinsk.xml' 'ValueSet/valueset-npu-infektionsmedicinsk'
 
 if [ $init_test_data = 'true' ]
 then

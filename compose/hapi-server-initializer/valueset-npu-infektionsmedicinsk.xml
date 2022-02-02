@@ -1,0 +1,42 @@
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-npu-infektionsmedicinsk"/>
+  <url value="http://hjemmebehandling.rm.dk/terminologi/valueset-npu-infektionsmedicinsk"/>
+  <name value="NPU_Infektionsmedicinsk_VS"/>
+  <title value="NPU_Infektionsmedicinsk_VS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-02-02T00:00:00+00:00"/>  
+  <description value="Event codes used in Questionnaires on RM Infektionsmedicinsk afdeling. The codes shall be NPU codes used in the Danish health care systems."/>
+  <compose>
+    <include>
+      <system value="urn:oid:1.2.208.176.2.1"/>
+      <concept>
+        <code value="NPU08676"/>
+        <display value="Pt—Legeme; temp. = ? °C"/>
+        <definition value="Pt—Legeme; temp. = ? °C"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="Legeme temp.;Pt"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="NPU19748"/>
+        <display value="P—C-reaktivt protein; massek. = ? mg/L"/>
+        <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="CRP"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -90,7 +90,7 @@ services:
       - hjemmebehandling
      
    hapi-server:
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:614d9b959a48d054aa353b7ab975456f3a3b555e
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:eb9e7efbb53b285c7ae5b8a8b8f2535bbfe28770
     environment:
       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
       - spring.datasource.username=hapi
