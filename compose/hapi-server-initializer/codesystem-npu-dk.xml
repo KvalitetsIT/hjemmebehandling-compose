@@ -15,7 +15,7 @@
   <content value="complete"/>
   <concept>
     <code value="NPU08676"/>
-    <display value="Pt—Legeme; temp. = ? °C"/>
+    <display value="Legeme temp.;Pt"/>
     <definition value="Pt—Legeme; temp. = ? °C"/>
     <designation>
       <language value="da"/>
@@ -28,7 +28,7 @@
   </concept>
   <concept>
     <code value="NPU19748"/>
-    <display value="P—C-reaktivt protein; massek. = ? mg/L"/>
+    <display value="C-reaktivt protein [CRP];P"/>
     <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
     <designation>
       <language value="da"/>
