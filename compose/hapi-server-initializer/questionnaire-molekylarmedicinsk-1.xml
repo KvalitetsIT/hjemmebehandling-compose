@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from unit test - manual pasted into file -->
+<Questionnaire xmlns="http://hl7.org/fhir">
+   <id value="questionnaire-molekylarmedicinsk-1"/>
+   <extension url="http://hjemmebehandling.rm.dk/organization">
+      <valueReference>
+         <reference value="Organization/organization-infektionsmedicinsk"/>
+      </valueReference>
+   </extension>
+   <title value="Molekylær medicinsk spørgeskema"/>
+   <language value="da-DK"/>
+   <status value="active"/>
+   <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+         <valueCoding>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="Cel"/>
+            <display value="grader Celsius"/>
+         </valueCoding>
+      </extension>
+      <linkId value="temperature"/>
+      <code>
+         <system value="urn:oid:1.2.208.176.2.1"/>
+         <code value="NPU08676"/>
+         <display value="Legeme temp.;Pt"/>
+      </code>
+      <text value="Indtast din morgen temperatur?"/>
+      <type value="quantity"/>
+      <item>
+         <linkId value="help"/>
+         <text value="For at få den korrekte værdi skal der være en rektal temperatur dvs. målt i endetarmen"/>
+         <type value="display"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="antibiotika"/>
+      <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
+      <type value="boolean"/>
+      <item>
+         <linkId value="help"/>
+         <text value="Hvis du får antibiotika på pumpe skal du svare nej hvis der har været problemer med indløb."/>
+         <type value="display"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="helbredstilstand"/>
+      <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
+      <type value="boolean"/>
+      <item>
+         <linkId value="help"/>
+         <text value="Hvis den er uændret fra i går skal du svare nej."/>
+         <type value="display"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="nye_symptomer"/>
+      <text value="Er der kommet nye symptomer i det sidste døgn?"/>
+      <type value="boolean"/>
+      <item>
+         <linkId value="help"/>
+         <text value="Nye symptomer kan være: smerter, hoste, diare, svie ved vandladning mv."/>
+         <type value="display"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="udslæt"/>
+      <text value="Har du udslæt?"/>
+      <type value="boolean"/>
+      <item>
+         <linkId value="help"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
+         <type value="display"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="udslæt_2"/>
+      <text value="Er dit udslæt værre idag end i går?"/>
+      <type value="boolean"/>
+      <enableWhen>
+         <question value="udslæt"/>
+         <operator value="="/>
+         <answerBoolean value="true"/>
+      </enableWhen>
+      <item>
+         <linkId value="help"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skaldu svare nej"/>
+         <type value="display"/>
+      </item>
+   </item>
+</Questionnaire>

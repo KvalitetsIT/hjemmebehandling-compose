@@ -65,8 +65,10 @@ delete 'CarePlan/careplan-infektionsmedicinsk-2'
 delete 'CarePlan/careplan-infektionsmedicinsk-1'
 
 delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+delete 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
 
 delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+delete 'Questionnaire/questionnaire-molekylarmedicinsk-1'
 
 delete 'Patient/patient-infektionsmedicinsk-1'
 delete 'Patient/patient-2'
@@ -81,8 +83,10 @@ create 'patient-2.xml' 'Patient/patient-2'
 create 'patient-infektionsmedicinsk-1.xml' 'Patient/patient-infektionsmedicinsk-1'
 
 create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+create 'questionnaire-molekylarmedicinsk-1.xml' 'Questionnaire/questionnaire-molekylarmedicinsk-1'
 
 create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+create 'plandefinition-molekylarmedicinsk-1.xml' 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
 
 create 'careplan-infektionsmedicinsk-1.xml' 'CarePlan/careplan-infektionsmedicinsk-1'
 create 'careplan-infektionsmedicinsk-2.xml' 'CarePlan/careplan-infektionsmedicinsk-2'
