@@ -114,4 +114,19 @@
          <type value="display"/>
       </item>
    </item>
+   <item>
+      <linkId value="call_to_action"/>
+      <type value="group"/>
+      <item>
+         <linkId value="1"/>
+         <text value="Det er ikke så godt. Det skal helst ikke blive værre. Ring til afdelingen."/>
+         <type value="display"/>
+         <enableWhen>
+            <question value="udslæt_2"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+      </item>
+
+   </item>
 </Questionnaire>
