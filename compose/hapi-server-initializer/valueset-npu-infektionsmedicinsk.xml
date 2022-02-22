@@ -1,6 +1,11 @@
 
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="valueset-npu-infektionsmedicinsk"/>
+  <extension url="http://hjemmebehandling.rm.dk/organization">
+      <valueReference>
+         <reference value="Organization/organization-infektionsmedicinsk"/>
+      </valueReference>
+   </extension>
   <url value="http://hjemmebehandling.rm.dk/terminologi/valueset-npu-infektionsmedicinsk"/>
   <name value="NPU_Infektionsmedicinsk_VS"/>
   <title value="NPU_Infektionsmedicinsk_VS"/>

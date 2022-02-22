@@ -41,6 +41,7 @@ function create {
     echo 'successfully created '$2'!'
   else
     echo 'error creating object, exiting ...'
+    curl -X PUT -vvv -d @$1 -H 'Content-Type: application/fhir+xml' "$hapi_server_base_url/fhir/$2?_format=xml"
     exit 1
   fi
 }
@@ -48,6 +49,7 @@ function create {
 delete 'ValueSet/valueset-npu-infektionsmedicinsk'
 delete 'CodeSystem/codesystem-npu-dk'
 
+delete 'SearchParameter/searchparameter-organization-valueset'
 delete 'SearchParameter/searchparameter-organization-questionnaireresponse'
 delete 'SearchParameter/searchparameter-organization-questionnaire'
 delete 'SearchParameter/searchparameter-organization-plandefinition'
@@ -76,9 +78,9 @@ delete 'Patient/patient-1'
 
 delete 'Organization/organization-infektionsmedicinsk'
 
+create 'patient-1.xml' 'Patient/patient-1'
 create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infektionsmedicinsk'
 
-create 'patient-1.xml' 'Patient/patient-1'
 create 'patient-2.xml' 'Patient/patient-2'
 create 'patient-infektionsmedicinsk-1.xml' 'Patient/patient-infektionsmedicinsk-1'
 
@@ -102,6 +104,7 @@ create 'searchparameter-organization-careplan.xml' 'SearchParameter/searchparame
 create 'searchparameter-organization-plandefinition.xml' 'SearchParameter/searchparameter-organization-plandefinition'
 create 'searchparameter-organization-questionnaire.xml' 'SearchParameter/searchparameter-organization-questionnaire'
 create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter/searchparameter-organization-questionnaireresponse'
+create 'searchparameter-organization-valueset.xml' 'SearchParameter/searchparameter-organization-valueset'
 create 'searchparameter-cpr.xml' 'SearchParameter/searchparameter-cpr'
 
 create 'codesystem-npu-dk.xml' 'CodeSystem/codesystem-npu-dk'
