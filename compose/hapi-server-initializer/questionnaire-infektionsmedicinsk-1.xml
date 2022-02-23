@@ -110,7 +110,7 @@
       </enableWhen>
       <item>
          <linkId value="help"/>
-         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skaldu svare nej"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
          <type value="display"/>
       </item>
    </item>
