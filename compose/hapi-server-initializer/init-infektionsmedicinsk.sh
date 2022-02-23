@@ -58,45 +58,17 @@ delete 'SearchParameter/searchparameter-examination-status'
 delete 'SearchParameter/searchparameter-careplan-satisfied-until'
 delete 'SearchParameter/searchparameter-cpr'
 
-delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-4'
-delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-3'
-delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-2'
-delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-1'
-
-delete 'CarePlan/careplan-infektionsmedicinsk-2'
-delete 'CarePlan/careplan-infektionsmedicinsk-1'
-
 delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
-delete 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
 
 delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
-delete 'Questionnaire/questionnaire-molekylarmedicinsk-1'
-
-delete 'Patient/patient-infektionsmedicinsk-1'
-delete 'Patient/patient-2'
-delete 'Patient/patient-1'
 
 delete 'Organization/organization-infektionsmedicinsk'
 
-create 'patient-1.xml' 'Patient/patient-1'
 create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infektionsmedicinsk'
 
-create 'patient-2.xml' 'Patient/patient-2'
-create 'patient-infektionsmedicinsk-1.xml' 'Patient/patient-infektionsmedicinsk-1'
-
 create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
-create 'questionnaire-molekylarmedicinsk-1.xml' 'Questionnaire/questionnaire-molekylarmedicinsk-1'
 
 create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
-create 'plandefinition-molekylarmedicinsk-1.xml' 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
-
-create 'careplan-infektionsmedicinsk-1.xml' 'CarePlan/careplan-infektionsmedicinsk-1'
-create 'careplan-infektionsmedicinsk-2.xml' 'CarePlan/careplan-infektionsmedicinsk-2'
-
-create 'questionnaireresponse-infektionsmedicinsk-1.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-1'
-create 'questionnaireresponse-infektionsmedicinsk-2.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-2'
-create 'questionnaireresponse-infektionsmedicinsk-3.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-3'
-create 'questionnaireresponse-infektionsmedicinsk-4.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-4'
 
 create 'searchparameter-careplan-satisfied-until.xml' 'SearchParameter/searchparameter-careplan-satisfied-until'
 create 'searchparameter-examination-status.xml' 'SearchParameter/searchparameter-examination-status'
@@ -114,6 +86,20 @@ if [ $init_test_data = 'true' ]
 then
   echo 'Initializing test data too!'
 
+  delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-4'
+  delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-3'
+  delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-2'
+  delete 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-1'
+
+  delete 'CarePlan/careplan-infektionsmedicinsk-2'
+  delete 'CarePlan/careplan-infektionsmedicinsk-1'
+
+  delete 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
+  delete 'Questionnaire/questionnaire-molekylarmedicinsk-1'
+  delete 'Patient/patient-infektionsmedicinsk-1'
+  delete 'Patient/patient-2'
+  delete 'Patient/patient-1'
+
   delete 'QuestionnaireResponse/questionnaireresponse-4'
   delete 'QuestionnaireResponse/questionnaireresponse-3'
   delete 'QuestionnaireResponse/questionnaireresponse-2'
@@ -130,6 +116,20 @@ then
 
   delete 'Organization/organization-2'
   delete 'Organization/organization-1'
+  
+  
+  create 'patient-1.xml' 'Patient/patient-1'
+  create 'patient-2.xml' 'Patient/patient-2'
+  create 'patient-infektionsmedicinsk-1.xml' 'Patient/patient-infektionsmedicinsk-1'
+  create 'questionnaire-molekylarmedicinsk-1.xml' 'Questionnaire/questionnaire-molekylarmedicinsk-1'
+  create 'plandefinition-molekylarmedicinsk-1.xml' 'PlanDefinition/plandefinition-molekylarmedicinsk-1'
+  create 'careplan-infektionsmedicinsk-1.xml' 'CarePlan/careplan-infektionsmedicinsk-1'
+  create 'careplan-infektionsmedicinsk-2.xml' 'CarePlan/careplan-infektionsmedicinsk-2'
+
+  create 'questionnaireresponse-infektionsmedicinsk-1.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-1'
+  create 'questionnaireresponse-infektionsmedicinsk-2.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-2'
+  create 'questionnaireresponse-infektionsmedicinsk-3.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-3'
+  create 'questionnaireresponse-infektionsmedicinsk-4.xml' 'QuestionnaireResponse/questionnaireresponse-infektionsmedicinsk-4'
 
   create 'organization-1.xml' 'Organization/organization-1'
   create 'organization-2.xml' 'Organization/organization-2'
