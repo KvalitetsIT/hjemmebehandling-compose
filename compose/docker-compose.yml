@@ -45,7 +45,7 @@ services:
       - hjemmebehandling
 
    medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:ca0d54551c80470aa54a06640d010183cf8c3459
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:cd8644397e4dd6077e7f45e3cafcb35912580b15
     environment:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
@@ -63,7 +63,7 @@ services:
       - hjemmebehandling
        
    medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:345e710dd30e0ee360642761f4b8c559fd08842b
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:4f5e24d51677e23acde5f9a05b602e6b564e32bc
     ports:
       - 3000:3000
     environment:
