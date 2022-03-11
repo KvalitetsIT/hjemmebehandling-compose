@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated from unit test - manual pasted into file -->
 <Questionnaire xmlns="http://hl7.org/fhir">
    <id value="questionnaire-infektionsmedicinsk-1"/>
    <extension url="http://hjemmebehandling.rm.dk/organization">
@@ -8,99 +6,66 @@
       </valueReference>
    </extension>
    <title value="Infektionsmedicinsk spørgeskema"/>
-   <language value="da-DK"/>
    <status value="active"/>
    <item>
-      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
-         <valueCoding>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="Cel"/>
-            <display value="grader Celsius"/>
-         </valueCoding>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="temperature"/>
       </extension>
-      <linkId value="temperature"/>
-      <code>
-         <system value="urn:oid:1.2.208.176.2.1"/>
-         <code value="NPU08676"/>
-         <display value="Legeme temp.;Pt"/>
-      </code>
+      <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
       <text value="Indtast din morgen temperatur?"/>
       <type value="quantity"/>
-      <item>
-         <linkId value="help"/>
-         <text value="For at få den korrekte værdi skal der være en rektal temperatur dvs. målt i endetarmen"/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
-         <valueCoding>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg/L"/>
-            <display value="milligram per liter"/>
-         </valueCoding>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="crp"/>
       </extension>
-      <linkId value="crp"/>
-      <code>
-         <system value="urn:oid:1.2.208.176.2.1"/>
-         <code value="NPU19748"/>
-         <display value="C-reaktivt protein [CRP];P"/>
-      </code>
+      <linkId value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
       <text value="Indtast den målte CRP værdi"/>
       <type value="quantity"/>
-      <item>
-         <linkId value="help"/>
-         <text value="CRP er et udtryk for infektion/betændelse."/>
-         <type value="display"/>
-      </item>
-      <item>
-         <linkId value="help"/>
-         <text value="CRP måles på det udleverede apparat. Se den vedlagte instruktion."/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="antibiotika"/>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="antibiotika"/>
+      </extension>
+      <linkId value="urn:uuid:dc22ed52-d1c1-4bc7-bc21-35022c51b0f9"/>
       <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
       <type value="boolean"/>
-      <item>
-         <linkId value="help"/>
-         <text value="Hvis du får antibiotika på pumpe skal du svare nej hvis der har været problemer med indløb."/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="helbredstilstand"/>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="helbredstilstand"/>
+      </extension>
+      <linkId value="urn:uuid:c551a88a-f73e-4cd8-976f-7b53f85526cd"/>
       <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
       <type value="boolean"/>
-      <item>
-         <linkId value="help"/>
-         <text value="Hvis den er uændret fra i går skal du svare nej."/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="nye_symptomer"/>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="nye_symptomer"/>
+      </extension>
+      <linkId value="urn:uuid:132792dc-5dc6-4e3a-8064-da324cd3526f"/>
       <text value="Er der kommet nye symptomer i det sidste døgn?"/>
       <type value="boolean"/>
-      <item>
-         <linkId value="help"/>
-         <text value="Nye symptomer kan være: smerter, hoste, diare, svie ved vandladning mv."/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="udslæt"/>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="udslæt"/>
+      </extension>
+      <linkId value="urn:uuid:0ffc36b3-a8b6-48ed-a483-0b9df7a64da2"/>
       <text value="Har du udslæt?"/>
       <type value="boolean"/>
-      <item>
-         <linkId value="help"/>
-         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="udslæt_2"/>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="udslæt_2"/>
+      </extension>
+      <linkId value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
       <text value="Er dit udslæt værre idag end i går?"/>
       <type value="boolean"/>
       <enableWhen>
@@ -108,17 +73,12 @@
          <operator value="="/>
          <answerBoolean value="true"/>
       </enableWhen>
-      <item>
-         <linkId value="help"/>
-         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
-         <type value="display"/>
-      </item>
+      <required value="false"/>
    </item>
    <item>
-      <linkId value="call_to_action"/>
       <type value="group"/>
       <item>
-         <linkId value="1"/>
+         <linkId value="urn:uuid:dc86b114-9286-44d0-9525-9c1ed85266a7"/>
          <text value="Det er ikke så godt. Det skal helst ikke blive værre. Ring til afdelingen."/>
          <type value="display"/>
          <enableWhen>
@@ -126,7 +86,7 @@
             <operator value="="/>
             <answerBoolean value="true"/>
          </enableWhen>
+         <required value="false"/>
       </item>
-
    </item>
 </Questionnaire>
