@@ -8,22 +8,56 @@
    <title value="Infektionsmedicinsk spørgeskema"/>
    <status value="active"/>
    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+         <valueCoding>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="Cel"/>
+            <display value="grader Celsius"/>
+         </valueCoding>
+      </extension>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
          <valueString value="temperature"/>
       </extension>
       <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
+      <code>
+         <system value="urn:oid:1.2.208.176.2.1"/>
+         <code value="NPU08676"/>
+         <display value="Legeme temp.;Pt"/>
+      </code>
       <text value="Indtast din morgen temperatur?"/>
       <type value="quantity"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:bf2f2218-9d70-47c9-92d5-e09c992d3f4b"/>
+         <text value="For at få den korrekte værdi skal der være en rektal temperatur dvs. målt i endetarmen"/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+         <valueCoding>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/L"/>
+            <display value="milligram per liter"/>
+         </valueCoding>
+      </extension>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
          <valueString value="crp"/>
       </extension>
       <linkId value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
+      <code>
+         <system value="urn:oid:1.2.208.176.2.1"/>
+         <code value="NPU19748"/>
+         <display value="C-reaktivt protein [CRP];P"/>
+      </code>
       <text value="Indtast den målte CRP værdi"/>
       <type value="quantity"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:371c0e4a-5809-49d4-87d9-d7ca81e53cd5"/>
+         <text value="CRP er et udtryk for infektion/betændelse. CRP måles på det udleverede apparat. Se den vedlagte instruktion."/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
@@ -33,6 +67,11 @@
       <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
       <type value="boolean"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:d88b9d71-74b0-465d-967f-8580ebb99a98"/>
+         <text value="Hvis du får antibiotika på pumpe skal du svare nej hvis der har været problemer med indløb."/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
@@ -42,6 +81,11 @@
       <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
       <type value="boolean"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:c5be75a8-f2e9-4048-8807-c30a485ae601"/>
+         <text value="Hvis den er uændret fra i går skal du svare nej."/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
@@ -51,6 +95,11 @@
       <text value="Er der kommet nye symptomer i det sidste døgn?"/>
       <type value="boolean"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:82d5311d-b932-4356-b1eb-26ef471ed263"/>
+         <text value="Nye symptomer kan være: smerter, hoste, diare, svie ved vandladning mv."/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
@@ -60,6 +109,11 @@
       <text value="Har du udslæt?"/>
       <type value="boolean"/>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:9b5738e1-ca2e-4ba8-b0ac-ae19e62b291c"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
@@ -74,6 +128,11 @@
          <answerBoolean value="true"/>
       </enableWhen>
       <required value="false"/>
+      <item>
+         <linkId value="urn:uuid:27ed8529-e602-4576-a438-087280fd8f61"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
+         <type value="display"/>
+      </item>
    </item>
    <item>
       <type value="group"/>
