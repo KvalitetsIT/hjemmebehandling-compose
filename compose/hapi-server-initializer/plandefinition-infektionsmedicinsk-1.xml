@@ -138,7 +138,7 @@
                         <value value="50.0"/>
                     </low>
                     <high>
-                        <value value="120.0"/>
+                        <value value="200.0"/>
                     </high>
                 </valueRange>
             </extension>
