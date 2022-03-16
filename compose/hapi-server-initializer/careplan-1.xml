@@ -23,21 +23,6 @@
             <extension url="http://hjemmebehandling.rm.dk/activity-satisfied-until">
                 <valueDateTime value="2021-11-27T10:11:12.123Z" />
             </extension>
-            <extension url="http://hjemmebehandling.rm.dk/threshold">
-                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
-                    <valueString value="2"/>
-                </extension>
-                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
-                    <valueString value="NORMAL"/>
-                </extension>
-                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
-                    <valueRange>
-                        <high>
-                            <value value="37.4"/>
-                        </high>
-                    </valueRange>
-                </extension>
-            </extension>
             <instantiatesCanonical value="Questionnaire/questionnaire-1"/>
             <status value="not-started"/>
             <scheduledTiming>
