@@ -16,7 +16,7 @@
          </valueCoding>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="morgen temperatur"/>
+         <valueString value="Morgen temperatur"/>
       </extension>
       <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
       <code>
@@ -42,7 +42,7 @@
          </valueCoding>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="crp"/>
+         <valueString value="CRP"/>
       </extension>
       <linkId value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
       <code>
@@ -61,7 +61,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="antibiotika"/>
+         <valueString value="Antibiotika"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -97,7 +97,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="helbredstilstand"/>
+         <valueString value="Helbredstilstand forværring"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -133,7 +133,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="nye symptomer"/>
+         <valueString value="Nye symptomer"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -169,7 +169,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="udslæt"/>
+         <valueString value="Udslæt"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -205,7 +205,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="udslæt forværring"/>
+         <valueString value="Udslæt forværring"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -246,7 +246,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="antibiotika problemer"/>
+         <valueString value="Antibiotika problemer"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -282,7 +282,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="kateter problemer"/>
+         <valueString value="Kateter problemer"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -318,7 +318,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="tryg ved behandling"/>
+         <valueString value="Tryg ved behandling"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
@@ -354,7 +354,7 @@
    </item>
    <item>
       <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="fortsæt behandling"/>
+         <valueString value="Fortsæt behandling"/>
       </extension>
       <extension url="http://hjemmebehandling.rm.dk/threshold">
          <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
