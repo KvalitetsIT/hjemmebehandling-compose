@@ -402,7 +402,7 @@
          <enableWhen>
             <question value="urn:uuid:8472c8ea-48f0-4d66-825c-21b120dae6f8"/>
             <operator value="="/>
-            <answerBoolean value="true"/>
+            <answerBoolean value="false"/>
          </enableWhen>
          <required value="false"/>
       </item>
