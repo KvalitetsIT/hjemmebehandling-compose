@@ -45,7 +45,7 @@
             <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
                 <valueRange>
                     <low>
-                        <value value="36.5"/>
+                        <value value="35.0"/>
                     </low>                     
                     <high>
                         <value value="38.0"/>
