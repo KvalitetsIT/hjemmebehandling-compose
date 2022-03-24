@@ -29,7 +29,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:bf2f2218-9d70-47c9-92d5-e09c992d3f4b"/>
-         <text value="For at få den korrekte værdi skal der være en rektal temperatur dvs. målt i endetarmen"/>
+         <text value="For at få den korrekte værdi, skal det være en rektal temperatur, dvs. målt i endetarmen"/>
          <type value="display"/>
       </item>
    </item>
@@ -91,7 +91,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:d88b9d71-74b0-465d-967f-8580ebb99a98"/>
-         <text value="Hvis du får antibiotika på pumpe skal du svare nej hvis der har været problemer med indløb."/>
+         <text value="Hvis du får antibiotika på pumpe, skal du svare nej, hvis der har været problemer med indløb."/>
          <type value="display"/>
       </item>
    </item>
@@ -122,7 +122,7 @@
          </extension>
       </extension>
       <linkId value="urn:uuid:c551a88a-f73e-4cd8-976f-7b53f85526cd"/>
-      <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
+      <text value="Er din helbredstilstand værre i dag sammenlignet med i går?	"/>
       <type value="boolean"/>
       <required value="false"/>
       <item>
@@ -163,7 +163,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:82d5311d-b932-4356-b1eb-26ef471ed263"/>
-         <text value="Nye symptomer kan være: smerter, hoste, diare, svie ved vandladning mv."/>
+         <text value="Nye symptomer kan være: smerter, hoste, diarré, svie ved vandladning mv."/>
          <type value="display"/>
       </item>
    </item>
@@ -199,7 +199,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:9b5738e1-ca2e-4ba8-b0ac-ae19e62b291c"/>
-         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej."/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn, skal du svare nej."/>
          <type value="display"/>
       </item>
    </item>
@@ -230,7 +230,7 @@
          </extension>
       </extension>
       <linkId value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
-      <text value="Er dit udslæt værre idag end i går?"/>
+      <text value="Er dit udslæt værre i dag end i går?"/>
       <type value="boolean"/>
       <enableWhen>
          <question value="urn:uuid:0ffc36b3-a8b6-48ed-a483-0b9df7a64da2"/>
@@ -240,7 +240,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:27ed8529-e602-4576-a438-087280fd8f61"/>
-         <text value="Hvis dit udslæt er kommet i løbet af dette døgn skal du svare nej"/>
+         <text value="Hvis dit udslæt er kommet i løbet af dette døgn, skal du svare nej"/>
          <type value="display"/>
       </item>
    </item>
@@ -271,7 +271,7 @@
          </extension>
       </extension>
       <linkId value="urn:uuid:68135704-3996-4b1d-85a7-93ab6bc64a9e"/>
-      <text value="Er der problemer i forbindelse med din antibiotika behandling?"/>
+      <text value="Er der problemer i forbindelse med din antibiotikabehandling?"/>
       <type value="boolean"/>
       <required value="false"/>
       <item>
@@ -379,7 +379,7 @@
          </extension>
       </extension>
       <linkId value="urn:uuid:6b1cabe3-9b68-4851-b6a3-34fdcb9d96bf"/>
-      <text value="Vil du fortsætte med intravenøs antibiotika i behandling i hjemmet?"/>
+      <text value="Vil du fortsætte med intravenøs antibiotika behandling i hjemmet?"/>
       <type value="boolean"/>
       <required value="false"/>
       <item>
