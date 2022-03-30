@@ -392,7 +392,7 @@
       <type value="group"/>
       <item>
          <linkId value="urn:uuid:dc86b114-9286-44d0-9525-9c1ed85266a7"/>
-         <text value="Kontakt afdelingen på 24777880."/>
+         <text value="Kontakt afdelingen på 2477 7880."/>
          <type value="display"/>
          <enableWhen>
             <question value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
