@@ -45,15 +45,17 @@ services:
       - hjemmebehandling
 
    medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:cd8644397e4dd6077e7f45e3cafcb35912580b15
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:28c62b0907aab50cfe27bb1720ee4b24313968fe
     environment:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
       - user.context.handler=DIAS
       - audit.url=http://audit-echo:8080
       - allowed_origins=*
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
     ports:
       - 8090:8080
+      - 5005:5005
     networks:
       - hjemmebehandling
 
@@ -63,7 +65,7 @@ services:
       - hjemmebehandling
        
    medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:4f5e24d51677e23acde5f9a05b602e6b564e32bc
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:9a899c61bcf70686553c54431105208287567f47
     ports:
       - 3000:3000
     environment:
@@ -90,7 +92,7 @@ services:
       - hjemmebehandling
      
    hapi-server:
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:eb9e7efbb53b285c7ae5b8a8b8f2535bbfe28770
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:b2ade7c4e2654c7936a9475ad9ca9fa8550268be
     environment:
       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
       - spring.datasource.username=hapi
