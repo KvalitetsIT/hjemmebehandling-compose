@@ -53,6 +53,8 @@ services:
       - audit.url=http://audit-echo:8080
       - allowed_origins=*
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator   
+
     ports:
       - 8090:8080
       - 5005:5005
