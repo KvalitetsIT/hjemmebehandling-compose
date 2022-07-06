@@ -24,12 +24,12 @@
          <code value="NPU08676"/>
          <display value="Legeme temp.;Pt"/>
       </code>
-      <text value="Indtast din morgen temperatur?"/>
+      <text value="Indtast din morgentemperatur"/>
       <type value="quantity"/>
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:bf2f2218-9d70-47c9-92d5-e09c992d3f4b"/>
-         <text value="For at få den korrekte værdi, skal det være en rektal temperatur, dvs. målt i endetarmen"/>
+         <text value="For at få den korrekte værdi, skal den være målt i endetarmen"/>
          <type value="display"/>
       </item>
    </item>
@@ -50,12 +50,12 @@
          <code value="NPU19748"/>
          <display value="C-reaktivt protein [CRP];P"/>
       </code>
-      <text value="Indtast den målte CRP værdi"/>
+      <text value="Indtast den målte CRP-værdi"/>
       <type value="quantity"/>
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:371c0e4a-5809-49d4-87d9-d7ca81e53cd5"/>
-         <text value="CRP er et udtryk for infektion/betændelse. CRP måles på det udleverede apparat. Se den vedlagte instruktion."/>
+         <text value="CRP er et udtryk for infektion/betændelse. CRP måles på det udleverede apparat. Se den udleverede instruktion."/>
          <type value="display"/>
       </item>
    </item>
