@@ -276,7 +276,7 @@
       <required value="false"/>
       <item>
          <linkId value="urn:uuid:9c7b476a-b044-49ca-a5c1-e92af8454492"/>
-         <text value="Det kan fx være: 'Rødme, hævelse eller smerter i huden omkring kateteret', 'Det er svært at få medicinen til at løbe ind', 'Smerter, når medicinen løber ind' eller 'Der løber væske ud ved siden af kateteret'."/>
+         <text value="Det kan fx være: Rødme, hævelse eller smerter i huden omkring kateteret, Det er svært at få medicinen til at løbe ind, Smerter, når medicinen løber ind eller Der løber væske ud ved siden af kateteret."/>
          <type value="display"/>
       </item>
    </item>
