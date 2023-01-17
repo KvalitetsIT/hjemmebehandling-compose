@@ -29,6 +29,24 @@
           </use>
           <value value="Legeme temp.;Pt"/>
         </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU08676"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="35"/>
+              </low>
+              <high>
+                <value value="43"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
       </concept>
       <concept>
         <code value="NPU19748"/>
@@ -42,6 +60,24 @@
           </use>
           <value value="CRP"/>
         </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU19748"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="0"/>
+              </low>
+              <high>
+                <value value="250"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
       </concept>
     </include>
   </compose>
