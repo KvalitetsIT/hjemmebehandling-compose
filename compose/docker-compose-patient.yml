@@ -1,0 +1,40 @@
+version: '3.9'
+
+networks:
+  hjemmebehandling:
+    driver: bridge
+
+services:
+   
+   patient-bff:
+    image: kvalitetsit/hjemmebehandling-patient-bff:fc959f81afd63caeb52f06ffaf8c036eb7239ebf
+    environment:
+      - user.context.handler=MOCK
+      - user.mock.context.cpr=2512489996
+
+      - usercontext_header_name=X-Test-Auth
+
+      - userattributes_role_key=UserRoles
+      - userattributes_org_key=453071000016001
+
+      - userrole_admin_values=adminrole
+      - userrole_user_values=userrole1,userrole2
+      - userrole_monitor_values=monitorrole
+      - userrole_provisioner_values=provisionerrole
+
+      - user.mock.context.organization.id=453071000016001
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - allowed_origins=*
+    ports:
+      - 18080:8080
+    networks:
+      - hjemmebehandling
+
+   patient-web:
+    image: kvalitetsit/hjemmebehandling-patient-web:b3202bdccb0f796d95252c08833642fa3cc4e82f
+    ports:
+      - 3001:3000
+    environment:
+      - BFF_BASE_URL=http://patient-bff:8080
+    networks:
+      - hjemmebehandling

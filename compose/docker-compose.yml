@@ -45,15 +45,16 @@ services:
       - hjemmebehandling
 
    medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:28c62b0907aab50cfe27bb1720ee4b24313968fe
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:2.0.0
     environment:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
-      - user.context.handler=DIAS
+      - user.context.handler=MOCK
       - audit.url=http://audit-echo:8080
       - allowed_origins=*
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator   
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator,DIAS_HJEMMEBEHANDLING_Sygeplejerske2   
+      - allowed.admin.roles=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
 
     ports:
       - 8090:8080
@@ -67,7 +68,7 @@ services:
       - hjemmebehandling
        
    medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:9a899c61bcf70686553c54431105208287567f47
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:2.0.0-2023-06-07
     ports:
       - 3000:3000
     environment:
