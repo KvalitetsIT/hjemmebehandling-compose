@@ -68,7 +68,7 @@ services:
       - hjemmebehandling
        
    medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:2.0.0-2023-06-07
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:47fa5c009642b9ad82d46380bc3b75acd41bb8ab
     ports:
       - 3000:3000
     environment:

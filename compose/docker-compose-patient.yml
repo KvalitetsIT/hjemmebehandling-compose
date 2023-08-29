@@ -7,7 +7,7 @@ networks:
 services:
    
    patient-bff:
-    image: kvalitetsit/hjemmebehandling-patient-bff:fc959f81afd63caeb52f06ffaf8c036eb7239ebf
+    image: kvalitetsit/hjemmebehandling-patient-bff:2.0.0
     environment:
       - user.context.handler=MOCK
       - user.mock.context.cpr=2512489996
@@ -31,7 +31,7 @@ services:
       - hjemmebehandling
 
    patient-web:
-    image: kvalitetsit/hjemmebehandling-patient-web:b3202bdccb0f796d95252c08833642fa3cc4e82f
+    image: kvalitetsit/hjemmebehandling-patient-web:4b63f0b3ae6308ce09f5edca674fb36b3ed6a0bd
     ports:
       - 3001:3000
     environment:
