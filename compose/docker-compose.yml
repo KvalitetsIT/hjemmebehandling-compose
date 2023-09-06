@@ -5,73 +5,104 @@ networks:
     driver: bridge
 
 services:
-
-   keycloak:
-     image: jboss/keycloak:15.0.2
-     environment:
-      - DB_VENDOR=h2
-      - KEYCLOAK_USER=keycloak 
-      - KEYCLOAK_PASSWORD=keycloak
-      - KEYCLOAK_IMPORT=/tmp/test-realm.json
-     volumes:
-       - ./dias-custom-login/test-realm.json:/tmp/test-realm.json
-     ports:
-      - "8091:8080"
-     networks:
-      - hjemmebehandling
-      
-   dias-custom-user:
-     image: kvalitetsit/dias-custom-user-service:0.0.1
-     environment:
-      - KEYCLOAK_URL=http://keycloak:8080/auth
-      - REALM_NAME=test
-      - CLIENT_ID=test
-      - CLIENT_SECRET=43fd3a1d-1012-4e6d-8f35-83ee061668d2
-     ports:
-      - "8092:8083"
-     networks:
-      - hjemmebehandling
-     
-      
-   # login med {testbruger1,testbruger2}/Test1234 
-   medarbejder-login-proxy:
-     image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
-     command: --config /oauth2-proxy.cfg
-     ports:
-      - 4180:4180
-     volumes:
-      - "./oauth2-proxy.cfg:/oauth2-proxy.cfg"
-     networks:
-      - hjemmebehandling
-
+    
    medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:28c62b0907aab50cfe27bb1720ee4b24313968fe
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
     environment:
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      # - userattributes_org_key=organization-infektionsmedicinsk
+      - user.context.handler=MOCK
+      - user.mock.context.organization.id=453071000016001
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
-      - user.context.handler=DIAS
-      - audit.url=http://audit-echo:8080
-      - allowed_origins=*
+      - allowed_origins=http://localhost:3000
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator   
-
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
     ports:
       - 8090:8080
       - 5005:5005
     networks:
       - hjemmebehandling
 
-   audit-echo:
-    image: mendhak/http-https-echo:21
+   patient-bff:
+    image: kvalitetsit/hjemmebehandling-patient-bff:dev
+    environment:
+      - user.mock.context.cpr=0104909995
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - user.context.handler=MOCK
+      - allowed_origins=*
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
+    ports:
+      - 8091:8080
+      - 5006:5005
     networks:
       - hjemmebehandling
-       
-   medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:9a899c61bcf70686553c54431105208287567f47
-    ports:
-      - 3000:3000
+
+   patient-web-init:
+    image: kvalitetsit/hjemmebehandling-patient-web:dev
+    restart: always
     environment:
-      - BFF_BASE_URL=http://medarbejder-bff:8080
+      - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
+      - REACT_APP_NODE_ENV=dev
+      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    networks:
+      - hjemmebehandling
+    volumes:
+      - ./patient-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
+      - ./patient-web/init/etc/nginx:/temp/etc/nginx
+      - ./patient-web/init/var/run:/temp/var/run
+      - ./patient-web/init/var/cache/nginx:/temp/var/cache/nginx
+
+   patient-web:
+    image: nginxinc/nginx-unprivileged:alpine3.17
+    restart: always
+    volumes:
+      - ./patient-web/init/docker-entrypoint.d:/docker-entrypoint.d
+      - ./patient-web/init/etc/nginx:/etc/nginx
+      - ./patient-web/init/var/run:/var/run
+      - ./patient-web/init/var/cache/nginx:/var/cache/nginx
+    ports:
+      - "3001:80"
+    depends_on:
+      - patient-web-init
+    networks:
+      - hjemmebehandling
+
+   medarbejder-web-init:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+    environment:
+      - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
+      - REACT_APP_NODE_ENV=dev
+      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+
+    volumes:
+      - ./medarbejder-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
+      - ./medarbejder-web/init/etc/nginx:/temp/etc/nginx
+      - ./medarbejder-web/init/var/run:/temp/var/run
+      - ./medarbejder-web/init/var/cache/nginx:/temp/var/cache/nginx
+    networks:
+      - hjemmebehandling
+
+   medarbejder-web:
+    image: nginxinc/nginx-unprivileged:alpine3.17
+    restart: always
+    volumes:
+      - ./medarbejder-web/init/docker-entrypoint.d:/docker-entrypoint.d
+      - ./medarbejder-web/init/etc/nginx:/etc/nginx
+      - ./medarbejder-web/init/var/run:/var/run
+      - ./medarbejder-web/init/var/cache/nginx:/var/cache/nginx
+    ports:
+      - "3000:80"
+    depends_on:
+      - medarbejder-web-init
     networks:
       - hjemmebehandling
 
@@ -94,7 +125,7 @@ services:
       - hjemmebehandling
      
    hapi-server:
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:b2ade7c4e2654c7936a9475ad9ca9fa8550268be
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:dev
     environment:
       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
       - spring.datasource.username=hapi
