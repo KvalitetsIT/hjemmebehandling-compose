@@ -42,25 +42,25 @@ services:
     networks:
       - hjemmebehandling
 
-   patient-web-init:
-    image: kvalitetsit/hjemmebehandling-patient-web:dev
-    restart: always
-    environment:
-      - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
-      - REACT_APP_NODE_ENV=dev
-      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    networks:
-      - hjemmebehandling
-    volumes:
-      - ./patient-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
-      - ./patient-web/init/etc/nginx:/temp/etc/nginx
-      - ./patient-web/init/var/run:/temp/var/run
-      - ./patient-web/init/var/cache/nginx:/temp/var/cache/nginx
+  #patient-web-init:
+  # image: kvalitetsit/hjemmebehandling-patient-web:dev
+  # restart: always
+  # environment:
+  #   - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
+  #   - REACT_APP_NODE_ENV=dev
+  #   - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+  #   - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+  #   - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+  # networks:
+  #   - hjemmebehandling
+  # volumes:
+  #   - ./patient-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
+  #   - ./patient-web/init/etc/nginx:/temp/etc/nginx
+  #   - ./patient-web/init/var/run:/temp/var/run
+  #   - ./patient-web/init/var/cache/nginx:/temp/var/cache/nginx
 
    patient-web:
-    image: nginxinc/nginx-unprivileged:alpine3.17
+    image: kvalitetsit/hjemmebehandling-patient-web:dev
     restart: always
     volumes:
       - ./patient-web/init/docker-entrypoint.d:/docker-entrypoint.d
@@ -69,30 +69,32 @@ services:
       - ./patient-web/init/var/cache/nginx:/var/cache/nginx
     ports:
       - "3001:80"
-    depends_on:
-      - patient-web-init
+   #depends_on:
+   #  - patient-web-init
     networks:
       - hjemmebehandling
+  
 
-   medarbejder-web-init:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
-    environment:
-      - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
-      - REACT_APP_NODE_ENV=dev
-      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+  # Init container no longer needed
+  #medarbejder-web-init:
+  # image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+  # environment:
+  #   - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
+  #   - REACT_APP_NODE_ENV=dev
+  #   - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+  #   - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+  #   - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
 
-    volumes:
-      - ./medarbejder-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
-      - ./medarbejder-web/init/etc/nginx:/temp/etc/nginx
-      - ./medarbejder-web/init/var/run:/temp/var/run
-      - ./medarbejder-web/init/var/cache/nginx:/temp/var/cache/nginx
-    networks:
-      - hjemmebehandling
+  # volumes:
+  #   - ./medarbejder-web/init/docker-entrypoint.d:/temp/docker-entrypoint.d
+  #   - ./medarbejder-web/init/etc/nginx:/temp/etc/nginx
+  #   - ./medarbejder-web/init/var/run:/temp/var/run
+  #   - ./medarbejder-web/init/var/cache/nginx:/temp/var/cache/nginx
+  # networks:
+  #   - hjemmebehandling
 
    medarbejder-web:
-    image: nginxinc/nginx-unprivileged:alpine3.17
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
     restart: always
     volumes:
       - ./medarbejder-web/init/docker-entrypoint.d:/docker-entrypoint.d
@@ -101,8 +103,8 @@ services:
       - ./medarbejder-web/init/var/cache/nginx:/var/cache/nginx
     ports:
       - "3000:80"
-    depends_on:
-      - medarbejder-web-init
+   #depends_on:
+   #  - medarbejder-web-init
     networks:
       - hjemmebehandling
 
