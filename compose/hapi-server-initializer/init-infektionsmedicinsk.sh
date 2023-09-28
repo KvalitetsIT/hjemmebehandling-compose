@@ -46,8 +46,37 @@ function create {
   fi
 }
 
+
+
+## infektionsmedicinsk
 delete 'ValueSet/valueset-npu-infektionsmedicinsk'
+delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+delete 'Organization/organization-infektionsmedicinsk'
+
+
+create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infektionsmedicinsk'
+create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+create 'valueset-npu-infektionsmedicinsk.xml' 'ValueSet/valueset-npu-infektionsmedicinsk'
+
+## Lungesygdomme
+delete 'ValueSet/valueset-npu-lungesygdomme'
+delete 'PlanDefinition/plandefinition-lungesygdomme-1'
+delete 'Questionnaire/questionnaire-lungesygdomme-1'
+delete 'Organization/organization-lungesygdomme'
+
+create 'organization-lungesygdomme.xml' 'Organization/organization-lungesygdomme'
+create 'questionnaire-lungesygdomme-1.xml' 'Questionnaire/questionnaire-lungesygdomme-1'
+create 'plandefinition-lungesygdomme-1.xml' 'PlanDefinition/plandefinition-lungesygdomme-1'
+create 'valueset-npu-lungesygdomme.xml' 'ValueSet/valueset-npu-lungesygdomme'
+
+
+## Genrelt
+
 delete 'CodeSystem/codesystem-npu-dk'
+create 'codesystem-npu-dk.xml' 'CodeSystem/codesystem-npu-dk'
+
 
 delete 'SearchParameter/searchparameter-organization-valueset'
 delete 'SearchParameter/searchparameter-organization-questionnaireresponse'
@@ -58,18 +87,6 @@ delete 'SearchParameter/searchparameter-examination-status'
 delete 'SearchParameter/searchparameter-careplan-satisfied-until'
 delete 'SearchParameter/searchparameter-cpr'
 
-delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
-
-delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
-
-delete 'Organization/organization-infektionsmedicinsk'
-
-create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infektionsmedicinsk'
-
-create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
-
-create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
-
 create 'searchparameter-careplan-satisfied-until.xml' 'SearchParameter/searchparameter-careplan-satisfied-until'
 create 'searchparameter-examination-status.xml' 'SearchParameter/searchparameter-examination-status'
 create 'searchparameter-organization-careplan.xml' 'SearchParameter/searchparameter-organization-careplan'
@@ -79,8 +96,6 @@ create 'searchparameter-organization-questionnaireresponse.xml' 'SearchParameter
 create 'searchparameter-organization-valueset.xml' 'SearchParameter/searchparameter-organization-valueset'
 create 'searchparameter-cpr.xml' 'SearchParameter/searchparameter-cpr'
 
-create 'codesystem-npu-dk.xml' 'CodeSystem/codesystem-npu-dk'
-create 'valueset-npu-infektionsmedicinsk.xml' 'ValueSet/valueset-npu-infektionsmedicinsk'
 
 if [ $init_test_data = 'true' ]
 then
@@ -147,6 +162,8 @@ then
   create 'questionnaireresponse-2.xml' 'QuestionnaireResponse/questionnaireresponse-2'
   create 'questionnaireresponse-3.xml' 'QuestionnaireResponse/questionnaireresponse-3'
   create 'questionnaireresponse-4.xml' 'QuestionnaireResponse/questionnaireresponse-4'
+
+
 fi
 
 echo 'Done initializing hapi-server!';

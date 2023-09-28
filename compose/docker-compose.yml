@@ -5,16 +5,43 @@ networks:
     driver: bridge
 
 services:
-   medarbejder-bff:
+   medarbejder-bff-lungesygdomme:
     image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
     environment:
       - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      # - userattributes_org_key=organization-infektionsmedicinsk
       - user.context.handler=MOCK
-      - user.mock.context.organization.id=453071000016001
+      
+      # infektionsmedicinskafdeling = 453071000016001
+      # lungesygdomme = 904931000016006
+      - user.mock.context.organization.id=904931000016006 
+        # - user.mock.context.organization.id=453071000016001 
+      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
-      - allowed_origins=http://localhost:3000
+      - allowed_origins=http://localhost:3005
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+    ports:
+      - 8092:8080
+    networks:
+      - hjemmebehandling
+
+  
+   medarbejder-bff-infektionsmedicinsk:
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
+    environment:
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - user.context.handler=MOCK
+      
+      # infektionsmedicinskafdeling = 453071000016001
+      # lungesygdomme = 904931000016006
+      #- user.mock.context.organization.id=904931000016006 
+      - user.mock.context.organization.id=453071000016001 
+      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - allowed_origins=http://localhost:3006
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
@@ -23,6 +50,36 @@ services:
       - 5005:5005
     networks:
       - hjemmebehandling
+
+   medarbejder-web-infektionsmedicinsk:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+    restart: always
+    environment:
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-infektionsmedicinsk:8080
+     - REACT_APP_NODE_ENV=dev
+     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    ports:
+     - "3006:80"
+    networks:
+      - hjemmebehandling
+
+
+   medarbejder-web-lungesygdomme:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
+    restart: always
+    environment:
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-lungesygdomme:8080
+     - REACT_APP_NODE_ENV=dev
+     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    ports:
+     - "3005:80"
+    networks:
+      - hjemmebehandling
+
 
    patient-bff:
     image: kvalitetsit/hjemmebehandling-patient-bff:dev
@@ -54,22 +111,7 @@ services:
       - hjemmebehandling
     ports:
       - "3001:80"
-    
-   medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
-    restart: always
-    environment:
-     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
-     - REACT_APP_NODE_ENV=dev
-     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    ports:
-     - "3000:80"
-    networks:
-      - hjemmebehandling
-
-  # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
+      # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
    rm-cpr-service:
     image: kvalitetsit/rm-cpr-service:0.2.0
     environment:
