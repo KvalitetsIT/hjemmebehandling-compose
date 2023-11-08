@@ -24,6 +24,7 @@ services:
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
     ports:
       - 8092:8080
+      - 5006:5005
     networks:
       - hjemmebehandling
 
@@ -88,13 +89,13 @@ services:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
       - user.context.handler=MOCK
-      - allowed_origins=*
+      - allowed_origins=http://localhost:3001
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
     ports:
       - 8091:8080
-      - 5006:5005
+      - 5007:5005
     networks:
       - hjemmebehandling
 
@@ -112,6 +113,7 @@ services:
     ports:
       - "3001:80"
       # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
+  
    rm-cpr-service:
     image: kvalitetsit/rm-cpr-service:0.2.0
     environment:

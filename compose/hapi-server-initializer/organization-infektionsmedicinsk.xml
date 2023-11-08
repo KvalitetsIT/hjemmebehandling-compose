@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="organization-infektionsmedicinsk"/>
+    <id value="organization-infektionsmedicinsk" />
     <identifier>
-        <system value="1.2.208.176.1.1"/>
-        <value value="453071000016001"/>
+        <system value="1.2.208.176.1.1" />
+        <value value="453071000016001" />
     </identifier>
-    <name value="Infektionssygdomme"/>
+    <name value="Infektionssygdomme" />
     <address>
         <line value="Fiskergade 66" />
         <postalCode value="8000" />
@@ -13,22 +13,25 @@
         <country value="Danmark" />
     </address>
     <telecom>
-        <system value="phone"/>
-        <value value="+4512345678"/>
-        <use value="mobile"/>
+        <system value="phone" />
+        <value value="+4512345678" />
+        <use value="mobile" />
         <extension url="http://hjemmebehandling.rm.dk/phone-hours">
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
-                <valueString value="MON"/>
+                <valueString value="MON" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
-                <valueString value="FRI"/>
+                <valueString value="FRI" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-from">
-                <valueTime value="08:00"/>
+                <valueTime value="08:00" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-to">
-                <valueTime value="12:00"/>
+                <valueTime value="12:00" />
             </extension>
         </extension>
     </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organisation-blob">
+        <valueString value="&lt;h1&gt;Infektionsmedicinsk&lt;/h1&gt;&lt;h3&gt;Åbningstider:&lt;h3&gt;&lt;p&gt;08:00 - 16:00&lt;/p&gt;"/>
+    </extension>
 </Organization>
