@@ -22,5 +22,9 @@ docker-compose down
 docker system prune --volumes
 docker-compose up
 ```
+When the setup has been initialized
+1. Go to: http://localhost:3005/newpatient
+2. Request the following CPR: 0104909995
+3. 'Save patient' and it will be available at http://localhost:3005/newpatient
 
 
