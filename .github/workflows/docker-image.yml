@@ -28,3 +28,13 @@ jobs:
 
     - name: Push the latest Docker image
       run: docker push kvalitetsit/hjemmebehandling-data-initializer:latest
+
+
+    - name: Build the migrations Docker image
+      run: docker build ./migrations --tag kvalitetsit/hjemmebehandling-data-migrations:$(git rev-parse --short "$GITHUB_SHA") --tag kvalitetsit/hjemmebehandling-data-migrations:latest  
+
+    - name: Push the tagged migrations Docker image
+      run: docker push kvalitetsit/hjemmebehandling-data-migrations:$(git rev-parse --short "$GITHUB_SHA")
+
+    - name: Push the latest migrations Docker image
+      run: docker push kvalitetsit/hjemmebehandling-data-migrations:latest
