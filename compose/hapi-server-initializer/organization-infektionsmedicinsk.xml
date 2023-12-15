@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="organization-infektionsmedicinsk"/>
+    <id value="organization-infektionsmedicinsk" />
     <identifier>
-        <system value="1.2.208.176.1.1"/>
-        <value value="453071000016001"/>
+        <system value="1.2.208.176.1.1" />
+        <value value="453071000016001" />
     </identifier>
-    <name value="Infektionssygdomme"/>
+    <name value="Infektionssygdomme" />
     <address>
         <line value="Fiskergade 66" />
         <postalCode value="8000" />
@@ -13,22 +13,50 @@
         <country value="Danmark" />
     </address>
     <telecom>
-        <system value="phone"/>
-        <value value="+4512345678"/>
-        <use value="mobile"/>
+        <system value="phone" />
+        <value value="+4512345678" />
+        <use value="mobile" />
         <extension url="http://hjemmebehandling.rm.dk/phone-hours">
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
-                <valueString value="MON"/>
+                <valueString value="MON" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
-                <valueString value="FRI"/>
+                <valueString value="FRI" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-from">
-                <valueTime value="08:00"/>
+                <valueTime value="08:00" />
             </extension>
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-to">
-                <valueTime value="12:00"/>
+                <valueTime value="12:00" />
             </extension>
         </extension>
     </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organisation-blob">
+        <!--Below
+        is the html blob which is injected into the contact card -->
+        <valueString
+            value="
+            &lt;h1&gt;Aarhus Universitetshospital&lt;/h1&gt;
+            &lt;p&gt;Palle Juul-Jensen Boulevard 99, Indgang E eller D3&lt;/p&gt;
+            &lt;p&gt;Krydspunkt: Infektionsklinikken E202 eller sengeafsnittet E201&lt;/p&gt;
+            &lt;p&gt;8200 Aarhus N&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: &quot;bold&quot; &gt;Infektionsklinikken&lt;/p&gt;
+            &lt;p&gt;Infektionsklinikken kan kontaktes telefonisk på 24 77 78 80 hverdage i nedenstående tidsrum&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sekretær&lt;/p&gt;
+            &lt;p&gt;Alle hverdage &lt;span&gt;kl. 9.00-12.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sygeplejerske&lt;/p&gt;
+            &lt;p&gt;Mandag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Tirsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Onsdag  &lt;span&gt;kl. 8.15-9.00&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Torsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Fredag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sengeafsnittet&lt;/p&gt;
+            &lt;p&gt;Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 24 77 78 80 (hele døgnet)&lt;/p&gt;
+            " />
+    </extension>
+
 </Organization>
