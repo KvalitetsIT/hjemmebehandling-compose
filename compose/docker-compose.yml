@@ -19,12 +19,12 @@ services:
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
       - allowed_origins=http://localhost:3005
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
     ports:
       - 8092:8080
-      - 5006:5005
+      - 5006:5006
     networks:
       - hjemmebehandling
 
@@ -90,12 +90,12 @@ services:
       - fhir.server.url=http://hapi-server:8080/fhir
       - user.context.handler=MOCK
       - allowed_origins=http://localhost:3001
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
     ports:
       - 8091:8080
-      - 5007:5005
+      - 5007:5007
     networks:
       - hjemmebehandling
 
@@ -147,6 +147,8 @@ services:
       start_period: 40s
     networks:
       - hjemmebehandling
+    ports:
+      - "9090:8080"
       
    hapi-server-initializer:
     image: alpine:3.11.5
