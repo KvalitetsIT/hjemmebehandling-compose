@@ -32,6 +32,30 @@
         </extension>
     </telecom>
     <extension url="http://hjemmebehandling.rm.dk/organisation-blob">
-        <valueString value="&lt;h1&gt;Infektionsmedicinsk&lt;/h1&gt;&lt;h3&gt;Åbningstider:&lt;h3&gt;&lt;p&gt;08:00 - 16:00&lt;/p&gt;"/>
+        <!--Below
+        is the html blob which is injected into the contact card -->
+        <valueString
+            value="
+            &lt;h1&gt;Aarhus Universitetshospital&lt;/h1&gt;
+            &lt;p&gt;Palle Juul-Jensen Boulevard 99, Indgang E eller D3&lt;/p&gt;
+            &lt;p&gt;Krydspunkt: Infektionsklinikken E202 eller sengeafsnittet E201&lt;/p&gt;
+            &lt;p&gt;8200 Aarhus N&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: &quot;bold&quot; &gt;Infektionsklinikken&lt;/p&gt;
+            &lt;p&gt;Infektionsklinikken kan kontaktes telefonisk på 24 77 78 80 hverdage i nedenstående tidsrum&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sekretær&lt;/p&gt;
+            &lt;p&gt;Alle hverdage &lt;span&gt;kl. 9.00-12.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sygeplejerske&lt;/p&gt;
+            &lt;p&gt;Mandag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Tirsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Onsdag  &lt;span&gt;kl. 8.15-9.00&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Torsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Fredag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;font-weight: bold&quot; &gt;Sengeafsnittet&lt;/p&gt;
+            &lt;p&gt;Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 24 77 78 80 (hele døgnet)&lt;/p&gt;
+            " />
     </extension>
 </Organization>
