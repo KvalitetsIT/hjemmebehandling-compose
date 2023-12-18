@@ -58,5 +58,10 @@
             &lt;p&gt;Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 24 77 78 80 (hele døgnet)&lt;/p&gt;
             " />
     </extension>
-
+    <extension url="http://hjemmebehandling.rm.dk/questionnaire-summary-blob">
+        <valueString value="&lt;Typography&gt;Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du &lt;b&gt;altid&lt;/b&gt; kontakte Infektionsklinikken p&aring; tlf. 78 45 28 64 p&aring; hverdage kl. 8.00 &ndash; 15.00. Uden for dette tidspunkt kan du kontakte Sengeafsnittet p&aring; tlf. 24 77 78 80.&lt;/Typography&gt;"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
+      <valueTime value="11:00"></valueTime>
+    </extension>
 </Organization>

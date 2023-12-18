@@ -31,4 +31,7 @@
             </extension>
         </extension>
     </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
+      <valueTime value="10:00"></valueTime>
+    </extension>
 </Organization>
