@@ -17,4 +17,7 @@
         <value value="gastro@acme.org"/>
         <use value="work"/>
     </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
+      <valueTime value="11:00"></valueTime>
+    </extension>
 </Organization>
