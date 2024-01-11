@@ -38,4 +38,8 @@
         <type value="integer"/>
         <required value="true"/>
     </item>
+    <item>
+      <linkId value="call-to-action" />
+      <type value="display" />
+   </item>
 </Questionnaire>

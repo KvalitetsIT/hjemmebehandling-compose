@@ -389,22 +389,19 @@
       </item>
    </item>
    <item>
-      <type value="group"/>
-      <item>
-         <linkId value="urn:uuid:dc86b114-9286-44d0-9525-9c1ed85266a7"/>
-         <text value="Kontakt Infektionsklinikken på tlf. 7845 2864 på hverdage kl. 8.00 – 15.00. Uden for dette tidspunkt kontakt Sengeafsnittet på tlf. 2477 7880"/>
-         <type value="display"/>
-         <enableWhen>
-            <question value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
-            <operator value="="/>
-            <answerBoolean value="true"/>
-         </enableWhen>
-         <enableWhen>
-            <question value="urn:uuid:8472c8ea-48f0-4d66-825c-21b120dae6f8"/>
-            <operator value="="/>
-            <answerBoolean value="false"/>
-         </enableWhen>
-         <required value="false"/>
-      </item>
+      <linkId value="call-to-action" />
+      <text value="Kontakt Infektionsklinikken på tlf. 7845 2864 på hverdage kl. 8.00 – 15.00. Uden for dette tidspunkt kontakt Sengeafsnittet på tlf. 2477 7880"/>
+      <type value="display"/>
+      <enableWhen>
+         <question value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
+         <operator value="="/>
+         <answerBoolean value="true"/>
+      </enableWhen>
+      <enableWhen>
+         <question value="urn:uuid:8472c8ea-48f0-4d66-825c-21b120dae6f8"/>
+         <operator value="="/>
+         <answerBoolean value="false"/>
+      </enableWhen>
+      <required value="false"/>
    </item>
 </Questionnaire>
