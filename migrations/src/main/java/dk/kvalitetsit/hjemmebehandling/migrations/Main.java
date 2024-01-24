@@ -4,6 +4,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Patient;
+import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,7 +56,7 @@ public class Main implements ApplicationRunner {
             Patient patient = (Patient) bundleEntryComponent.getResource();
 
             if (patient.getContact().size() == 1 ) {
-                LOG.info(String.format("Updating patient: %s", patient.getNameFirstRep().getNameAsSingleString()));
+                LOG.info(String.format("Updating contact for patient: %s", patient.getNameFirstRep().getNameAsSingleString()));
                 patient.getContactFirstRep().setOrganization(new Reference(patientContactOrganization));
                 client.update().resource(patient).execute();
             }
@@ -65,6 +66,37 @@ public class Main implements ApplicationRunner {
             // if no contact (size=0) nothing to update
         });
 
+        // get patients
+        Bundle questionnaireResult = client.search()
+                .forResource(Questionnaire.class)
+                .returnBundle(Bundle.class)
+                .execute();
+        
+        LOG.info(String.format("Found %s questionnaires", questionnaireResult.getEntry().size()));
+
+        questionnaireResult.getEntry().forEach(bundleEntryComponent -> {
+            Questionnaire questionnaire = (Questionnaire) bundleEntryComponent.getResource();
+
+            for (Questionnaire.QuestionnaireItemComponent item : questionnaire.getItem()) {
+                if (item.getType() == Questionnaire.QuestionnaireItemType.GROUP) {
+                    if (item.hasItem() && item.getItemFirstRep().getType() == Questionnaire.QuestionnaireItemType.DISPLAY && item.getItemFirstRep().getLinkId().startsWith("call-to-action")) {
+                        // this is the 'old-style' call-to-action question-item
+
+                        // change to 'new-style'
+                        LOG.info(String.format("Updating call-to-action for questionnaire: %s", questionnaire.getId()));
+                        item.setType(Questionnaire.QuestionnaireItemType.DISPLAY);
+                        item.setLinkId("call-to-action");
+                        item.setText(item.getItemFirstRep().getText());
+                        item.setEnableWhen(item.getItemFirstRep().getEnableWhen());
+                        item.getItem().clear();
+
+                        client.update().resource(questionnaire).execute();
+                    }
+                }
+            }
+        });
+
+;
         LOG.info("Done!");
         System.exit(0);
     }
