@@ -8,60 +8,6 @@
    <title value="Infektionsmedicinsk spørgeskema" />
    <status value="active" />
    <item>
-      <text value="Hvad mange måltider har du fået i dag?"></text>
-      <type value="choice" />
-      <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869r" />
-
-      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="køn" />
-      </extension>
-      <item>
-         <linkId value="urn:uuid:d88b9d71-74b0-465d-967f-8580ebb99a78" />
-         <text
-            value="Hvis du har fået flere end 3 måltider så vælg 3" />
-         <type value="display" />
-      </item>
-      <answerOption>
-         <valueInteger value="0"></valueInteger>
-      </answerOption>
-      <answerOption>
-         <valueInteger value="1"></valueInteger>
-      </answerOption>
-      <answerOption>
-         <valueInteger value="2"></valueInteger>
-      </answerOption>
-      <answerOption>
-         <valueInteger value="3"></valueInteger>
-      </answerOption>
-   </item>
-
- 
-   <item>
-      <text value="Hvad er dit køn?"></text>
-      <type value="choice" />
-      <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869r" />
-
-      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
-         <valueString value="køn" />
-      </extension>
-      <item>
-         <linkId value="urn:uuid:d88b9d71-74b0-465d-967f-8580ebb99a78" />
-         <text
-            value="Hvis du skulle ske at være i tvivl - vælg 'Andet'" />
-         <type value="display" />
-      </item>
-      <answerOption>
-         <valueString value="Mand"></valueString>
-      </answerOption>
-      <answerOption>
-         <valueString value="Kvinde"></valueString>
-      </answerOption>
-      <answerOption>
-         <valueString value="Andet"></valueString>
-      </answerOption>
-   </item>
-
-   <item>
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
          <valueCoding>
             <system value="http://unitsofmeasure.org" />
