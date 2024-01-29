@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-npu-mavetarmkirurgi"/>
+  <extension url="http://hjemmebehandling.rm.dk/organization">
+      <valueReference>
+         <reference value="Organization/organization-mavetarmkirurgi"/>
+      </valueReference>
+   </extension>
+  <url value="http://hjemmebehandling.rm.dk/terminologi/valueset-npu-mavetarmkirurgi"/>
+  <name value="NPU_mavetarmkirurgi_VS"/>
+  <title value="NPU_mavetarmkirurgi_VS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-02-02T00:00:00+00:00"/>  
+  <description value="Event codes used in Questionnaires on RM Mave- og Tarmkirurgi Overafdeling. The codes shall be NPU codes used in the Danish health care systems."/>
+  <compose>
+    <include>
+      <system value="urn:oid:1.2.208.176.2.1"/>
+      <concept>
+        <code value="NPU08677"/>
+        <display value="Legeme temp.;Pt"/>
+        <definition value="Pt—Legeme; temp. = ? °C"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="Legeme temp.;Pt"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU08677"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="36"/>
+              </low>
+              <high>
+                <value value="43"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU19749"/>
+        <display value="C-reaktivt protein [CRP];P"/>
+        <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="CRP"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU19749"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="0"/>
+              </low>
+              <high>
+                <value value="400"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

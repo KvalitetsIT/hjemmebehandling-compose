@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="organization-mavetarmkirurgi"/>
+    <identifier>
+        <system value="1.2.208.176.1.1"/>
+        <value value="622471000016003"/>
+    </identifier>
+    <name value="Mave- og Tarmkirurgi "/>
+    <address>
+        <line value="Palle Juul-Jensens Boulevard 99" />
+        <postalCode value="8200" />
+        <city value="Aarhus N" />
+        <country value="Danmark" />
+    </address>
+    <telecom>
+        <system value="phone"/>
+        <value value="+78450000"/>
+        <use value="mobile"/>
+        <extension url="http://hjemmebehandling.rm.dk/phone-hours">
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
+                <valueString value="MON"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
+                <valueString value="FRI"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-from">
+                <valueTime value="08:00"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-to">
+                <valueTime value="12:00"/>
+            </extension>
+        </extension>
+    </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
+      <valueTime value="10:00"></valueTime>
+    </extension>
+</Organization>

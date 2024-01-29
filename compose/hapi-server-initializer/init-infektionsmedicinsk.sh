@@ -71,6 +71,12 @@ create 'questionnaire-lungesygdomme-1.xml' 'Questionnaire/questionnaire-lungesyg
 create 'plandefinition-lungesygdomme-1.xml' 'PlanDefinition/plandefinition-lungesygdomme-1'
 create 'valueset-npu-lungesygdomme.xml' 'ValueSet/valueset-npu-lungesygdomme'
 
+## Mave- og Tarmkirurgi Overafdeling
+delete 'ValueSet/valueset-npu-mavetarmkirurgi'
+delete 'Organization/organization-mavetarmkirurgi'
+
+create 'organization-mavetarmkirurgi.xml' 'Organization/organization-mavetarmkirurgi'
+create 'valueset-npu-mavetarmkirurgi.xml' 'ValueSet/valueset-npu-mavetarmkirurgi'
 
 ## Genrelt
 
