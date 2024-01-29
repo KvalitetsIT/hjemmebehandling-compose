@@ -34,4 +34,7 @@
     <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
       <valueTime value="10:00"></valueTime>
     </extension>
+    <extension url="http://hjemmebehandling.rm.dk/questionnaire-summary-blob">
+        <valueString value="&lt;Typography&gt;Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.&lt;/Typography&gt;"/>
+    </extension>
 </Organization>
