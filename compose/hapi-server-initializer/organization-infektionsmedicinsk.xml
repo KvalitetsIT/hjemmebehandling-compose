@@ -14,7 +14,7 @@
     </address>
     <telecom>
         <system value="phone" />
-        <value value="+4512345678" />
+        <value value="+45 40 45 98 12" />
         <use value="mobile" />
         <extension url="http://hjemmebehandling.rm.dk/phone-hours">
             <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">

@@ -1,0 +1,174 @@
+version: '3.9'
+
+networks:
+  hjemmebehandling:
+    driver: bridge
+
+services:
+   medarbejder-bff-lungesygdomme:
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:2.0.0
+    environment:
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - user.context.handler=MOCK
+      
+      # infektionsmedicinskafdeling = 453071000016001
+      # lungesygdomme = 904931000016006
+      - user.mock.context.organization.id=904931000016006 
+        # - user.mock.context.organization.id=453071000016001 
+      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - allowed_origins=http://localhost:3005
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+    ports:
+      - 8092:8080
+      - 5006:5006
+    networks:
+      - hjemmebehandling
+
+  
+   medarbejder-bff-infektionsmedicinsk:
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:2.0.0
+    environment:
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - user.context.handler=MOCK
+      
+      # infektionsmedicinskafdeling = 453071000016001
+      # lungesygdomme = 904931000016006
+      #- user.mock.context.organization.id=904931000016006 
+      - user.mock.context.organization.id=453071000016001 
+      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - allowed_origins=http://localhost:3006
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+    ports:
+      - 8090:8080
+      - 5005:5005
+    networks:
+      - hjemmebehandling
+
+   medarbejder-web-infektionsmedicinsk:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:2.0.0
+    restart: always
+    environment:
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-infektionsmedicinsk:8080
+     - REACT_APP_NODE_ENV=dev
+     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    ports:
+     - "3006:80"
+    networks:
+      - hjemmebehandling
+
+
+   medarbejder-web-lungesygdomme:
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:2.0.0
+    restart: always
+    environment:
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-lungesygdomme:8080
+     - REACT_APP_NODE_ENV=dev
+     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    ports:
+     - "3005:80"
+    networks:
+      - hjemmebehandling
+
+
+   patient-bff:
+    image: kvalitetsit/hjemmebehandling-patient-bff:2.0.0
+    environment:
+      - user.mock.context.cpr=0104909995
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server:8080/fhir
+      - user.context.handler=MOCK
+      - allowed_origins=http://localhost:3001
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
+    ports:
+      - 8091:8080
+      - 5007:5007
+    networks:
+      - hjemmebehandling
+
+   patient-web: 
+    image: kvalitetsit/hjemmebehandling-patient-web:2.0.0
+    restart: always
+    environment:
+      - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
+      - REACT_APP_NODE_ENV=dev
+      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    networks:
+      - hjemmebehandling
+    ports:
+      - "3001:80"
+      # Mulige patienter kan ses i DIAS git. Patienter fremsøges via GET, f.eks. http://localhost:8081/Patient/2512489996
+  
+   rm-cpr-service:
+    image: kvalitetsit/rm-cpr-service:0.2.0
+    environment:
+      - CPR_ENDPOINT=http://rm-cpr-service-mock:8080
+      - DEBUG_LOGGING=true
+    networks:
+      - hjemmebehandling
+    ports:
+      - "8081:8080"
+
+   rm-cpr-service-mock:
+    image: kvalitetsit/rm-cpr-service-mock-backend:0.2.0
+    environment:
+      - DEBUG_LOGGING=true
+    networks:
+      - hjemmebehandling
+     
+   hapi-server:
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:dev
+    environment:
+      - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
+      - spring.datasource.username=hapi
+      - spring.datasource.password=hapi
+    depends_on:
+      - mariadb
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/fhir/metadata" ]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - hjemmebehandling
+    ports:
+      - "9090:8080"
+      
+   hapi-server-initializer:
+    image: alpine:3.11.5
+    depends_on:
+      hapi-server:
+        condition: service_healthy
+    working_dir: /hapi-server-initializer
+    volumes:
+      - ./hapi-server-initializer:/hapi-server-initializer
+    command: "./init-infektionsmedicinsk.sh"
+    networks:
+      - hjemmebehandling
+      
+   mariadb:
+    image: mariadb:10.7
+    environment:
+      - MARIADB_USER=hapi
+      - MARIADB_PASSWORD=hapi
+      - MARIADB_ROOT_PASSWORD=hapi
+      - MARIADB_DATABASE=hapi
+    networks:
+      - hjemmebehandling
+
