@@ -15,6 +15,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, ElasticsearchRestClientAutoConfiguration.class})
 public class Main implements ApplicationRunner {
@@ -22,8 +25,11 @@ public class Main implements ApplicationRunner {
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
     @Value("${serverBase:}")
     String serverBase;
-    @Value("${patientContactOrganization:}")
-    String patientContactOrganization;
+    @Value("${patientContactDefaultOrganization:}")
+    String patientContactDefaultOrganization;
+
+    @Value("${diasExitUrl:}")
+    String diasExitUrl;
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
@@ -33,46 +39,58 @@ public class Main implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         if (serverBase == null || "".equals(serverBase)) {
             LOG.error("'serverBase' must be specified!");
-            System.exit(0);
+            exit();
         }
 
-        LOG.info(String.format("Starting migrate for patient contact. Setting organization to: '%s'", patientContactOrganization));
-        if (patientContactOrganization == null || "".equals(patientContactOrganization)) {
+        if (patientContactDefaultOrganization == null || "".equals(patientContactDefaultOrganization)) {
             LOG.error("'patientContactOrganization' must be specified!");
-            System.exit(0);
+            exit();
         }
+
         FhirContext ctx = FhirContext.forR4();
         IGenericClient client = ctx.newRestfulGenericClient(serverBase);
 
+        // update patient contact(s)
+        setDefaultOrganizationForPatientContacts(client);
+
+        // update questionnaire(s)
+        updateCallToActionStructureForQuestionnaires(client);
+
+        LOG.info("All done!");
+        exit();
+    }
+
+    private void setDefaultOrganizationForPatientContacts(IGenericClient client) {
         // get patients
         Bundle results = client.search()
                 .forResource(Patient.class)
                 .returnBundle(Bundle.class)
                 .execute();
 
-        LOG.info(String.format("Found %s patients", results.getEntry().size()));
+        LOG.info(String.format("Starting migrate for patient contact. Setting default organization to: '%s'", patientContactDefaultOrganization));
 
         results.getEntry().forEach(bundleEntryComponent -> {
             Patient patient = (Patient) bundleEntryComponent.getResource();
 
-            if (patient.getContact().size() == 1 ) {
-                LOG.info(String.format("Updating contact for patient: %s", patient.getNameFirstRep().getNameAsSingleString()));
-                patient.getContactFirstRep().setOrganization(new Reference(patientContactOrganization));
-                client.update().resource(patient).execute();
+            for (Patient.ContactComponent contactComponent : patient.getContact()) {
+                if (!contactComponent.hasOrganization()) {
+                    LOG.info(String.format("Updating contact for patient: '%s'", patient.getNameFirstRep().getNameAsSingleString()));
+                    contactComponent.setOrganization(new Reference(patientContactDefaultOrganization));
+                    client.update().resource(patient).execute();
+                }
             }
-            else if (patient.getContact().size() > 1 ) {
-                LOG.warn(String.format("Patient har flere kontakter: %s", patient.getNameFirstRep().getNameAsSingleString()));
-            }
-            // if no contact (size=0) nothing to update
         });
+        LOG.info("Done");
+    }
 
-        // get patients
+    private void updateCallToActionStructureForQuestionnaires(IGenericClient client) {
+        // get questionnaires
         Bundle questionnaireResult = client.search()
                 .forResource(Questionnaire.class)
                 .returnBundle(Bundle.class)
                 .execute();
-        
-        LOG.info(String.format("Found %s questionnaires", questionnaireResult.getEntry().size()));
+
+        LOG.info("Starting migrate for Questionnaire.");
 
         questionnaireResult.getEntry().forEach(bundleEntryComponent -> {
             Questionnaire questionnaire = (Questionnaire) bundleEntryComponent.getResource();
@@ -83,7 +101,7 @@ public class Main implements ApplicationRunner {
                         // this is the 'old-style' call-to-action question-item
 
                         // change to 'new-style'
-                        LOG.info(String.format("Updating call-to-action for questionnaire: %s", questionnaire.getId()));
+                        LOG.info(String.format("Updating call-to-action structure for questionnaire: %s", questionnaire.getId()));
                         item.setType(Questionnaire.QuestionnaireItemType.DISPLAY);
                         item.setLinkId("call-to-action");
                         item.setText(item.getItemFirstRep().getText());
@@ -95,9 +113,19 @@ public class Main implements ApplicationRunner {
                 }
             }
         });
+        LOG.info("Done");
+    }
 
-;
-        LOG.info("Done!");
+    private void exit() {
+        if (diasExitUrl != null && !"".equals(diasExitUrl)) {
+            // Calling quit on istio sidecar proxy (DIAS)
+            HttpHeaders headers = new HttpHeaders();
+            HttpEntity<String> request = new HttpEntity<String>(headers);
+
+            RestTemplate template = new RestTemplate();
+            template.postForLocation(diasExitUrl, request);
+        }
+
         System.exit(0);
     }
 }
