@@ -101,10 +101,10 @@
           <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
             <valueRange>
               <low>
-                <value value="0"/>
+                <value value="40"/>
               </low>
               <high>
-                <value value="400"/>
+                <value value="240"/>
               </high>
             </valueRange>
           </extension>
@@ -132,10 +132,10 @@
           <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
             <valueRange>
               <low>
-                <value value="0"/>
+                <value value="40"/>
               </low>
               <high>
-                <value value="200"/>
+                <value value="240"/>
               </high>
             </valueRange>
           </extension>
@@ -163,10 +163,72 @@
           <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
             <valueRange>
               <low>
+                <value value="20"/>
+              </low>
+              <high>
+                <value value="220"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU03804"/>
+        <display value="Legeme vægt; Pt"/>
+        <definition value="Pt—Legeme; masse = ? kg"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="Legeme vægt; Pt"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU03804"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="0"/>
+              </low>
+              <high>
+                <value value="300"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU03011"/>
+        <display value="O2 sat.;Hb(aB)"/>
+        <definition value="Hb(Fe; O<sub>2</sub>-bind.;aB)—Oxygen(O<sub>2</sub>); sat. = ?"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="O2 sat.;Hb(aB)"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU03011"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
                 <value value="50"/>
               </low>
               <high>
-                <value value="250"/>
+                <value value="100"/>
               </high>
             </valueRange>
           </extension>
