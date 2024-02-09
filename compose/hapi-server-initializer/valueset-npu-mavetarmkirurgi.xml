@@ -18,7 +18,7 @@
     <include>
       <system value="urn:oid:1.2.208.176.2.1"/>
       <concept>
-        <code value="NPU08677"/>
+        <code value="NPU08676"/>
         <display value="Legeme temp.;Pt"/>
         <definition value="Pt—Legeme; temp. = ? °C"/>
         <designation>
@@ -31,7 +31,7 @@
         </designation>
         <extension url="http://hjemmebehandling.rm.dk/threshold">
           <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
-            <valueString value="NPU08677"/>
+            <valueString value="NPU08676"/>
           </extension>
           <extension url="http://hjemmebehandling.rm.dk/threshold-type">
             <valueString value="NORMAL"/>
@@ -49,7 +49,7 @@
         </extension>
       </concept>
       <concept>
-        <code value="NPU19749"/>
+        <code value="NPU19748"/>
         <display value="C-reaktivt protein [CRP];P"/>
         <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
         <designation>
@@ -62,7 +62,7 @@
         </designation>
         <extension url="http://hjemmebehandling.rm.dk/threshold">
           <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
-            <valueString value="NPU19749"/>
+            <valueString value="NPU19748"/>
           </extension>
           <extension url="http://hjemmebehandling.rm.dk/threshold-type">
             <valueString value="NORMAL"/>
@@ -74,6 +74,161 @@
               </low>
               <high>
                 <value value="400"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="DNK05472"/>
+        <display value="Blodtryk systolisk;Arm"/>
+        <definition value="Blodtryk systolisk;Arm"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="SYS"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="DNK05472"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="40"/>
+              </low>
+              <high>
+                <value value="240"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="DNK05473"/>
+        <display value="Blodtryk diastolisk;Arm"/>
+        <definition value="Blodtryk diastolisk;Arm"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="DIA"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="DNK05472"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="40"/>
+              </low>
+              <high>
+                <value value="240"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU21692"/>
+        <display value="Puls;Hjerte"/>
+        <definition value="Puls;Hjerte"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="PUL"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU21692"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="20"/>
+              </low>
+              <high>
+                <value value="220"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU03804"/>
+        <display value="Legeme vægt; Pt"/>
+        <definition value="Pt—Legeme; masse = ? kg"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="Legeme vægt; Pt"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU03804"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="0"/>
+              </low>
+              <high>
+                <value value="300"/>
+              </high>
+            </valueRange>
+          </extension>
+        </extension>
+      </concept>
+      <concept>
+        <code value="NPU03011"/>
+        <display value="O2 sat.;Hb(aB)"/>
+        <definition value="Hb(Fe; O<sub>2</sub>-bind.;aB)—Oxygen(O<sub>2</sub>); sat. = ?"/>
+        <designation>
+          <language value="da"/>
+          <use>
+            <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+            <code value="consumer"/>
+          </use>
+          <value value="O2 sat.;Hb(aB)"/>
+        </designation>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+          <extension url="http://hjemmebehandling.rm.dk/threshold-concept-code">
+            <valueString value="NPU03011"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+            <valueString value="NORMAL"/>
+          </extension>
+          <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+            <valueRange>
+              <low>
+                <value value="50"/>
+              </low>
+              <high>
+                <value value="100"/>
               </high>
             </valueRange>
           </extension>
