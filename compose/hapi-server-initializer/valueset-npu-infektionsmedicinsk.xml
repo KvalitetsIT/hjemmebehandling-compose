@@ -20,7 +20,6 @@
       <concept>
         <code value="NPU08676"/>
         <display value="Legeme temp.;Pt"/>
-        <definition value="Pt—Legeme; temp. = ? °C"/>
         <designation>
           <language value="da"/>
           <use>
@@ -51,7 +50,6 @@
       <concept>
         <code value="NPU19748"/>
         <display value="C-reaktivt protein [CRP];P"/>
-        <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
         <designation>
           <language value="da"/>
           <use>
@@ -82,7 +80,6 @@
       <concept>
         <code value="DNK05472"/>
         <display value="Blodtryk systolisk;Arm"/>
-        <definition value="Blodtryk systolisk;Arm"/>
         <designation>
           <language value="da"/>
           <use>
@@ -113,7 +110,6 @@
       <concept>
         <code value="DNK05473"/>
         <display value="Blodtryk diastolisk;Arm"/>
-        <definition value="Blodtryk diastolisk;Arm"/>
         <designation>
           <language value="da"/>
           <use>
@@ -144,7 +140,6 @@
       <concept>
         <code value="NPU21692"/>
         <display value="Puls;Hjerte"/>
-        <definition value="Puls;Hjerte"/>
         <designation>
           <language value="da"/>
           <use>
@@ -175,7 +170,6 @@
       <concept>
         <code value="NPU03804"/>
         <display value="Legeme vægt; Pt"/>
-        <definition value="Pt—Legeme; masse = ? kg"/>
         <designation>
           <language value="da"/>
           <use>
@@ -206,7 +200,6 @@
       <concept>
         <code value="NPU03011"/>
         <display value="O2 sat.;Hb(aB)"/>
-        <definition value="Hb(Fe; O<sub>2</sub>-bind.;aB)—Oxygen(O<sub>2</sub>); sat. = ?"/>
         <designation>
           <language value="da"/>
           <use>
