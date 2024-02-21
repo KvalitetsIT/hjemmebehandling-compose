@@ -12,7 +12,15 @@ fi
 if [ -z $hapi_server_base_url ]
 then
   echo 'hapi-server url not defined. Using default: http://hapi-server:8080'
+  echo ''
   hapi_server_base_url=http://hapi-server:8080
+fi
+if [ -z $init_questionnaire_and_plandefinition_infektionsmedicinsk ]
+then
+  echo 'ENV variable for initializing Questionnaire and PlanDefinition for 'Infektionsmedicinsk Afdeling - Skejby' not defined. Using default: '
+  echo '  init_questionnaire_and_plandefinition_infektionsmedicinsk=false'
+  echo ''
+  init_questionnaire_and_plandefinition_infektionsmedicinsk=false
 fi
 
 echo 'Waiting for hapi-server ('$hapi_server_base_url') to be ready ...';
@@ -50,14 +58,20 @@ function create {
 
 ## infektionsmedicinsk
 delete 'ValueSet/valueset-npu-infektionsmedicinsk'
-delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
-delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+if [ $init_questionnaire_and_plandefinition_infektionsmedicinsk = 'true' ]
+then 
+  delete 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+  delete 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+fi
 delete 'Organization/organization-infektionsmedicinsk'
 
 
 create 'organization-infektionsmedicinsk.xml' 'Organization/organization-infektionsmedicinsk'
-create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
-create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+if [ $init_questionnaire_and_plandefinition_infektionsmedicinsk = 'true' ]
+then
+  create 'questionnaire-infektionsmedicinsk-1.xml' 'Questionnaire/questionnaire-infektionsmedicinsk-1'
+  create 'plandefinition-infektionsmedicinsk-1.xml' 'PlanDefinition/plandefinition-infektionsmedicinsk-1'
+fi
 create 'valueset-npu-infektionsmedicinsk.xml' 'ValueSet/valueset-npu-infektionsmedicinsk'
 
 ## Lungesygdomme
