@@ -92,6 +92,16 @@ delete 'Organization/organization-mavetarmkirurgi'
 create 'organization-mavetarmkirurgi.xml' 'Organization/organization-mavetarmkirurgi'
 create 'valueset-npu-mavetarmkirurgi.xml' 'ValueSet/valueset-npu-mavetarmkirurgi'
 
+## Medicinsk afdeling
+delete 'ValueSet/valueset-npu-medicinsk-afdeling'
+delete 'Organization/organization-medicinsk-afdeling'
+
+create 'organization-medicinsk-afdeling.xml' 'Organization/organization-medicinsk-afdeling'
+create 'valueset-npu-medicinsk-afdeling.xml' 'ValueSet/valueset-npu-medicinsk-afdeling'
+
+
+
+
 ## Genrelt
 
 delete 'CodeSystem/codesystem-npu-dk'
