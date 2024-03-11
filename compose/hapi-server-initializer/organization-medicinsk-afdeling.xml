@@ -63,6 +63,6 @@
             value="&lt;Typography&gt;Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du &lt;b&gt;altid&lt;/b&gt; kontakte Sengeafsnittet for Mave-, Tarm-, Lever- og Infektionssygdomme eller Klinik for Infektionssygdomme. Hvis du i forbindelse med udskrivelse bliver tilknyttet Klinik for Infektionssygdomme mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 43 63 00 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Klinik for Infektionssygdomme, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). &lt;/Typography&gt;&lt;Typography&gt;Med venlig hilsen,&lt;/Typography&gt;&lt;Typography&gt;Personalet på Sengeafsnittet for Mave-, Tarm-, Lever- og Infektionssygdomme.&lt;/Typography&gt;"/>
     </extension>
     <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
-        <valueTime value="11:00"></valueTime>
+        <valueTime value="10:00"></valueTime>
     </extension>
 </Organization>
