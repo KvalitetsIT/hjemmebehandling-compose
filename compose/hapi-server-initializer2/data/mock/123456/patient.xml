@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="patient-1" />
+    <identifier>
+        <system value="1.2.208.176.1.2" />
+        <value value="1011121314" />
+    </identifier>
+    <name>
+        <family value="Jameson" />
+        <given value="J" />
+        <given value="Jonah" />
+    </name>
+
+    <contact>
+        <relationship>
+            <text value="tante" />
+        </relationship>
+        <name>
+            <text value="lone" />
+        </name>
+        <telecom>
+            <system value="phone" />
+            <value value="+4522222222" />
+            <rank value="1" />
+        </telecom>
+        <organization>
+            <reference value="Organization/organization-1" />
+        </organization>
+    </contact>
+
+    <telecom>
+        <system value="phone" />
+        <value value="22648052" />
+    </telecom>
+    <gender value="female" />
+</Patient>

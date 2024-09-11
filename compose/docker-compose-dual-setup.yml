@@ -5,16 +5,13 @@ networks:
     driver: bridge
 
 services:
-   medarbejder-bff-lungesygdomme:
+     
+   medarbejder-bff:
     image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
     environment:
-      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2,Administrator
       - user.context.handler=MOCK
-      
-      # infektionsmedicinskafdeling = 453071000016001
-      # lungesygdomme = 904931000016006
-      - user.mock.context.organization.id=904931000016006 
-        # - user.mock.context.organization.id=453071000016001 
+      - user.mock.context.organization.id=271231000016008
       - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
@@ -23,64 +20,24 @@ services:
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
     ports:
-      - 8092:8080
-      - 5006:5006
-    networks:
-      - hjemmebehandling
-
-  
-   medarbejder-bff-infektionsmedicinsk:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
-    environment:
-      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - user.context.handler=MOCK
-      
-      # infektionsmedicinskafdeling = 453071000016001
-      # lungesygdomme = 904931000016006
-      #- user.mock.context.organization.id=904931000016006 
-      - user.mock.context.organization.id= #453071000016001 
-      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
-      - cpr.url=http://rm-cpr-service:8080/Patient/
-      - fhir.server.url=http://hapi-server:8080/fhir
-      - allowed_origins=http://localhost:3006
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-    ports:
       - 8090:8080
-      - 5005:5005
+      - 5008:5006
     networks:
       - hjemmebehandling
-
-   medarbejder-web-infektionsmedicinsk:
+      
+   medarbejder-web:
     image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
     restart: always
     environment:
-     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-infektionsmedicinsk:8080
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
      - REACT_APP_NODE_ENV=dev
      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
     ports:
-     - "3006:80"
+     - "4003:80"
     networks:
       - hjemmebehandling
-
-
-   medarbejder-web-lungesygdomme:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
-    restart: always
-    environment:
-     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-lungesygdomme:8080
-     - REACT_APP_NODE_ENV=dev
-     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    ports:
-     - "3005:80"
-    networks:
-      - hjemmebehandling
-
 
    patient-bff:
     image: kvalitetsit/hjemmebehandling-patient-bff:dev
@@ -157,8 +114,8 @@ services:
         condition: service_healthy
     working_dir: /hapi-server-initializer
     volumes:
-      - ./hapi-server-initializer:/hapi-server-initializer
-    command: "./init-infektionsmedicinsk.sh"
+      - ./hapi-server-initializer2:/hapi-server-initializer
+    command: "./init.sh"
     networks:
       - hjemmebehandling
       

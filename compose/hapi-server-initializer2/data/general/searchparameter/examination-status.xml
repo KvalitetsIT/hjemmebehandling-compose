@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="searchparameter-examination-status"/>
+    <url value="http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status"/>
+    <name value="Search parameter for the Examination Status extension."/>
+    <status value="active"/>
+    <publisher value="KvalitetsIT"/>
+    <purpose value="Searching for QuestionnarieResponses by their examination status (implemented using an extension)."/>
+
+    <code value="examination_status"/>
+    <base value="QuestionnaireResponse"/>
+    <type value="token"/>
+    <title value="Examination Status"/>
+    <expression value="QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')"/>
+    <xpathUsage value="normal"/>
+</SearchParameter>

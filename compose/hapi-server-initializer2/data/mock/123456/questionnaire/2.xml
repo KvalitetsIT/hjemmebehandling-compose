@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Questionnaire xmlns="http://hl7.org/fhir">
+    <id value="questionnaire-2"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-1"/>
+        </valueReference>
+    </extension>
+    <title value="Customer Satisfaction Questionnaire 2012"/>
+    <status value="draft"/>
+    <subjectType value="Patient"/>
+    <date value="2013-01"/>
+    <item>
+        <linkId value="1"/>
+        <text value="Hvad er din temperatur?"/>
+        <type value="integer"/>
+        <required value="true"/>
+    </item>
+    <item>
+      <linkId value="call-to-action" />
+      <type value="display" />
+   </item>
+</Questionnaire>

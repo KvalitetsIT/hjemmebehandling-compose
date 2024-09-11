@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
+    <id value="careplan-infektionsmedicinsk-2"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-infektionsmedicinsk"/>
+        </valueReference>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/careplan-satisfied-until">
+        <valueDateTime value="2021-11-27T10:11:12.123Z" />
+    </extension>
+    <instantiatesCanonical value="PlanDefinition/plandefinition-infektionsmedicinsk-1"/>
+    <status value="active"/>
+    <subject>
+        <reference value="Patient/patient-2"/>
+    </subject>
+    <created value="2021-10-28"/>
+    <period>
+        <start value="2021-10-18"/>
+    </period>
+    <activity>
+        <detail>
+            <instantiatesCanonical value="Questionnaire/questionnaire-infektionsmedicinsk-1"/>
+            <status value="not-started"/>
+            <extension url="http://hjemmebehandling.rm.dk/activity-satisfied-until">
+                <valueDateTime value="2021-11-27T10:11:12.123Z" />
+            </extension>
+            <scheduledTiming>
+                <repeat>
+                    <dayOfWeek value="mon"/>
+                    <timeOfDay value="11:00"/>
+                </repeat>
+            </scheduledTiming>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="temperature"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="NORMAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <high>
+                            <value value="37.4"/>
+                        </high>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="temperature"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="ABNORMAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <low>
+                            <value value="37.5"/>
+                        </low>
+                        <high>
+                            <value value="37.9"/>
+                        </high>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="temperature"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="CRITICAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <low>
+                            <value value="38.0"/>
+                        </low>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="crp"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="NORMAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <high>
+                            <value value="24.9"/>
+                        </high>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="crp"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="ABNORMAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <low>
+                            <value value="25.0"/>
+                        </low>
+                        <high>
+                            <value value="49.9"/>
+                        </high>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="crp"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="CRITICAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                    <valueRange>
+                        <low>
+                            <value value="50.0"/>
+                        </low>
+                    </valueRange>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="helbredstilstand"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="NORMAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-boolean">
+                    <valueBoolean value="false"/>
+                </extension>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold">
+                <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                    <valueString value="helbredstilstand"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                    <valueString value="CRITICAL"/>
+                </extension>
+                <extension url="http://hjemmebehandling.rm.dk/threshold-value-boolean">
+                    <valueBoolean value="true"/>
+                </extension>
+            </extension>
+        </detail>
+    </activity>
+</CarePlan>

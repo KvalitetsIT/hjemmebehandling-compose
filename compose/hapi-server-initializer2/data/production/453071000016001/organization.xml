@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="organization-453071000016001" />
+    <identifier>
+        <system value="1.2.208.176.1.1" />
+        <value value="453071000016001" />
+    </identifier>
+    <name value="Infektionssygdomme" />
+    <address>
+        <line value="Fiskergade 66" />
+        <postalCode value="8000" />
+        <city value="Aarhus" />
+        <country value="Danmark" />
+    </address>
+    <telecom>
+        <system value="phone" />
+        <value value="+45 40 45 98 12" />
+        <use value="mobile" />
+        <extension url="http://hjemmebehandling.rm.dk/phone-hours">
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
+                <valueString value="MON" />
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-weekday">
+                <valueString value="FRI" />
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-from">
+                <valueTime value="08:00" />
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/phone-hours-to">
+                <valueTime value="12:00" />
+            </extension>
+        </extension>
+    </telecom>
+    <extension url="http://hjemmebehandling.rm.dk/organisation-blob">
+        <!--Below
+        is the html blob which is injected into the contact card -->
+        <valueString
+            value="
+            &lt;p style=&quot; margin: 0&quot; &gt;Aarhus Universitetshospital&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Palle Juul-Jensen Boulevard 99, Indgang E eller D3&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Krydspunkt: Infektionsklinikken E202 eller sengeafsnittet E201&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;8200 Aarhus N&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Infektionsklinikken&lt;/p&gt;
+            &lt;p style=&quot;margin: 0; &quot; &gt;Infektionsklinikken kan kontaktes telefonisk på 40 45 98 12 hverdage i nedenstående tidsrum&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Sekretær&lt;/p&gt;
+            &lt;p style=&quot;margin: 0&quot; &gt;Alle hverdage &lt;span&gt;kl. 9.00-12.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Sygeplejerske&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Mandag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Tirsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Onsdag  &lt;span&gt;kl. 8.15-9.00&lt;/span&gt;&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Torsdag &lt;span&gt;kl. 8.15-9.00 og 13.00-14.30&lt;/span&gt;&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Fredag  &lt;span&gt;kl. 8.15-9.00 og 13.00-14.00&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Sengeafsnittet&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 24 77 78 80 (hele døgnet)&lt;/p&gt;
+            " />
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/questionnaire-summary-blob">
+        <valueString value="&lt;Typography&gt;Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du &lt;b&gt;altid&lt;/b&gt; kontakte Infektionsklinikken p&aring; tlf. 78 45 28 64 p&aring; hverdage kl. 8.00 &ndash; 15.00. Uden for dette tidspunkt kan du kontakte Sengeafsnittet p&aring; tlf. 24 77 78 80.&lt;/Typography&gt;"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
+      <valueTime value="11:00"></valueTime>
+    </extension>
+</Organization>

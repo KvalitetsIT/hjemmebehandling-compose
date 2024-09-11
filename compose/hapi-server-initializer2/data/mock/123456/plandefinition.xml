@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanDefinition xmlns="http://hl7.org/fhir">
+    <id value="plandefinition-1"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-1"/>
+        </valueReference>
+    </extension>
+    <text>bla</text>
+    <identifier>
+        <use value="official"/>
+        <value value="ChlamydiaScreening_CDS_UsingCommon"/>
+    </identifier>
+    <version value="2.0.0"/>
+    <title value="Chalmydia Screening CDS Example Using Common"/>
+    <status value="draft"/>
+    <date value="2015-07-22"/>
+    <description value="Chlamydia Screening CDS Example Using Common"/>
+    <topic>
+        <text value="Chlamydia Screening Extended"/>
+    </topic>
+    <action>
+        <title value="Yet another action ..."/>
+        <condition>
+            <kind value="applicability"/>
+            <expression>
+                <language value="text/cql"/>
+                <expression value="NoScreening"/>
+            </expression>
+        </condition>
+        <timingTiming>
+            <repeat>
+                <dayOfWeek value="mon"/>
+                <dayOfWeek value="wed"/>
+                <timeOfDay value="14:33"/>
+            </repeat>
+        </timingTiming>
+        <definitionCanonical value="Questionnaire/questionnaire-1"/>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="2"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="NORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <high>
+                        <value value="37.4"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+    </action>
+    <action>
+        <title value="Fill out questionnaire #2"/>
+        <condition>
+            <kind value="applicability"/>
+            <expression>
+                <language value="text/cql"/>
+                <expression value="NoScreening"/>
+            </expression>
+        </condition>
+        <timingTiming>
+            <repeat>
+                <dayOfWeek value="tue"/>
+                <dayOfWeek value="thu"/>
+                <timeOfDay value="15:43"/>
+            </repeat>
+        </timingTiming>
+        <definitionCanonical value="Questionnaire/questionnaire-2"/>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="1"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="NORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <high>
+                        <value value="38.5"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+    </action>
+</PlanDefinition>

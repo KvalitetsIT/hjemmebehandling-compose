@@ -1,0 +1,42 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="codesystem-npu-dk"/>
+  <url value="urn:oid:1.2.208.176.2.1"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.2.208.176.2.1"/>
+  </identifier>
+  <name value="npu-dk"/>
+  <title value="NPU DK"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-02-02T12:00:00+00:00"/>
+  <description value="It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="NPU08676"/>
+    <display value="Legeme temp.;Pt"/>
+    <definition value="Pt—Legeme; temp. = ? °C"/>
+    <designation>
+      <language value="da"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="consumer"/>
+      </use>
+      <value value="Legeme temp.;Pt"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="NPU19748"/>
+    <display value="C-reaktivt protein [CRP];P"/>
+    <definition value="P—C-reaktivt protein; massek. = ? mg/L"/>
+    <designation>
+      <language value="da"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="consumer"/>
+      </use>
+      <value value="CRP"/>
+    </designation>
+  </concept>
+</CodeSystem>

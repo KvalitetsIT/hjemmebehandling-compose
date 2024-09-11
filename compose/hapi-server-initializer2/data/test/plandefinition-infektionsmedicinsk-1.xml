@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanDefinition xmlns="http://hl7.org/fhir">
+    <id value="plandefinition-infektionsmedicinsk-1"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-infektionsmedicinsk"/>
+        </valueReference>
+    </extension>
+    <text>bla</text>
+    <identifier>
+        <use value="official"/>
+        <value value="ChlamydiaScreening_CDS_UsingCommon"/>
+    </identifier>
+    <version value="2.0.0"/>
+    <title  value="Infektionsmedicinsk patientgruppe"/>
+    <status value="active"/>
+    <date value="2015-07-22"/>
+    <description value="Infektionsmedicinsk patientgruppe"/>
+    <topic>
+        <text value="Infektionsmedicinsk patientgruppe"/>
+    </topic>
+    <action>
+        <title value="Infektionsmedicinsk spørgeskema"/>
+        <condition>
+            <kind value="applicability"/>
+            <expression>
+                <language value="text/cql"/>
+                <expression value="NoScreening"/>
+            </expression>
+        </condition>
+        <timingTiming>
+            <repeat>
+                <dayOfWeek value="mon"/>
+                <timeOfDay value="11:00"/>
+            </repeat>
+        </timingTiming>
+        <definitionCanonical value="Questionnaire/questionnaire-infektionsmedicinsk-1"/>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="NORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="36.0"/>
+                    </low>                     
+                    <high>
+                        <value value="38.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="ABNORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="38.0"/>
+                    </low>
+                    <high>
+                        <value value="40.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="CRITICAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="40.0"/>
+                    </low>
+                    <high>
+                        <value value="43.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="NORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="0"/>
+                    </low>
+                    <high>
+                        <value value="25.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="ABNORMAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="25.0"/>
+                    </low>
+                    <high>
+                        <value value="50.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+        <extension url="http://hjemmebehandling.rm.dk/threshold">
+            <extension url="http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid">
+                <valueString value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-type">
+                <valueString value="CRITICAL"/>
+            </extension>
+            <extension url="http://hjemmebehandling.rm.dk/threshold-value-range">
+                <valueRange>
+                    <low>
+                        <value value="50.0"/>
+                    </low>
+                    <high>
+                        <value value="250.0"/>
+                    </high>
+                </valueRange>
+            </extension>
+        </extension>
+    </action>
+</PlanDefinition>

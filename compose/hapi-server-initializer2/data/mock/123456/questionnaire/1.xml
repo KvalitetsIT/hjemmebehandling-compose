@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Questionnaire xmlns="http://hl7.org/fhir">
+    <id value="questionnaire-1"/>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-1"/>
+        </valueReference>
+    </extension>
+    <title value="Demo spørgeskema"/>
+    <status value="active"/>
+    <subjectType value="Patient"/>
+    <date value="2021-10-26"/>
+    <item>
+        <linkId value="1"/>
+        <text value="Har du det bedre i dag?"/>
+        <type value="choice"/>
+        <required value="true"/>
+        <answerOption>
+            <valueString value="Ja"/>
+        </answerOption>
+        <answerOption>
+            <valueString value="Nej"/>
+        </answerOption>
+        <answerOption>
+            <valueString value="Måske"/>
+        </answerOption>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <text value="Hvad er din temperatur?"/>
+        <type value="integer"/>
+        <required value="true"/>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <text value="Hvad er din højde?"/>
+        <type value="integer"/>
+        <required value="true"/>
+    </item>
+    <item>
+      <linkId value="call-to-action" />
+      <type value="display" />
+   </item>
+</Questionnaire>

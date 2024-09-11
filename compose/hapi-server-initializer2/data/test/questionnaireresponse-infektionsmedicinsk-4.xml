@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="questionnaireresponse-infektionsmedicinsk-4"/>
+    <extension url="http://hjemmebehandling.rm.dk/examination-status">
+        <valueString value="NOT_EXAMINED"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/triaging-category">
+        <valueString value="RED"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-infektionsmedicinsk"/>
+        </valueReference>
+    </extension>
+    <basedOn>
+        <reference value="CarePlan/careplan-infektionsmedicinsk-2"/>
+    </basedOn>
+    <questionnaire value="Questionnaire/questionnaire-infektionsmedicinsk-1"/>
+    <subject>
+        <reference value="Patient/patient-2"/>
+        <display value="Ford"/>
+    </subject>
+    <authored value="2021-10-20T00:00:00+01:00"/>
+    <author>
+        <reference value="Patient/patient-2"/>
+    </author>
+    <source>
+        <reference value="Patient/patient-2"/>
+    </source>
+    <item>
+        <linkId value="urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"/>
+        <text value="Indtast din morgen temperatur?"/>
+        <answer>
+            <valueQuantity>
+                <value value="391"/>
+            </valueQuantity>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"/>
+        <text value="Indtast den målte CRP værdi"/>
+        <answer>
+            <valueQuantity>
+                <value value="62"/>
+            </valueQuantity>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:dc22ed52-d1c1-4bc7-bc21-35022c51b0f9"/>
+        <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:c551a88a-f73e-4cd8-976f-7b53f85526cd"/>
+        <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:132792dc-5dc6-4e3a-8064-da324cd3526f"/>
+        <text value="Er der kommet nye symptomer i det sidste døgn?"/>
+        <answer>
+            <valueBoolean value="false"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:0ffc36b3-a8b6-48ed-a483-0b9df7a64da2"/>
+        <text value="Har du udslæt?"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="urn:uuid:707d1946-51c0-4fd7-b579-3dd3ec432531"/>
+        <text value="Er dit udslæt værre idag end i går?"/>
+        <answer>
+            <valueBoolean value="false"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

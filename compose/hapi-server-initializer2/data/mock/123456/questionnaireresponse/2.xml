@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="questionnaireresponse-2"/>
+    <extension url="http://hjemmebehandling.rm.dk/examination-status">
+        <valueString value="NOT_EXAMINED"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/triaging-category">
+        <valueString value="GREEN"/>
+    </extension>
+    <extension url="http://hjemmebehandling.rm.dk/organization">
+        <valueReference>
+            <reference value="Organization/organization-123456"/>
+        </valueReference>
+    </extension>
+    <basedOn>
+        <reference value="CarePlan/careplan-1"/>
+    </basedOn>
+    <questionnaire value="Questionnaire/questionnaire-1"/>
+    <subject>
+        <reference value="Patient/patient-1"/>
+        <display value="Arthur"/>
+    </subject>
+    <authored value="2021-10-19T00:00:00+01:00"/>
+    <author>
+        <reference value="Patient/patient-1"/>
+    </author>
+    <source>
+        <reference value="Patient/patient-1"/>
+    </source>
+    <item>
+        <linkId value="1"/>
+        <text>Har du det bedre i dag?</text>
+        <answer>
+            <valueString value="Måske"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <text>Hvad er din temperatur?</text>
+        <answer>
+            <valueInteger value="11"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <text>Hvad er din højde?</text>
+        <answer>
+            <valueInteger value="182"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

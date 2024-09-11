@@ -1,0 +1,73 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+   <id value="questionnaire-molekylarmedicinsk-1"/>
+   <extension url="http://hjemmebehandling.rm.dk/organization">
+      <valueReference>
+         <reference value="Organization/organization-infektionsmedicinsk"/>
+      </valueReference>
+   </extension>
+   <title value="Molekylær medicinsk spørgeskema"/>
+   <status value="active"/>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="temperature"/>
+      </extension>
+      <linkId value="urn:uuid:3edfbee2-84fa-457c-812a-6180de3a2c39"/>
+      <text value="Indtast din morgen temperatur?"/>
+      <type value="quantity"/>
+      <required value="false"/>
+   </item>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="antibiotika"/>
+      </extension>
+      <linkId value="urn:uuid:a1062782-1f2c-4297-bec8-d72d4708199f"/>
+      <text value="Har du fået alt den ordinerede antibiotika det sidste døgn?"/>
+      <type value="boolean"/>
+      <required value="false"/>
+   </item>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="helbredstilstand"/>
+      </extension>
+      <linkId value="urn:uuid:e070caef-0ae7-4a5a-8c76-de84b331a1df"/>
+      <text value="Er din helbredstilstand værre idag sammenlignet med igår?"/>
+      <type value="boolean"/>
+      <required value="false"/>
+   </item>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="nye_symptomer"/>
+      </extension>
+      <linkId value="urn:uuid:52c269b1-ea7e-4762-ab01-dcdc895cefd9"/>
+      <text value="Er der kommet nye symptomer i det sidste døgn?"/>
+      <type value="boolean"/>
+      <required value="false"/>
+   </item>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="udslæt"/>
+      </extension>
+      <linkId value="urn:uuid:86377b1d-05a8-4fdb-9f02-04176d8208f7"/>
+      <text value="Har du udslæt?"/>
+      <type value="boolean"/>
+      <required value="false"/>
+   </item>
+   <item>
+      <extension url="http://hjemmebehandling.rm.dk/question-abbreviation">
+         <valueString value="udslæt_2"/>
+      </extension>
+      <linkId value="urn:uuid:6618565e-aea2-47ba-8828-60c324e75915"/>
+      <text value="Er dit udslæt værre idag end i går?"/>
+      <type value="boolean"/>
+      <enableWhen>
+         <question value="udslæt"/>
+         <operator value="="/>
+         <answerBoolean value="true"/>
+      </enableWhen>
+      <required value="false"/>
+   </item>
+   <item>
+      <linkId value="call-to-action" />
+      <type value="display" />
+   </item>
+</Questionnaire>
