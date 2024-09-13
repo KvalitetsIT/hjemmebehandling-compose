@@ -5,7 +5,7 @@
         <system value="1.2.208.176.1.1" />
         <value value="271231000016008" />
     </identifier>
-    <name value="" />
+    <name value="Medicinsk Afdeling" />
     <address>
         <line value="Skovlyvej 15" />
         <postalCode value="8930" />
@@ -36,16 +36,15 @@
         is the html blob which is injected into the contact card -->
         <valueString
             value="
-            &lt;p style=&quot; margin: 0&quot; &gt;Medicinsk Afdeling&lt;/p&gt;
             &lt;p style=&quot; margin: 0&quot; &gt;Regionshospitalet Randers&lt;/p&gt;
             &lt;p style=&quot; margin: 0&quot; &gt;Skovlyvej 15&lt;/p&gt;
             &lt;p style=&quot; margin: 0&quot; &gt;8930 Randers NØ&lt;/p&gt;
-            
+            &lt;br /p&gt;
             &lt;p style=&quot; margin: 0&quot; &gt;Hvis du har spørgsmål eller behov for hjælp kan du kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit hele døgnet.&lt;/p&gt;
             &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Medicinsk Korttidsafsnit, Fløj X, plan 9&lt;/p&gt;
-            &lt;p style=&quot; margin: 0&quot; &gt; Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk p 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenst&aring;ende tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet p&aring; 78 11 11 11 (hele døgnet).&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt; Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk p&aring; 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenst&aring;ende tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet p&aring; 78 11 11 11 (hele døgnet).&lt;/p&gt;
             &lt;p style=&quot;margin: 0; font-weight: bold&quot; &gt;Medicinsk Sengeafsnit A. Fløj B, plan 4.&lt;/p&gt;
-            &lt;p style=&quot; margin: 0&quot; &gt;Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet p&aring;78 11 11 11 (hele døgnet).&lt;/p&gt;
+            &lt;p style=&quot; margin: 0&quot; &gt;Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet p&aring; 78 11 11 11 (hele døgnet).&lt;/p&gt;
             " />
     </extension>
     <extension url="http://hjemmebehandling.rm.dk/questionnaire-summary-blob">
