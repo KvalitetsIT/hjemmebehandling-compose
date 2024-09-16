@@ -99,7 +99,23 @@ delete 'Organization/organization-medicinsk-afdeling'
 create 'organization-medicinsk-afdeling.xml' 'Organization/organization-medicinsk-afdeling'
 create 'valueset-npu-medicinsk-afdeling.xml' 'ValueSet/valueset-npu-medicinsk-afdeling'
 
+## Medicinsk afdeling - randers
+delete 'ValueSet/valueset-271231000016008'
+delete 'Organization/organization-271231000016008'
 
+create 'data/271231000016008/organization.xml' 'Organization/organization-271231000016008'
+create 'data/271231000016008/valueset.xml' 'ValueSet/valueset-271231000016008'
+
+## Ovenstående burde skrives om til noget det minder om dette
+## Så fremtidige organisationer oprettes ved tilføjelse af subfolder ./data/<SOR-kode>
+# for organisation in `cat filenames.txt`; do
+#   delete 'ValueSet/valueset-$organisation'
+#   delete 'Organization/organization-$organisation'
+
+#   create 'data/$organisation/organization.xml' 'Organization/organization-$organisation'
+#   create 'data/$organisation/valueset.xml' 'ValueSet/valueset-$organisation'
+# done
+##
 
 
 ## Genrelt
@@ -192,7 +208,6 @@ then
   create 'questionnaireresponse-2.xml' 'QuestionnaireResponse/questionnaireresponse-2'
   create 'questionnaireresponse-3.xml' 'QuestionnaireResponse/questionnaireresponse-3'
   create 'questionnaireresponse-4.xml' 'QuestionnaireResponse/questionnaireresponse-4'
-
 
 fi
 
