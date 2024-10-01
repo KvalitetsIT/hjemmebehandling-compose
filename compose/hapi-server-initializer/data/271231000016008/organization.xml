@@ -51,6 +51,6 @@
         <valueString value="&lt;Typography&gt; Hvis der er noget du er i tvivl om, eller du har praktiske problemer, kan du altid kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit. Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk p&aring; 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenst&aring;ende tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet p&aring; 78 11 11 11 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet p&aring; 78 11 11 11 (hele døgnet). &lt;/Typography&gt;"/>
     </extension>
     <extension url="http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default">
-      <valueTime value="11:00"></valueTime>
+      <valueTime value="10:00"></valueTime>
     </extension>
 </Organization>
