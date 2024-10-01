@@ -13,7 +13,7 @@ services:
       
       # infektionsmedicinskafdeling = 453071000016001
       # lungesygdomme = 904931000016006
-      - user.mock.context.organization.id=904931000016006 
+      - user.mock.context.organization.id=271231000016008 #271231000016008
         # - user.mock.context.organization.id=453071000016001 
       - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
       - cpr.url=http://rm-cpr-service:8080/Patient/

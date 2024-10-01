@@ -8,8 +8,8 @@
       </valueReference>
    </extension>
   <url value="http://hjemmebehandling.rm.dk/terminologi/valueset-271231000016008"/>
-  <name value="NPU_Infektionsmedicinsk_VS"/>
-  <title value="NPU_Infektionsmedicinsk_VS"/>
+  <name value="NPU_MedicinskRanders_VS"/>
+  <title value="NPU_MedicinskRanders_VS"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2022-02-02T00:00:00+00:00"/>  
