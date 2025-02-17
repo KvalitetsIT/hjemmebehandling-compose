@@ -214,4 +214,4 @@ fi
 echo 'Done initializing hapi-server!';
 
 echo 'Calling quit on istio sidecar proxy'
-curl -X POST http://localhost:15020/quitquitquit
+# curl -X POST http://localhost:15020/quitquitquit
