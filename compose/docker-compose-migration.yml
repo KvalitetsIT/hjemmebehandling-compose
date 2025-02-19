@@ -109,9 +109,7 @@ services:
 
 
   hapi-server-migrator:
-    build:
-      dockerfile: Dockerfile
-      context: ./migrator
+    image: kvalitetsit/hjemmebehandling-migrator:1.0.2
     container_name: migrator
     environment:
       # Note: The resources below has to be in a certain order
@@ -130,7 +128,7 @@ services:
 ################ MariaDB ################
       
   hapi-server-mariadb:
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:mariadb
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:b2ade7c4e2654c7936a9475ad9ca9fa8550268be
     container_name: hapi-server-mariadb
     environment:
       - spring.datasource.url=jdbc:mysql://mariadb:3306/hapi
@@ -167,7 +165,7 @@ services:
 
   hapi-server-postgres:
     container_name: hapi-server-postgres
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:postgres
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:postgres-1.0.0
     environment:
       - spring.datasource.url=jdbc:postgresql://postgres:5432/hapi
       - spring.datasource.driverClassName=org.postgresql.Driver
@@ -188,7 +186,7 @@ services:
 
   postgres:
     container_name: postgres
-    image: postgres:16-alpine
+    image: postgres:17-alpine
     environment:
       - POSTGRES_USER=hapi
       - POSTGRES_PASSWORD=hapi
