@@ -1,31 +1,30 @@
-# Build stage
-FROM rust:1.82 AS builder
+# Start with a rust alpine image
+FROM rust:1-alpine3.19
 
-# Set the working directory
+# This is important, see https://github.com/rust-lang/docker-rust/issues/85
+ENV RUSTFLAGS="-C target-feature=-crt-static"
+
+# if needed, add additional dependencies here
+RUN apk add --no-cache musl-dev
+RUN apk add openssl openssl-dev
+
+# set the workdir and copy the source into it
 WORKDIR /app
+COPY ./ /app
 
-# Copy Cargo files to leverage Docker cache
-COPY Cargo.toml Cargo.lock ./
-COPY src ./src
-
-# Build the application in release mode
+# do a release build
 RUN cargo build --release
+RUN strip target/release/migrator
 
-# Runtime stage (small final image)
-FROM debian:bullseye-slim
+# use a plain alpine image, the alpine version needs to match the builder
+FROM alpine:3.19
 
-# Set the working directory
-WORKDIR /app
+# if needed, install additional dependencies here
+RUN apk add --no-cache libgcc
+RUN apk add openssl openssl-dev
 
-# Copy the compiled binary from the builder stage
-COPY --from=builder /app/target/release/migrator .
+# copy the binary into the final image
+COPY --from=0 /app/target/release/migrator .
 
-# Set the binary as the entrypoint
-CMD ["./migrator"]
-
-
-# FROM rust:1.82
-
-# COPY . .
-# RUN cargo build
-# CMD ["cargo", "run"]
+# set the binary as entrypoint
+ENTRYPOINT ["/migrator"]
