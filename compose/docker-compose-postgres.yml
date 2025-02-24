@@ -4,46 +4,10 @@ networks:
 
 services:
 
-############################ infektionsmedicinsk ############################
+############################ Medarbejder ############################
 
-   medarbejder-bff-infektionsmedicinsk:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
-    environment:
-      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - user.context.handler=MOCK
-      - user.mock.context.organization.id=453071000016001 
-      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
-      - cpr.url=http://rm-cpr-service:8080/Patient/
-      - fhir.server.url=http://hapi-server:8080/fhir
-      - allowed_origins=http://localhost:3006
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-    ports:
-      - 8090:8080
-      - 5005:5005
-    networks:
-      - hjemmebehandling
-
-   medarbejder-web-infektionsmedicinsk:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
-    restart: always
-    environment:
-     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-infektionsmedicinsk:8080
-     - REACT_APP_NODE_ENV=dev
-     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    ports:
-     - "3006:80"
-    networks:
-      - hjemmebehandling
-
-
-############################ lungesygdomme ############################
-
-   medarbejder-bff-lungesygdomme:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
+   medarbejder-bff:
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:6c88457c05263eb03450e0cbc2b1592286f87d32
     environment:
       - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - user.context.handler=MOCK
@@ -61,7 +25,7 @@ services:
     networks:
       - hjemmebehandling
 
-   medarbejder-web-lungesygdomme:
+   medarbejder-web:
     image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
     restart: always
     environment:
@@ -80,7 +44,7 @@ services:
 ############################ Patient ############################
 
    patient-bff:
-    image: kvalitetsit/hjemmebehandling-patient-bff:dev
+    image: kvalitetsit/hjemmebehandling-patient-bff:6c88457c05263eb03450e0cbc2b1592286f87d32
     environment:
       - user.mock.context.cpr=0104909995
       - cpr.url=http://rm-cpr-service:8080/Patient/
@@ -130,7 +94,7 @@ services:
       - hjemmebehandling
      
    hapi-server:
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:dev
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:a321e0eb5f8b3249ff1c76cc98f94fabf7494b69
     environment:
       - spring.datasource.url=jdbc:postgresql://postgres:5432/hapi
       - spring.datasource.username=hapi
@@ -161,7 +125,7 @@ services:
       - hjemmebehandling
 
    postgres:
-    image: postgres:16-alpine
+    image: postgres:17-alpine
     environment:
       - POSTGRES_USER=hapi
       - POSTGRES_PASSWORD=hapi

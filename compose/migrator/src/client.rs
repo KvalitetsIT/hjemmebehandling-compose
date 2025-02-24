@@ -1,6 +1,6 @@
-use std::fmt::Display;
+use std::{error::Error, fmt::Display};
 
-use log::{debug, info};
+use log::info;
 use reqwest::{
     header::{HeaderMap, HeaderValue},
     IntoUrl, Method,
@@ -26,7 +26,7 @@ impl Client {
                 .unwrap(),
         }
     }
-    pub fn get<T>(&self, url: T) -> Result<reqwest::blocking::Response, String>
+    pub fn get<T>(&self, url: T) -> Result<reqwest::blocking::Response, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
@@ -36,7 +36,11 @@ impl Client {
     }
 
     #[allow(dead_code)]
-    pub fn post<T>(&self, url: T, data: Value) -> Result<reqwest::blocking::Response, String>
+    pub fn post<T>(
+        &self,
+        url: T,
+        data: &Value,
+    ) -> Result<reqwest::blocking::Response, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
@@ -52,11 +56,15 @@ impl Client {
         self.execute(request)
     }
 
-    pub fn put<T>(&self, url: T, value: &Value) -> Result<reqwest::blocking::Response, String>
+    pub fn put<T>(
+        &self,
+        url: T,
+        value: &Value,
+    ) -> Result<reqwest::blocking::Response, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
-        let json = serde_json::to_string_pretty(value).unwrap();
+        let json = serde_json::to_string(value).unwrap();
 
         let request = self
             .client
@@ -71,26 +79,29 @@ impl Client {
     fn execute(
         &self,
         request: reqwest::blocking::Request,
-    ) -> Result<reqwest::blocking::Response, String> {
+    ) -> Result<reqwest::blocking::Response, Box<dyn Error>> {
         info!(
-            "{}: {}",
+            "request:\nmethod: {}\nurl: {}\nbody: {}",
             request.method().to_string(),
             request.url().to_string(),
+            request
+                .body()
+                .and_then(|b| { b.as_bytes() })
+                .and_then(|b| { String::from_utf8(b.to_vec()).ok() })
+                .unwrap_or(String::from(""))
         );
 
         match self.client.execute(request) {
-            Ok(response) => match response.status().is_success() {
-                true => {
-                    debug!("{:?}", response);
-                    Ok(response)
-                }
-                false => {
-                    let status = response.status();
-                    debug!("{:?}", response.text());
-                    Err(format!("Unexpected status: {}", status))
-                }
-            },
-            Err(error) => Err(format!("Something went wrong during exectution: {}", error)),
+            Ok(response) => Ok(response),
+            Err(error) => Err(error.into()),
         }
+    }
+
+    pub(crate) fn delete<T>(&self, url: T) -> Result<reqwest::blocking::Response, Box<dyn Error>>
+    where
+        T: IntoUrl + Display,
+    {
+        let request = self.client.request(Method::DELETE, url).build().unwrap();
+        self.execute(request)
     }
 }

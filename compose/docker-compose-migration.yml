@@ -24,74 +24,7 @@ services:
     networks:
       - hjemmebehandling
 
-  medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
-    environment:
-      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - user.context.handler=MOCK
-      - user.mock.context.organization.id=271231000016008
-      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
-      - cpr.url=http://rm-cpr-service:8080/Patient/
-      - fhir.server.url=http://hapi-server-postgres:8080/fhir
-      - allowed_origins=http://localhost:3000
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-    ports:
-      - 8092:8080
-      - 5006:5006
-    networks:
-      - hjemmebehandling
-
-
-  medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:dev
-    restart: always
-    environment:
-     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
-     - REACT_APP_NODE_ENV=dev
-     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    ports:
-     - "3000:80"
-    networks:
-      - hjemmebehandling
-
-
-  patient-bff:
-    image: kvalitetsit/hjemmebehandling-patient-bff:dev
-    environment:
-      - user.mock.context.cpr=0104909995
-      - cpr.url=http://rm-cpr-service:8080/Patient/
-      - fhir.server.url=http://hapi-server-postgres:8080/fhir
-      - user.context.handler=MOCK
-      - allowed_origins=http://localhost:3001
-      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007
-      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
-      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
-    ports:
-      - 8091:8080
-      - 5007:5007
-    networks:
-      - hjemmebehandling
-
-
-  patient-web: 
-    image: kvalitetsit/hjemmebehandling-patient-web:dev
-    restart: always
-    environment:
-      - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
-      - REACT_APP_NODE_ENV=dev
-      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
-      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
-      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
-    networks:
-      - hjemmebehandling
-    ports:
-      - "3001:80"
-
-
+      
   hapi-server-initializer:
     image: alpine:3.11.5
     container_name: initializer
@@ -109,7 +42,7 @@ services:
 
 
   hapi-server-migrator:
-    image: kvalitetsit/hjemmebehandling-migrator:1.0.2
+    image: kvalitetsit/hjemmebehandling-migrator:1.0.11
     container_name: migrator
     environment:
       # Note: The resources below has to be in a certain order
@@ -117,6 +50,7 @@ services:
       - origin=http://hapi-server-mariadb:8080
       - successor=http://hapi-server-postgres:8080
       - RUST_LOG=Debug
+      - wait=20
     depends_on:
       hapi-server-initializer:
         condition: service_completed_successfully
@@ -139,10 +73,10 @@ services:
       - mariadb
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8080/fhir/metadata" ]
-      interval: 1m30s
+      interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
+      start_period: 10s
     networks:
       - hjemmebehandling
     ports:
@@ -162,10 +96,9 @@ services:
 
 ################ Postgres ################
 
-
   hapi-server-postgres:
     container_name: hapi-server-postgres
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:postgres-1.0.0
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:postgres-1.0.1
     environment:
       - spring.datasource.url=jdbc:postgresql://postgres:5432/hapi
       - spring.datasource.driverClassName=org.postgresql.Driver
@@ -175,10 +108,10 @@ services:
       - postgres
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8080/fhir/metadata" ]
-      interval: 1m30s
+      interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
+      start_period: 10s
     networks:
       - hjemmebehandling
     ports:

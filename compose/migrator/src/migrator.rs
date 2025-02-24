@@ -1,7 +1,9 @@
-use std::{fs::File, io::Write, thread::sleep, time::Duration};
+use std::{
+    collections::{HashMap, HashSet}, env, fs::File, io::Write, str::FromStr, thread::sleep, time::Duration
+};
 
 use log::{error, info, warn};
-use reqwest::Url;
+use reqwest::{Method, Url};
 use serde_json::Value;
 
 use crate::client::Client;
@@ -25,40 +27,85 @@ impl Migrator {
         info!("Migrating data from: {} to {}", self.origin, self.successor);
 
         resources.iter().for_each(|resource_type| {
-            match self.client.get(&Self::get_url(&self.origin, resource_type)) {
-                Ok(response) => {
-                    let value = Self::to_value(response);
+             match self.client.get(&Self::get_url(&self.origin, resource_type)) {
+                 Ok(response) => {
+                     let value = Self::to_value(response);
+                    let entry =  &value["entry"].as_array();
+                      match entry {
+                         Some(entries) => {
 
-                     match &value["entry"].as_array() {
-                        Some(entries) => {
-                            for entry in entries.iter() {
-                                let full_url = Url::parse(entry["fullUrl"].as_str().unwrap())
-                                    .expect("The expected field 'fullUrl' was not found");
-
-                                let resource = &entry["resource"];
-                                let destination = self.successor.join(full_url.path()).unwrap();
-
-                                if let Err(error) = self.client.put(destination, &resource){
-                                     error!("{}", error);
-                                 }                               
+                            let resource_ids = entries.iter().map(|entry| {
+                               entry.get("resource").and_then(|resource| resource.get("id")).and_then(|id| id.as_str())
+                           }).filter(|id| id.is_some()).map(|id|{ id.unwrap().to_string()}).collect::<HashSet<String>>();
 
 
-                            }
-                        }
-                        None => warn!(
-                            "The expected field 'entry' was not found for resource '{}': reasource may not have any entries yet",
-                            resource_type
-                        )
-                    }
-                }
-                Err(err) => {
-                    error!(
-                        "Could not fetch resource '{}' due to: {}",
-                        resource_type, err
-                    );
-                }
-            }
-        });
+                            resource_ids.iter().for_each(|resource_id|{
+                                let url =  Self::get_url(&self.origin, format!("{}/{}", resource_type, resource_id).as_str());
+                                let response = Self::to_value(self.client.get(url).unwrap());
+                                    let entries = response.get("entry").unwrap().as_array().unwrap();
+
+
+
+
+
+                             for entry in entries {
+
+                                let request = entry.get("request").expect("Could not extract request from entry");
+
+                                let method = request.get("method").expect("Could not extract method from request").as_str().and_then(|method| Method::from_str(method).ok()).unwrap();
+                                let full_url: Url = entry.get("fullUrl").and_then(|u| u.as_str()).and_then(|u| Url::parse(u).ok()).unwrap();
+                                
+                                 let destination = self.successor.join(full_url.path()).unwrap();
+
+                                let response = match method {
+                                    Method::PUT | Method::POST  => {
+                                        let resource = entry.get("resource").expect("Could not extract resource");
+
+                                        self.client.put(destination, resource)
+                                    }
+                                    Method::DELETE => {self.client.delete(self.successor.join(full_url.path()).unwrap())}
+                                    _ => Err(String::from("Expected method {}, method").into())
+                                };
+
+                                match response {
+                                    Ok(response) => {
+                                        if response.status().is_success(){
+                                            info!("{}: {}", response.status(), response.text().unwrap_or("".to_string()) )
+                                        }else {
+                                            error!("{}: {}", response.status(), response.text().unwrap_or("".to_string()))
+                                        }                                     },
+                                    Err(error) => error!("{:#?}", error),
+                                }
+                                
+
+                                
+                             }
+
+                                    
+                                
+
+
+
+                            })
+                                
+                            
+
+
+                         }
+                         None => warn!(
+                             "The expected field 'entry' was not found for resource '{}': reasource may not have any entries yet",
+                             resource_type
+                         )
+                     }
+                 }
+                 Err(err) => {
+                     error!(
+                         "Could not fetch resource '{}' due to: {:#?}",
+                         resource_type, err
+                     );
+                 }
+             }
+         });
 
         Self::wait();
 
@@ -71,6 +118,7 @@ impl Migrator {
         origin.to_string()
     }
 
+    #[allow(dead_code)]
     fn create_reponse_file(name: &str, value: &Value) {
         const ERROR_MESSAGE: &str = "Could not create file";
         let path = format!("./resources/{}.json", name);
@@ -85,7 +133,14 @@ impl Migrator {
     }
 
     fn wait() {
-        let duration = Duration::from_secs(20);
+        let secs: u64 = env::var("wait")
+            .map(|secs| {
+                secs.parse::<u64>()
+                    .expect("Could not parse 'wait' as a u64")
+            })
+            .unwrap_or(20);
+        let duration = Duration::from_secs(secs);
+
         info!(
             "Waiting {} seconds before verifying migration...",
             duration.as_secs()
@@ -107,10 +162,6 @@ impl Migrator {
 
             match (a, b) {
                 (Ok(a), Ok(b)) => {
-                    // Create files for manual comparison
-                    Self::create_reponse_file(format!("{}-origin", resource_type).as_str(), &a);
-                    Self::create_reponse_file(format!("{}-successor", resource_type).as_str(), &b);
-
                     self.validator.verify_resource(a, b, &resource_type);
                 }
                 _ => {
@@ -119,8 +170,8 @@ impl Migrator {
             }
         });
     }
-}
 
+    }
 struct Validator;
 
 impl Validator {
@@ -143,6 +194,8 @@ impl Validator {
 
         if !&a.eq(&b) {
             error!("Expected the same number ({b}/{a}) of entries for resource: {resource_type}");
+        }else {
+            info!("Successfully migrated resouce: {resource_type}")
         }
     }
 }

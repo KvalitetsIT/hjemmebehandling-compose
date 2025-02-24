@@ -22,9 +22,14 @@ FROM alpine:3.19
 # if needed, install additional dependencies here
 RUN apk add --no-cache libgcc
 RUN apk add openssl openssl-dev
+RUN apk add curl
 
 # copy the binary into the final image
 COPY --from=0 /app/target/release/migrator .
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+# 
+# 
 # set the binary as entrypoint
-ENTRYPOINT ["/migrator"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
