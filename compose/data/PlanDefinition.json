@@ -1,0 +1,3062 @@
+{
+  "resourceType": "Bundle",
+  "id": "c7876f62-40c2-4b55-9b08-a67d6577e6c9",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:34.084+00:00"
+  },
+  "type": "history",
+  "total": 32,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/PlanDefinition/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/453",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "453",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-01-28T14:31:41.000+00:00",
+        "source": "#e249ff6e-aea6-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ],
+      "title": "Test windows 11",
+      "status": "active",
+      "action": [ {
+        "definitionCanonical": "Questionnaire/452"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/453/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "28",
+        "lastUpdated": "2024-10-09T13:03:42.000+00:00",
+        "source": "#51368668-af97-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/28"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"28\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/26"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"26\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "25",
+        "lastUpdated": "2024-10-09T11:27:24.000+00:00",
+        "source": "#c26686bd-131e-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/25"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"25\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/23"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"23\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/307",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "307",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-10-02T09:56:34.000+00:00",
+        "source": "#ab69558a-5a5c-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "title": "Infektionsmedicinske patienter MKA Randers",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "a37a1027-2528-4b81-b7f6-f96bf1925a61"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 41.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "a37a1027-2528-4b81-b7f6-f96bf1925a61"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 41.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "a37a1027-2528-4b81-b7f6-f96bf1925a61"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/306"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/307/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "22",
+        "lastUpdated": "2024-10-01T10:02:33.000+00:00",
+        "source": "#8c10a2bf-7c9f-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/22"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"22\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/20"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"20\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-01T09:55:21.000+00:00",
+        "source": "#cc824a9a-b762-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/303",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "303",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-10-01T09:33:28.000+00:00",
+        "source": "#ca279f2c-2e20-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ],
+      "title": "bla",
+      "status": "active",
+      "action": [ {
+        "definitionCanonical": "Questionnaire/302"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/303/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/258",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "258",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:19:33.000+00:00",
+        "source": "#03a0ddee-a6ff-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "title": "Infektionsmedicinske patienter i MKA",
+      "status": "active",
+      "action": [ {
+        "definitionCanonical": "Questionnaire/256"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/258/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/253",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "253",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-09-18T12:11:08.000+00:00",
+        "source": "#085796e4-a597-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "title": "Hjemme behandling med IV AB",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "56695b66-0567-46e6-adca-8c1e77f41be1"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "56695b66-0567-46e6-adca-8c1e77f41be1"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "be03355d-26af-48a0-a4fa-baaef97f9ac9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-option",
+            "valueString": "1"
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "be03355d-26af-48a0-a4fa-baaef97f9ac9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-option",
+            "valueString": "2"
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "be03355d-26af-48a0-a4fa-baaef97f9ac9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-option",
+            "valueString": "meget godt"
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/252"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/253/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/253",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "253",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:10:49.000+00:00",
+        "source": "#549311d1-320c-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "title": "Hjemme behandling med IV AB",
+      "status": "draft",
+      "action": [ {
+        "definitionCanonical": "Questionnaire/252"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/253/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "16",
+        "lastUpdated": "2024-09-16T13:40:40.000+00:00",
+        "source": "#d37b4aee-86da-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-09-16T13:27:10.000+00:00",
+        "source": "#d2311eeb-2f72-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "10",
+        "lastUpdated": "2024-03-19T08:07:57.000+00:00",
+        "source": "#28d4a6d3-8a3c-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#e44bf055-ce9b-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/75",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "75",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-12T14:01:48.000+00:00",
+        "source": "#b1268b60-8fdd-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "title": "RHG - Infektionsmedicinsk patientgruppe",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "43e3662c-26a4-4496-bc2d-06e8b1a117c9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 41.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "43e3662c-26a4-4496-bc2d-06e8b1a117c9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 41.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "43e3662c-26a4-4496-bc2d-06e8b1a117c9"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/73"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/75/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/59",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "59",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-12T13:53:48.000+00:00",
+        "source": "#ac7a4555-0312-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "title": "RHG - patienter i hjemmebehandling",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "ce63fcdf-2605-4c9a-9f09-4aa289fc1424"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "ce63fcdf-2605-4c9a-9f09-4aa289fc1424"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "94ba87a1-5734-4702-9086-ad886a20cf7a"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "94ba87a1-5734-4702-9086-ad886a20cf7a"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "3e4852ff-13bd-4c44-87aa-34b0e6a56c8d"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "3e4852ff-13bd-4c44-87aa-34b0e6a56c8d"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "9b713c6f-ba82-4afa-bfec-67ddbf7255f8"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "9b713c6f-ba82-4afa-bfec-67ddbf7255f8"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "4693e3f9-78c5-4894-8a57-258f15c72d4b"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "4693e3f9-78c5-4894-8a57-258f15c72d4b"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "e8f2c3e4-aa0d-4942-b8ad-b89928c2d5cc"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "e8f2c3e4-aa0d-4942-b8ad-b89928c2d5cc"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "f3d77ccd-aa71-491d-b05a-eb2a04f7d35b"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "f3d77ccd-aa71-491d-b05a-eb2a04f7d35b"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "cb906bec-1831-46bf-b067-002e1324b150"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "cb906bec-1831-46bf-b067-002e1324b150"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "34b064ac-675c-4409-b337-757d60243b8a"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "34b064ac-675c-4409-b337-757d60243b8a"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-boolean",
+            "valueBoolean": false
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 41.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 41.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/58"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/59/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/70",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "70",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-12T10:08:55.000+00:00",
+        "source": "#e250e30a-2ce8-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "title": "TEST patienter",
+      "status": "active",
+      "action": [ {
+        "definitionCanonical": "Questionnaire/69"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/70/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-11T12:55:49.000+00:00",
+        "source": "#6dc77212-78bd-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/59",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "59",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-06T15:25:32.000+00:00",
+        "source": "#36abc8f8-7649-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "title": "RHG - patienter i hjemmebehandling",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 41.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 41.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "7feeb849-d53d-4839-8a32-a2d81771d1d0"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/58"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/59/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/37",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "37",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T12:08:34.000+00:00",
+        "source": "#52777758-6d3d-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "title": "ClausBlodtype",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "675797ea-4fae-483e-aea2-03e29d69e629"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 120.0
+              },
+              "high": {
+                "value": 300.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "675797ea-4fae-483e-aea2-03e29d69e629"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 90.0
+              },
+              "high": {
+                "value": 120.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "675797ea-4fae-483e-aea2-03e29d69e629"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0.0
+              },
+              "high": {
+                "value": 90.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "1b78eb4a-381e-41b6-8911-e1cd5464a87e"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 110.0
+              },
+              "high": {
+                "value": 200.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "1b78eb4a-381e-41b6-8911-e1cd5464a87e"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 80.0
+              },
+              "high": {
+                "value": 110.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "1b78eb4a-381e-41b6-8911-e1cd5464a87e"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0.0
+              },
+              "high": {
+                "value": 80.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/36"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/37/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-lungesygdomme-1",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#b157f245-e9c6-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-lungesygdomme"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Lungesygdomme patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Lungesygdomme patientgruppe",
+      "topic": [ {
+        "text": "Lungesygdomme patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Lungesygdomme spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-lungesygdomme-1"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-lungesygdomme-1/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/19",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "19",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:41:40.000+00:00",
+        "source": "#f6548fc9-25f2-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "title": "sune-gruppe",
+      "status": "active",
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "5a187174-34ad-41dc-b78a-6acc85a2c337"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 20.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "5a187174-34ad-41dc-b78a-6acc85a2c337"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 10.0
+              },
+              "high": {
+                "value": 20.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "5a187174-34ad-41dc-b78a-6acc85a2c337"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0.0
+              },
+              "high": {
+                "value": 10.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "2a1a5616-4293-49bb-adc3-fbc693808a00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 20.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "2a1a5616-4293-49bb-adc3-fbc693808a00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 10.0
+              },
+              "high": {
+                "value": 20.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "2a1a5616-4293-49bb-adc3-fbc693808a00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0.0
+              },
+              "high": {
+                "value": 10.0
+              }
+            }
+          } ]
+        } ],
+        "definitionCanonical": "Questionnaire/18"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/19/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/PlanDefinition/plandefinition-infektionsmedicinsk-1",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "plandefinition-infektionsmedicinsk-1",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:35.000+00:00",
+        "source": "#54b3e70a-44e7-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "ChlamydiaScreening_CDS_UsingCommon"
+      } ],
+      "version": "2.0.0",
+      "title": "Infektionsmedicinsk patientgruppe",
+      "status": "active",
+      "date": "2015-07-22",
+      "description": "Infektionsmedicinsk patientgruppe",
+      "topic": [ {
+        "text": "Infektionsmedicinsk patientgruppe"
+      } ],
+      "action": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 36.0
+              },
+              "high": {
+                "value": 38.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 38.0
+              },
+              "high": {
+                "value": 40.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:63dc8443-8012-4c1d-ac40-623c4921869c"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 40.0
+              },
+              "high": {
+                "value": 43.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "NORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 0
+              },
+              "high": {
+                "value": 25.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "ABNORMAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 25.0
+              },
+              "high": {
+                "value": 50.0
+              }
+            }
+          } ]
+        }, {
+          "url": "http://hjemmebehandling.rm.dk/threshold",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/threshold-questionnaire-item-linkid",
+            "valueString": "urn:uuid:fbfe8c5c-e441-47ec-a475-597ec55d9261"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-type",
+            "valueString": "CRITICAL"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/threshold-value-range",
+            "valueRange": {
+              "low": {
+                "value": 50.0
+              },
+              "high": {
+                "value": 250.0
+              }
+            }
+          } ]
+        } ],
+        "title": "Infektionsmedicinsk spørgeskema",
+        "condition": [ {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "NoScreening"
+          }
+        } ],
+        "timingTiming": {
+          "repeat": {
+            "dayOfWeek": [ "mon" ],
+            "timeOfDay": [ "11:00" ]
+          }
+        },
+        "definitionCanonical": "Questionnaire/questionnaire-infektionsmedicinsk-1"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/PlanDefinition/plandefinition-infektionsmedicinsk-1/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

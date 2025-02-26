@@ -1,0 +1,674 @@
+{
+  "resourceType": "Bundle",
+  "id": "be927513-1d8c-401a-9645-ab1d065e2c53",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:33.646+00:00"
+  },
+  "type": "history",
+  "total": 19,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/CodeSystem/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:43.000+00:00",
+        "source": "#b856d665-f2bd-4f"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:24.000+00:00",
+        "source": "#1fd299ca-a070-49"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:33.000+00:00",
+        "source": "#011b1cb9-b962-48"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:22.000+00:00",
+        "source": "#4776408c-4ba4-45"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:41.000+00:00",
+        "source": "#3a04e838-e7db-4c"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:57.000+00:00",
+        "source": "#1c25f0e6-8f61-41"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#a488cd6c-923f-40"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#677b05ee-d7ce-41"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#a1f3ec82-3247-4e"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk",
+    "resource": {
+      "resourceType": "CodeSystem",
+      "id": "codesystem-npu-dk",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:40.000+00:00",
+        "source": "#e5f54f90-59f1-49"
+      },
+      "url": "urn:oid:1.2.208.176.2.1",
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.208.176.2.1"
+      } ],
+      "name": "npu-dk",
+      "title": "NPU DK",
+      "status": "active",
+      "experimental": false,
+      "date": "2022-02-02T12:00:00+00:00",
+      "description": "It is the translation into Danish of the International NPU Terminology. The NPU terminology defines types of clinical laboratory results expressed as patient properties, with measurement units where relevant, and with individual identifiers. The NPU terminology is owned by: the International Union of Pure and Applied Chemistry (IUPAC) and the International Federation of Clinical Chemistry and laboratory medicine (IFCC). The Danish Health Data Authority (see OID {iso(1) member-body(2) dk(208) nsi(176)}) serves as the international repository for the international version. Child OIDs may be registered by the Danish Health Data Authority on decision by the NPU Terminology Steering Committee. OIDs for the national versions are registered by the National Release Centers.",
+      "caseSensitive": true,
+      "content": "complete",
+      "concept": [ {
+        "code": "NPU08676",
+        "display": "Legeme temp.;Pt",
+        "definition": "Pt—Legeme; temp. = ? °C",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "Legeme temp.;Pt"
+        } ]
+      }, {
+        "code": "NPU19748",
+        "display": "C-reaktivt protein [CRP];P",
+        "definition": "P—C-reaktivt protein; massek. = ? mg/L",
+        "designation": [ {
+          "language": "da",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "consumer"
+          },
+          "value": "CRP"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CodeSystem/codesystem-npu-dk/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

@@ -1,0 +1,1981 @@
+{
+  "resourceType": "Bundle",
+  "id": "fcc9af55-837c-4d28-99fd-50a6593620d5",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:33.884+00:00"
+  },
+  "type": "history",
+  "total": 35,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/Patient/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/Patient/24",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "24",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2025-01-28T14:32:38.000+00:00",
+        "source": "#a78b85f3-115e-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ff98c9da-c52d-4a7f-9382-b8ccb8cfd57d"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "svemos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0104909995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Sverre Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4533333333",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Søn"
+        } ],
+        "name": {
+          "text": "Mogens Mogensen"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4523232323",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      }, {
+        "name": {
+          "text": "hej"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4555555555",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/24/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-10-02T09:57:00.000+00:00",
+        "source": "#64a79c62-7d15-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "6",
+        "lastUpdated": "2024-10-02T09:36:44.000+00:00",
+        "source": "#d28b0947-e0a2-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "6",
+        "lastUpdated": "2024-10-01T09:33:49.000+00:00",
+        "source": "#ba7c9021-9ed6-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512121212",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "name": {
+          "text": "Knud"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4512345678",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/24",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "24",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-09-24T09:29:31.000+00:00",
+        "source": "#7cd1037d-548a-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ff98c9da-c52d-4a7f-9382-b8ccb8cfd57d"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "svemos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0104909995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Sverre Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4545678912",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Søn"
+        } ],
+        "name": {
+          "text": "Mogens Mogensen"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4523232323",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/24/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/255",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "255",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-09-18T12:28:52.000+00:00",
+        "source": "#e496676f-04de-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "69ced41e-425e-440b-b642-8ef430be33f5"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "tesage"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0211223989"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Åge Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "+4523456789",
+        "rank": 2
+      } ],
+      "address": [ {
+        "line": [ "Testvænget 1" ],
+        "city": "Aarhus C",
+        "postalCode": "8000"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "søn"
+        } ],
+        "name": {
+          "text": "Børge"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4523456789",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/255/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/261",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "261",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:24:49.000+00:00",
+        "source": "#7c3f464f-ac75-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "0ff3bc2b-7c75-4f9a-8903-570aec76f017"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "testes"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0212159995"
+      } ],
+      "name": [ {
+        "family": "Vestergaard",
+        "given": [ "Bo Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4586231589",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "rank": 2
+      } ],
+      "address": [ {
+        "line": [ "Testvejen 251" ],
+        "city": "Strandby",
+        "postalCode": "9970"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Hustru"
+        } ],
+        "name": {
+          "text": "Inge Test Vestergaard"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4578152789",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/261/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/255",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "255",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:15:50.000+00:00",
+        "source": "#f289f83b-a336-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "69ced41e-425e-440b-b642-8ef430be33f5"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "tesage"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0211223989"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Åge Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "+4523456789",
+        "rank": 2
+      } ],
+      "address": [ {
+        "line": [ "Testvænget 1" ],
+        "city": "Aarhus C",
+        "postalCode": "8000"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "søn"
+        } ],
+        "name": {
+          "text": "Børge"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4523456789",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/255/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-08-26T11:56:14.000+00:00",
+        "source": "#bf6c4233-d5bb-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "name": {
+          "text": "Knud"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4512345678",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/40",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "40",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-08-26T08:30:37.000+00:00",
+        "source": "#9f966c5a-3ac4-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "6a842078-1504-45ed-8da7-e7aa655c92c1"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "elslau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0201919990"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Else Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4521222324",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 1.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/40/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/52",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "52",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-08-22T13:40:08.000+00:00",
+        "source": "#b433dbc5-af64-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ec80e751-611d-45c8-ac84-c35674d357ba"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "briber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "1509819996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Brita Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Urmoderen"
+        } ],
+        "name": {
+          "text": "Nancy "
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4598989890",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/52/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/52",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "52",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-05-06T09:02:42.000+00:00",
+        "source": "#6e26f67f-aeb4-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ec80e751-611d-45c8-ac84-c35674d357ba"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "briber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "1509819996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Brita Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Urmoderen"
+        } ],
+        "name": {
+          "text": "Nancy "
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4598989890",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/52/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/52",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "52",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-04-09T08:16:46.000+00:00",
+        "source": "#d94caba8-c3c8-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ec80e751-611d-45c8-ac84-c35674d357ba"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "briber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "1509819996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Brita Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512121212",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Urmoderen"
+        } ],
+        "name": {
+          "text": "Nancy "
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4598989890",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/52/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/86",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "86",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-21T13:58:11.000+00:00",
+        "source": "#9dfefd65-64b7-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "2d8c14f3-2940-4b79-b6e9-f968d4cb1f81"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "andjen"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "3103979995"
+      } ],
+      "name": [ {
+        "family": "Jensen",
+        "given": [ "Anders Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4526542145",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testtorvet 7" ],
+        "city": "Hillerød",
+        "postalCode": "4700"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/86/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/52",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "52",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-15T10:18:57.000+00:00",
+        "source": "#4f3d7338-4425-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ec80e751-611d-45c8-ac84-c35674d357ba"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "briber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "1509819996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Brita Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Urmoderen"
+        } ],
+        "name": {
+          "text": "Nancy "
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4598989890",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/52/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/24",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "24",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-15T10:09:18.000+00:00",
+        "source": "#30f9626b-79d4-95"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ff98c9da-c52d-4a7f-9382-b8ccb8cfd57d"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "svemos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0104909995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Sverre Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Søn"
+        } ],
+        "name": {
+          "text": "Mogens Mogensen"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4523232323",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/24/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/24",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "24",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-15T10:08:04.000+00:00",
+        "source": "#f58b29e9-0abe-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ff98c9da-c52d-4a7f-9382-b8ccb8cfd57d"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "svemos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0104909995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Sverre Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512345678",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/24/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-13T13:57:24.000+00:00",
+        "source": "#13d6d337-c67b-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512121212",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://hjemmebehandling.rm.dk/contact-relationship"
+          } ]
+        } ],
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/56",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "56",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-12T14:02:12.000+00:00",
+        "source": "#16c1bde3-2276-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "69a6885a-98aa-4677-babe-0c95be322405"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "maglau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0504909995"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Magnus Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4586868686",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 10.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/56/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/56",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "56",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-12T10:09:58.000+00:00",
+        "source": "#69c05f32-40ef-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "69a6885a-98aa-4677-babe-0c95be322405"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "maglau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0504909995"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Magnus Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4586868686",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 10.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/56/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/46",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "46",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-08T12:55:47.000+00:00",
+        "source": "#409850e4-2b9b-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3506d071-0a6b-4812-9b10-5b3e4a025229"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "einlau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0201609995"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Einer Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "datter"
+        } ],
+        "name": {
+          "text": "Dorte"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4588888888",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/46/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-06T15:41:07.000+00:00",
+        "source": "#3ac07c25-f124-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4523232323",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-06T15:26:14.000+00:00",
+        "source": "#94831a8f-7a8d-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512121212",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/56",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "56",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T09:41:06.000+00:00",
+        "source": "#d5692a2f-3260-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "69a6885a-98aa-4677-babe-0c95be322405"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "maglau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0504909995"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Magnus Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4511111111",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 10.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/56/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/52",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "52",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T09:08:14.000+00:00",
+        "source": "#a4aa62ca-1146-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ec80e751-611d-45c8-ac84-c35674d357ba"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "briber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "1509819996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Brita Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4512121212",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/52/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/49",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "49",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T08:57:35.000+00:00",
+        "source": "#6ff9bbf8-5404-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "37461001-70c6-4ef8-af02-3defa513fe62"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "lonlau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0201609996"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Lonni Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Fader"
+        } ],
+        "name": {
+          "text": "Gert"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4538388383",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/49/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/46",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "46",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-04T14:57:25.000+00:00",
+        "source": "#ef89b92b-ea2a-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3506d071-0a6b-4812-9b10-5b3e4a025229"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "einlau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0201609995"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Einer Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Hustru"
+        } ],
+        "name": {
+          "text": "Lonni"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4525252525",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/46/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-04T14:27:03.000+00:00",
+        "source": "#97c8edd9-5db9-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4525252525",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/40",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "40",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-23T07:58:55.000+00:00",
+        "source": "#87ec833b-8042-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "6a842078-1504-45ed-8da7-e7aa655c92c1"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "elslau"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0201919990"
+      } ],
+      "name": [ {
+        "family": "Lauridsen",
+        "given": [ "Else Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4521222324",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 1.th" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/40/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T12:08:52.000+00:00",
+        "source": "#106787e1-6b3e-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Fætter"
+        } ],
+        "name": {
+          "text": "Jesus"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4577777777",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/35",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "35",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T12:06:10.000+00:00",
+        "source": "#5964b07f-96bb-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "94e4c960-5efb-4ddf-a1f8-3cc4fb389f9f"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "schmos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0108589995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Schwendlund Test" ]
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "text": "Fætter"
+        } ],
+        "name": {
+          "text": "Jesus"
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+4577777777",
+          "rank": 1
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/35/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:55:13.000+00:00",
+        "source": "#8d60dfab-00f7-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4588888888",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://hjemmebehandling.rm.dk/contact-relationship"
+          } ]
+        } ],
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ],
+        "organization": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/24",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "24",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:51:03.000+00:00",
+        "source": "#df1956dc-0872-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "ff98c9da-c52d-4a7f-9382-b8ccb8cfd57d"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "svemos"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "0104909995"
+      } ],
+      "name": [ {
+        "family": "Mosebryggersen",
+        "given": [ "Sverre Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4588888888",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testgrusgraven 3, 3.tv" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/24/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T10:42:02.000+00:00",
+        "source": "#a0dd83c2-b3e4-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4588888888",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://hjemmebehandling.rm.dk/contact-relationship"
+          } ]
+        } ],
+        "telecom": [ {
+          "system": "phone",
+          "rank": 1
+        }, {
+          "system": "phone",
+          "rank": 2
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Patient/15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "15",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:36:38.000+00:00",
+        "source": "#cfdf4dc9-cb86-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-id",
+        "valueString": "3d1828b3-6f2e-4113-9925-12cd90ea5c95"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/custom-user-name",
+        "valueString": "nanber"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.2",
+        "value": "2512489996"
+      } ],
+      "name": [ {
+        "family": "Berggren",
+        "given": [ "Nancy Ann Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "+4588888888",
+        "rank": 1
+      } ],
+      "address": [ {
+        "line": [ "Testpark Allé 48" ],
+        "city": "Hillerød",
+        "postalCode": "3400"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Patient/15/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

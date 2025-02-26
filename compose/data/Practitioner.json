@@ -1,0 +1,189 @@
+{
+  "resourceType": "Bundle",
+  "id": "3ca7e538-47e9-460c-985e-6121b37d68ea",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:33.665+00:00"
+  },
+  "type": "history",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/Practitioner/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/Practitioner/458",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "458",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-01-28T14:41:03.000+00:00",
+        "source": "#7f36263e-bdcb-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "453071000016001"
+      }, {
+        "system": "regions-id",
+        "value": "MERSTO"
+      } ],
+      "name": [ {
+        "given": [ "Merete" ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Practitioner/458/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Practitioner/457",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "457",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-01-28T14:36:40.000+00:00",
+        "source": "#87764a22-8d99-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      }, {
+        "system": "regions-id",
+        "value": "ANDAKI"
+      } ],
+      "name": [ {
+        "given": [ "Annelise Dalsgaard" ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Practitioner/457/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Practitioner/259",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "259",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:20:56.000+00:00",
+        "source": "#27f0d474-d577-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "271231000016008"
+      }, {
+        "system": "regions-id",
+        "value": "SOFBOS"
+      } ],
+      "name": [ {
+        "given": [ "Sofie Ran Lindhardt" ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Practitioner/259/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Practitioner/74",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "74",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-12T14:00:24.000+00:00",
+        "source": "#13478d69-7210-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "900231000016007"
+      }, {
+        "system": "regions-id",
+        "value": "KRIBRI"
+      } ],
+      "name": [ {
+        "given": [ "Kristina Margareta" ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Practitioner/74/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Practitioner/20",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "20",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:42:19.000+00:00",
+        "source": "#cd783eb2-1c81-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "453071000016001"
+      }, {
+        "system": "regions-id",
+        "value": "ANLOEN"
+      } ],
+      "name": [ {
+        "given": [ "Annette" ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Practitioner/20/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

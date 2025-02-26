@@ -1,0 +1,5222 @@
+{
+  "resourceType": "Bundle",
+  "id": "04d3cc11-f06e-4996-9cf6-f595ee81d4a7",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:34.165+00:00"
+  },
+  "type": "history",
+  "total": 92,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/CarePlan/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/454",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "454",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-01-28T14:42:28.000+00:00",
+        "source": "#f7c9c6e2-75d9-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/453" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2025-01-28T14:32:38+00:00"
+      },
+      "created": "2025-01-28T14:32:38+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/452" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/454/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/85",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "85",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-01-28T14:41:41.000+00:00",
+        "source": "#842f3035-be46-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2025-01-29T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/86"
+      },
+      "period": {
+        "start": "2024-03-21T13:58:11+00:00"
+      },
+      "created": "2024-03-21T13:58:11+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2025-01-29T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/85/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/454",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "454",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-01-28T14:35:05.000+00:00",
+        "source": "#44d1b29a-aaa7-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/453" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2025-01-28T14:32:38+00:00"
+      },
+      "created": "2025-01-28T14:32:38+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/452" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/454/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/454",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "454",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-01-28T14:32:38.000+00:00",
+        "source": "#762c1ec6-2ae3-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/453" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2025-01-28T14:32:38+00:00"
+      },
+      "created": "2025-01-28T14:32:38+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2025-01-29T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/452" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/454/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/80",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "80",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-11-07T08:40:00.000+00:00",
+        "source": "#fa9912db-621f-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-11-08T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-03-15T10:08:04+00:00"
+      },
+      "created": "2024-03-15T10:08:04+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-11-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/80/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/305",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "305",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-10-02T09:57:00.000+00:00",
+        "source": "#64a79c62-7d15-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-10-04T08:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/307" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-10-02T09:36:44+00:00"
+      },
+      "created": "2024-10-02T09:36:44+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-10-04T08:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/306" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/305/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/305",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "305",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-10-02T09:36:44.000+00:00",
+        "source": "#a49c0492-4694-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-10-04T08:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/258" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-10-02T09:36:44+00:00"
+      },
+      "created": "2024-10-02T09:36:44+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-10-04T08:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/256" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/305/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/304",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "304",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-10-01T09:33:49.000+00:00",
+        "source": "#69320e7f-2bb4-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-10-02T08:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-mavetarmkirurgi"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/303" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-10-01T09:33:49+00:00"
+      },
+      "created": "2024-10-01T09:33:49+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-10-02T08:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/302" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "wed" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/304/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/263",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "263",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-09-24T09:33:45.000+00:00",
+        "source": "#5ed1d927-0d12-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-25T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/258" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-09-24T09:29:31+00:00"
+      },
+      "created": "2024-09-24T09:29:31+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-25T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/256" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/263/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/263",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "263",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-24T09:29:32.000+00:00",
+        "source": "#74d52c75-ef31-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-25T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/258" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-09-24T09:29:31+00:00"
+      },
+      "created": "2024-09-24T09:29:31+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-25T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/256" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/263/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/254",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "254",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-09-18T12:28:52.000+00:00",
+        "source": "#e496676f-04de-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/253", "PlanDefinition/258" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/255"
+      },
+      "period": {
+        "start": "2024-09-18T12:15:49+00:00"
+      },
+      "created": "2024-09-18T12:15:49+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/252" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/256" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/254/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/260",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "260",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:24:49.000+00:00",
+        "source": "#7c3f464f-ac75-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/258" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/261"
+      },
+      "period": {
+        "start": "2024-09-18T12:24:49+00:00"
+      },
+      "created": "2024-09-18T12:24:49+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/256" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/260/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/254",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "254",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-09-18T12:19:05.000+00:00",
+        "source": "#78a8fab2-4db7-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/253" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/255"
+      },
+      "period": {
+        "start": "2024-09-18T12:15:49+00:00"
+      },
+      "created": "2024-09-18T12:15:49+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/252" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/254/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/254",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "254",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-18T12:15:50.000+00:00",
+        "source": "#f289f83b-a336-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-271231000016008"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/253" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/255"
+      },
+      "period": {
+        "start": "2024-09-18T12:15:49+00:00"
+      },
+      "created": "2024-09-18T12:15:49+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-09-20T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/252" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/254/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/205",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "205",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-08-26T12:13:27.000+00:00",
+        "source": "#4601bbd1-b542-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-28T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-08-26T11:56:14+00:00"
+      },
+      "created": "2024-08-26T11:56:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-28T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/205/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/205",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "205",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-08-26T11:56:14.000+00:00",
+        "source": "#cb7225df-d722-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-28T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-08-26T11:56:14+00:00"
+      },
+      "created": "2024-08-26T11:56:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-28T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/205/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "6",
+        "lastUpdated": "2024-08-26T08:30:37.000+00:00",
+        "source": "#9f966c5a-3ac4-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-27T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-27T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-27T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-08-26T08:00:14.000+00:00",
+        "source": "#705a0a53-37fb-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-27T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-27T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/202",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "202",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-08-22T13:40:09.000+00:00",
+        "source": "#f094de7a-812d-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-08-22T13:40:08+00:00"
+      },
+      "created": "2024-08-22T13:40:08+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/202/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/102",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "102",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-08-22T13:39:14.000+00:00",
+        "source": "#6ff4f317-78e5-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-05-06T09:02:42+00:00"
+      },
+      "created": "2024-05-06T09:02:42+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/102/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/102",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "102",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-08-22T13:38:44.000+00:00",
+        "source": "#3d698e96-1269-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-05-06T09:02:42+00:00"
+      },
+      "created": "2024-05-06T09:02:42+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-08-23T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/102/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/102",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "102",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-05-06T09:05:08.000+00:00",
+        "source": "#f7a33c38-11e3-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-05-06T09:02:42+00:00"
+      },
+      "created": "2024-05-06T09:02:42+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/102/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/102",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "102",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-05-06T09:02:42.000+00:00",
+        "source": "#308c6db8-cdde-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-05-06T09:02:42+00:00"
+      },
+      "created": "2024-05-06T09:02:42+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/102/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/91",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "91",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-05-06T07:43:11.000+00:00",
+        "source": "#37259cae-dbc5-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-04-09T08:16:46+00:00"
+      },
+      "created": "2024-04-09T08:16:46+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/91/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/91",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "91",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-05-06T07:42:46.000+00:00",
+        "source": "#d2b1941a-13d9-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-04-09T08:16:46+00:00"
+      },
+      "created": "2024-04-09T08:16:46+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-05-07T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/91/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/91",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "91",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-04-10T07:55:31.000+00:00",
+        "source": "#af242979-8868-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-11T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-04-09T08:16:46+00:00"
+      },
+      "created": "2024-04-09T08:16:46+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-11T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/91/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/82",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "82",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-04-10T06:46:14.000+00:00",
+        "source": "#d2832059-2c7e-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-11T08:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-15T10:18:57+00:00"
+      },
+      "created": "2024-03-15T10:18:57+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-11T08:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/82/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/82",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "82",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-04-10T06:46:00.000+00:00",
+        "source": "#420b4f0d-3a67-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-11T08:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-15T10:18:57+00:00"
+      },
+      "created": "2024-03-15T10:18:57+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-11T08:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/82/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/91",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "91",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-04-09T08:20:18.000+00:00",
+        "source": "#8782cf2e-d56c-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-04-09T08:16:46+00:00"
+      },
+      "created": "2024-04-09T08:16:46+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/91/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/91",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "91",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-04-09T08:16:46.000+00:00",
+        "source": "#061ad554-af15-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-04-09T08:16:46+00:00"
+      },
+      "created": "2024-04-09T08:16:46+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/91/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/48",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "48",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-04-09T08:14:00.000+00:00",
+        "source": "#b4953824-dd61-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/49"
+      },
+      "period": {
+        "start": "2024-03-05T08:57:35+00:00"
+      },
+      "created": "2024-03-05T08:57:35+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/48/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-04-09T08:11:19.000+00:00",
+        "source": "#f9bba698-b975-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-04-10T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/65",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "65",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-21T14:05:13.000+00:00",
+        "source": "#e156bdf0-a46a-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-08T12:55:47+00:00"
+      },
+      "created": "2024-03-08T12:55:47+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/65/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/85",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "85",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-21T14:02:38.000+00:00",
+        "source": "#367df3b9-b8c8-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/86"
+      },
+      "period": {
+        "start": "2024-03-21T13:58:11+00:00"
+      },
+      "created": "2024-03-21T13:58:11+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/85/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/85",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "85",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-21T13:58:11.000+00:00",
+        "source": "#9dfefd65-64b7-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/86"
+      },
+      "period": {
+        "start": "2024-03-21T13:58:11+00:00"
+      },
+      "created": "2024-03-21T13:58:11+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/85/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/77",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "77",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-20T11:59:24.000+00:00",
+        "source": "#d5ef832f-e4eb-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-03-13T13:57:24+00:00"
+      },
+      "created": "2024-03-13T13:57:24+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/77/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/71",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "71",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-20T11:59:22.000+00:00",
+        "source": "#98caa4ae-ce02-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-12T10:09:58+00:00"
+      },
+      "created": "2024-03-12T10:09:58+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/71/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/82",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "82",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-20T11:59:19.000+00:00",
+        "source": "#444428dd-2838-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-15T10:18:57+00:00"
+      },
+      "created": "2024-03-15T10:18:57+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-21T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/82/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/82",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "82",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-15T12:15:39.000+00:00",
+        "source": "#066dd825-6a45-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-16T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-15T10:18:57+00:00"
+      },
+      "created": "2024-03-15T10:18:57+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-16T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/82/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/82",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "82",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-15T10:18:57.000+00:00",
+        "source": "#54e23750-823e-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-16T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-15T10:18:57+00:00"
+      },
+      "created": "2024-03-15T10:18:57+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-16T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/82/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/80",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "80",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-15T10:09:18.000+00:00",
+        "source": "#30f9626b-79d4-95"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-16T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-03-15T10:08:04+00:00"
+      },
+      "created": "2024-03-15T10:08:04+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-16T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/80/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/80",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "80",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-15T10:08:04.000+00:00",
+        "source": "#e2043a38-0241-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-16T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-03-15T10:08:04+00:00"
+      },
+      "created": "2024-03-15T10:08:04+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-16T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/80/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/77",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "77",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-13T13:57:24.000+00:00",
+        "source": "#512c36cf-6df6-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-14T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-03-13T13:57:24+00:00"
+      },
+      "created": "2024-03-13T13:57:24+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-14T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/77/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/71",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "71",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-12T14:02:12.000+00:00",
+        "source": "#16c1bde3-2276-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/75" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-12T10:09:58+00:00"
+      },
+      "created": "2024-03-12T10:09:58+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/73" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/71/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/71",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "71",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-12T10:21:46.000+00:00",
+        "source": "#3dcc20e4-90c2-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/70" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-12T10:09:58+00:00"
+      },
+      "created": "2024-03-12T10:09:58+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/69" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/71/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/71",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "71",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-12T10:09:58.000+00:00",
+        "source": "#2c81c7e1-711c-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-medicinsk-afdeling"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/70" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-12T10:09:58+00:00"
+      },
+      "created": "2024-03-12T10:09:58+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-13T09:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/69" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "10:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/71/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/65",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "65",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-08T13:06:53.000+00:00",
+        "source": "#54a4b78e-14f0-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-08T12:55:47+00:00"
+      },
+      "created": "2024-03-08T12:55:47+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/65/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/65",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "65",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-08T12:55:47.000+00:00",
+        "source": "#25331931-8e4f-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-08T12:55:47+00:00"
+      },
+      "created": "2024-03-08T12:55:47+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "wed", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/65/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/45",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "45",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-08T09:43:16.000+00:00",
+        "source": "#adf6fd18-7afa-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/37" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-04T14:57:25+00:00"
+      },
+      "created": "2024-03-04T14:57:25+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/45/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/45",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "45",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-08T09:43:08.000+00:00",
+        "source": "#1ab5f33e-2614-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-04T14:57:25+00:00"
+      },
+      "created": "2024-03-04T14:57:25+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/45/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/48",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "48",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-08T09:42:20.000+00:00",
+        "source": "#288be43b-4732-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/49"
+      },
+      "period": {
+        "start": "2024-03-05T08:57:35+00:00"
+      },
+      "created": "2024-03-05T08:57:35+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/48/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/51",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "51",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-08T09:41:44.000+00:00",
+        "source": "#2ede42e0-de77-4c"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-05T09:08:14+00:00"
+      },
+      "created": "2024-03-05T09:08:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/51/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/51",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "51",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-08T09:41:32.000+00:00",
+        "source": "#a4d9cab7-3168-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-05T09:08:14+00:00"
+      },
+      "created": "2024-03-05T09:08:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/51/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/55",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "55",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-08T09:41:03.000+00:00",
+        "source": "#f0095f58-014a-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-05T09:41:06+00:00"
+      },
+      "created": "2024-03-05T09:41:06+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/55/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/55",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "55",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-08T09:40:53.000+00:00",
+        "source": "#e860b87a-10de-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-05T09:41:06+00:00"
+      },
+      "created": "2024-03-05T09:41:06+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-09T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/55/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/23",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "23",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-08T09:37:48.000+00:00",
+        "source": "#4585bad7-30e3-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-02-21T10:51:02+00:00"
+      },
+      "created": "2024-02-21T10:51:02+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "sat", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/23/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-08T09:37:30.000+00:00",
+        "source": "#65e1a1b8-0175-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-12T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "6",
+        "lastUpdated": "2024-03-08T09:36:58.000+00:00",
+        "source": "#ee0258d5-4395-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-12T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/64",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "64",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-06T15:41:07.000+00:00",
+        "source": "#9404bead-beb5-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-06T15:41:07+00:00"
+      },
+      "created": "2024-03-06T15:41:07+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/64/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/60",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "60",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T15:40:19.000+00:00",
+        "source": "#357ff312-d6f2-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-06T15:26:14+00:00"
+      },
+      "created": "2024-03-06T15:26:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/60/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/60",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "60",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-06T15:31:27.000+00:00",
+        "source": "#f26d749c-836e-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-06T15:26:14+00:00"
+      },
+      "created": "2024-03-06T15:26:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/60/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/60",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "60",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-06T15:26:14.000+00:00",
+        "source": "#e3b798b8-4863-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/59" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-06T15:26:14+00:00"
+      },
+      "created": "2024-03-06T15:26:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/58" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/60/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/44",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "44",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T15:22:56.000+00:00",
+        "source": "#ad68a8e5-6eb2-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-04T14:27:03+00:00"
+      },
+      "created": "2024-03-04T14:27:03+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/44/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/44",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "44",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-06T15:22:40.000+00:00",
+        "source": "#4e064db5-62d5-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-04T14:27:03+00:00"
+      },
+      "created": "2024-03-04T14:27:03+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/44/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T14:59:35.000+00:00",
+        "source": "#87922a68-8f02-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/48",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "48",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T14:59:27.000+00:00",
+        "source": "#5058bbee-735e-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/49"
+      },
+      "period": {
+        "start": "2024-03-05T08:57:35+00:00"
+      },
+      "created": "2024-03-05T08:57:35+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/48/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/55",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "55",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T14:59:24.000+00:00",
+        "source": "#17fa588e-e852-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-05T09:41:06+00:00"
+      },
+      "created": "2024-03-05T09:41:06+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/55/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-06T14:59:21.000+00:00",
+        "source": "#cef23cc7-492a-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-07T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-06T14:59:12.000+00:00",
+        "source": "#78be1d43-bed8-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/23",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "23",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-06T14:59:08.000+00:00",
+        "source": "#107f3fdf-81dd-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-02-21T10:51:02+00:00"
+      },
+      "created": "2024-02-21T10:51:02+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-11T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "sat", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/23/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/23",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "23",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-06T14:59:00.000+00:00",
+        "source": "#bca29e60-dd34-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-02-21T10:51:02+00:00"
+      },
+      "created": "2024-02-21T10:51:02+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-08T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "sat", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/23/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/55",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "55",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-05T09:45:50.000+00:00",
+        "source": "#f1ac4c94-2174-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-05T09:41:06+00:00"
+      },
+      "created": "2024-03-05T09:41:06+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/55/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/55",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "55",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T09:41:06.000+00:00",
+        "source": "#d5692a2f-3260-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/56"
+      },
+      "period": {
+        "start": "2024-03-05T09:41:06+00:00"
+      },
+      "created": "2024-03-05T09:41:06+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/55/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/51",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "51",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-05T09:12:52.000+00:00",
+        "source": "#94cb3abd-5b01-40"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-05T09:08:14+00:00"
+      },
+      "created": "2024-03-05T09:08:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/51/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/51",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "51",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T09:08:14.000+00:00",
+        "source": "#a4aa62ca-1146-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/52"
+      },
+      "period": {
+        "start": "2024-03-05T09:08:14+00:00"
+      },
+      "created": "2024-03-05T09:08:14+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sun", "sat" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/51/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/48",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "48",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-05T08:59:39.000+00:00",
+        "source": "#f1e27257-55ba-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/49"
+      },
+      "period": {
+        "start": "2024-03-05T08:57:35+00:00"
+      },
+      "created": "2024-03-05T08:57:35+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/48/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/48",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "48",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-05T08:57:35.000+00:00",
+        "source": "#6ff9bbf8-5404-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/49"
+      },
+      "period": {
+        "start": "2024-03-05T08:57:35+00:00"
+      },
+      "created": "2024-03-05T08:57:35+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-06T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/48/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/45",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "45",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-04T15:13:25.000+00:00",
+        "source": "#79dcca8e-7b1f-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-04T14:57:25+00:00"
+      },
+      "created": "2024-03-04T14:57:25+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/45/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/45",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "45",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-04T14:57:25.000+00:00",
+        "source": "#ef89b92b-ea2a-45"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/46"
+      },
+      "period": {
+        "start": "2024-03-04T14:57:25+00:00"
+      },
+      "created": "2024-03-04T14:57:25+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/45/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/44",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "44",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-04T14:27:03.000+00:00",
+        "source": "#f447d775-7011-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-03-04T14:27:03+00:00"
+      },
+      "created": "2024-03-04T14:27:03+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/44/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/34",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "34",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-04T12:04:42.000+00:00",
+        "source": "#fb803c09-f6e9-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/37" ],
+      "status": "completed",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-02-21T12:06:10+00:00"
+      },
+      "created": "2024-02-21T12:06:10+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "fri", "thu", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/34/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/34",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "34",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2024-03-04T12:03:33.000+00:00",
+        "source": "#8448f0fd-2d62-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-02-21T12:06:10+00:00"
+      },
+      "created": "2024-02-21T12:06:10+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "fri", "thu", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/34/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/34",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "34",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-04T12:03:29.000+00:00",
+        "source": "#1fb0eb42-698d-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-02-21T12:06:10+00:00"
+      },
+      "created": "2024-02-21T12:06:10+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-03-05T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "fri", "thu", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/34/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-23T08:00:21.000+00:00",
+        "source": "#b4dd0c03-721b-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/39",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "39",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-23T07:58:55.000+00:00",
+        "source": "#87ec833b-8042-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/40"
+      },
+      "period": {
+        "start": "2024-02-23T07:58:54+00:00"
+      },
+      "created": "2024-02-23T07:58:54+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/39/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/34",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "34",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T12:08:52.000+00:00",
+        "source": "#106787e1-6b3e-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/37" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-02-21T12:06:10+00:00"
+      },
+      "created": "2024-02-21T12:06:10+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "fri", "thu", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/36" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/34/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/34",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "34",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T12:06:10.000+00:00",
+        "source": "#5964b07f-96bb-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/35"
+      },
+      "period": {
+        "start": "2024-02-21T12:06:10+00:00"
+      },
+      "created": "2024-02-21T12:06:10+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon", "tue", "wed", "fri", "thu", "sat", "sun" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/34/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/23",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "23",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T10:51:52.000+00:00",
+        "source": "#aa68c957-dfc9-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-23T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-02-21T10:51:02+00:00"
+      },
+      "created": "2024-02-21T10:51:02+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-23T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "sat", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/23/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/23",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "23",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:51:03.000+00:00",
+        "source": "#df1956dc-0872-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-23T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/24"
+      },
+      "period": {
+        "start": "2024-02-21T10:51:02+00:00"
+      },
+      "created": "2024-02-21T10:51:02+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-26T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "mon" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-23T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "sat", "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/23/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:42:02.000+00:00",
+        "source": "#a0dd83c2-b3e4-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1", "PlanDefinition/19" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      }, {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-23T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/18" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "fri" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T10:38:17.000+00:00",
+        "source": "#4d433a2b-7eb0-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/CarePlan/14",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "14",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:36:38.000+00:00",
+        "source": "#cfdf4dc9-cb86-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/careplan-satisfied-until",
+        "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization",
+        "valueReference": {
+          "reference": "Organization/organization-infektionsmedicinsk"
+        }
+      } ],
+      "instantiatesCanonical": [ "PlanDefinition/plandefinition-infektionsmedicinsk-1" ],
+      "status": "active",
+      "title": "Ny monitoreringsplan",
+      "subject": {
+        "reference": "Patient/15"
+      },
+      "period": {
+        "start": "2024-02-21T10:36:37+00:00"
+      },
+      "created": "2024-02-21T10:36:37+00:00",
+      "activity": [ {
+        "detail": {
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/activity-satisfied-until",
+            "valueDateTime": "2024-02-22T10:00:00.000+00:00"
+          } ],
+          "instantiatesCanonical": [ "Questionnaire/questionnaire-infektionsmedicinsk-1" ],
+          "status": "not-started",
+          "scheduledTiming": {
+            "repeat": {
+              "dayOfWeek": [ "tue", "thu" ],
+              "timeOfDay": [ "11:00" ]
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/CarePlan/14/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

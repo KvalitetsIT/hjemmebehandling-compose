@@ -1,0 +1,1469 @@
+{
+  "resourceType": "Bundle",
+  "id": "7b1acb01-e645-4cb0-b18d-027344e220a0",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:34.383+00:00"
+  },
+  "type": "history",
+  "total": 37,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/Organization/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:42.000+00:00",
+        "source": "#a7b94deb-2407-46"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:24.000+00:00",
+        "source": "#a72a5b41-df0e-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-271231000016008",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-271231000016008",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-10-01T10:02:33.000+00:00",
+        "source": "#874e7b97-747b-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Medicinsk Korttidsafsnit, Indgang B, plan 3</p>            <p style=\" margin: 0\" >Regionshospitalet Randers</p>            <p style=\" margin: 0\" >Skovlyvej 15</p>            <p style=\" margin: 0\" >8930 Randers NØ</p>            <br /p>            <p style=\" margin: 0\" >Hvis du har spørgsmål eller behov for hjælp kan du kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit hele døgnet.</p>            <br /p>               <p style=\"margin: 0; font-weight: bold\" >Medicinsk Korttidsafsnit, Indgang B, plan 3</p>            <p style=\" margin: 0\" >Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 42 41 16 i hverdage kl. 8.00 – 14.30. Ved behov for hjælp uden for ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet).</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Medicinsk Sengeafsnit A. Indgang A, plan 4.</p>            <p style=\" margin: 0\" >Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet).</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Medicinsk Korttidsafsnit.</p>            <p style=\" margin: 0\" >Medicinsk Korttidsafsnit kan kontaktes telefonisk på 78 42 41 16 hverdage i nedenstående tidsrum.</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Sygeplejerske</p>            <p style=\" margin: 0\" >Mandag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Tirsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Onsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Torsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Fredag  <span>kl. 8.00-14.30</span></p>            <br /p>                         <p style=\"margin: 0; font-weight: bold\" >Sengeafsnittet</p>            <p style=\" margin: 0\" >Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 78 42 15 75 (hele døgnet)</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography> Hvis der er noget du er i tvivl om, eller du har praktiske problemer, kan du altid kontakte Medicinsk Korttidsafsnit eller Medicinsk Sengeafsnit A. Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 42 41 16 i hverdage kl. 8.00 – 14.30. Ved behov for hjælp uden for ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet).</Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "271231000016008"
+      } ],
+      "name": "Medicinsk Afdeling",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 78 42 41 16",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Skovlyvej 15" ],
+        "city": "Randers NØ",
+        "postalCode": "8930",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-271231000016008/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:33.000+00:00",
+        "source": "#fb8693fa-d4a9-44"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-271231000016008",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-271231000016008",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-10-01T09:55:22.000+00:00",
+        "source": "#08dbbfd7-9187-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Medicinsk Korttidsafsnit, Indgang B, plan 3</p>            <p style=\" margin: 0\" >Regionshospitalet Randers</p>            <p style=\" margin: 0\" >Skovlyvej 15</p>            <p style=\" margin: 0\" >8930 Randers NØ</p>            <br /p>            <p style=\" margin: 0\" >Hvis du har spørgsmål eller behov for hjælp kan du kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit hele døgnet.</p>            <br /p>               <p style=\"margin: 0; font-weight: bold\" >Medicinsk Korttidsafsnit, Indgang B, plan 3</p>            <p style=\" margin: 0\" >Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 42 41 16 i hverdage kl. 8.00 – 14.30. Ved behov for hjælp uden for ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet).</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Medicinsk Sengeafsnit A. Indgang A, plan 4.</p>            <p style=\" margin: 0\" >Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 42 15 75 (hele døgnet).</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Medicinsk Korttidsafsnit.</p>            <p style=\" margin: 0\" >Medicinsk Korttidsafsnit kan kontaktes telefonisk på 78 42 41 16 hverdage i nedenstående tidsrum.</p>            <br /p>             <p style=\"margin: 0; font-weight: bold\" >Sygeplejerske</p>            <p style=\" margin: 0\" >Mandag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Tirsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Onsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Torsdag  <span>kl. 8.00-14.30</span></p>            <p style=\" margin: 0\" >Fredag  <span>kl. 8.00-14.30</span></p>            <br /p>             <p style=\" margin: 0\" >Sengeafsnittet</p>            <p style=\" margin: 0\" >Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 7842 15 75 (hele døgnet)</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography> Hvis der er noget du er i tvivl om, eller du har praktiske problemer, kan du altid kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit. Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet). </Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "271231000016008"
+      } ],
+      "name": "Medicinsk Afdeling",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 78 42 41 16",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Skovlyvej 15" ],
+        "city": "Randers NØ",
+        "postalCode": "8930",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-271231000016008/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:21.000+00:00",
+        "source": "#0d58a92e-0830-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-271231000016008",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-271231000016008",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-09-16T13:40:40.000+00:00",
+        "source": "#1a6139aa-ef2b-4a"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Regionshospitalet Randers</p>            <p style=\" margin: 0\" >Skovlyvej 15</p>            <p style=\" margin: 0\" >8930 Randers NØ</p>            <br /p>            <p style=\" margin: 0\" >Hvis du har spørgsmål eller behov for hjælp kan du kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit hele døgnet.</p>            <p style=\"margin: 0; font-weight: bold\" >Medicinsk Korttidsafsnit, Fløj X, plan 9</p>            <p style=\" margin: 0\" > Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet).</p>            <p style=\"margin: 0; font-weight: bold\" >Medicinsk Sengeafsnit A. Fløj B, plan 4.</p>            <p style=\" margin: 0\" >Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet).</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography> Hvis der er noget du er i tvivl om, eller du har praktiske problemer, kan du altid kontakte Medicinsk Sengeafsnit A eller Medicinsk Korttidsafsnit. Hvis du i forbindelse med udskrivelse bliver tilknyttet Medicinsk Korttidsafsnit mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 99 99 99 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Medicinsk Korttidsafsnit, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 11 11 11 (hele døgnet). </Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "11:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "271231000016008"
+      } ],
+      "name": "Medicinsk Afdeling",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 78 43 15 70",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Skovlyvej 15" ],
+        "city": "Randers NØ",
+        "postalCode": "8930",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Organization/organization-271231000016008/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:40.000+00:00",
+        "source": "#ef425d55-1755-4d"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:40.000+00:00",
+        "source": "#e5786f0c-439f-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-09-16T13:27:10.000+00:00",
+        "source": "#a3264dbe-fda0-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-09-16T13:27:10.000+00:00",
+        "source": "#71da905a-eb2a-48"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-19T08:07:57.000+00:00",
+        "source": "#4bb5bd83-684d-4e"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-19T08:07:57.000+00:00",
+        "source": "#bc07b8f6-41ca-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-medicinsk-afdeling",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-medicinsk-afdeling",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#f8de4af6-751a-42"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Regionshospitalet Gødstrup</p>            <p style=\" margin: 0\" >Hospitalsparken 15</p>            <p style=\" margin: 0\" >7400 Herning</p>            <br/>                    <p style=\" margin: 0\" >Hvis du har spørgsmål eller behov for hjælp kan du kontakte Sengeafsnittet for            Mave-, Tarm-, Lever- og Infektionssygdomme eller Klinik for Infektionssygdomme            hele døgnet..</p>            <p style=\"margin: 0; font-weight: bold\" >Klinik for Infektionssygdomme. Fløj D, plan 0.</p>            <p style=\" margin: 0\" >Hvis du i forbindelse med udskrivelse bliver tilknyttet Klinik for            Infektionssygdomme mhp. opfølgende blodprøvekontrol, kan du kontakte            sygeplejerske i klinikken telefonisk på 7843 6300 i hverdage kl. 8.00 – 15.00.            Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte            sygeplejerske i sengeafsnittet på 7843 1570 (hele døgnet).</p>            <p style=\"margin: 0; font-weight: bold\" >Sengeafsnit for Mave-, Tarm-, Lever- og Infektionssygdomme. Fløj B, plan 4.</p>            <p style=\" margin: 0\" >Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende            blodprøvekontrol i Klinik for Infektionssygdomme, kan du ved behov for hjælp            kontakte sygeplejerske i sengeafsnittet på 7843 1570 (hele døgnet).</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du <b>altid</b> kontakte Sengeafsnittet for Mave-, Tarm-, Lever- og Infektionssygdomme eller Klinik for Infektionssygdomme. Hvis du i forbindelse med udskrivelse bliver tilknyttet Klinik for Infektionssygdomme mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 43 63 00 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Klinik for Infektionssygdomme, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). </Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "900231000016007"
+      } ],
+      "name": "Infektionssygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 78 43 15 70",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Hospitalsparken 15" ],
+        "city": "Herning",
+        "postalCode": "7400",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-medicinsk-afdeling/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#f6b2ad5b-cb7e-43"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-13T13:55:11.000+00:00",
+        "source": "#95b14f77-9f2c-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-medicinsk-afdeling",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-medicinsk-afdeling",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-03-11T12:55:49.000+00:00",
+        "source": "#63df22aa-1526-4f"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Regionshospitalet Gødstrup</p>            <p style=\" margin: 0\" >Hospitalsparken 15</p>            <p style=\" margin: 0\" >7400 Herning</p>            <br/>                    <p style=\" margin: 0\" >Hvis du har spørgsmål eller behov for hjælp kan du kontakte Sengeafsnittet for            Mave-, Tarm-, Lever- og Infektionssygdomme eller Klinik for Infektionssygdomme            hele døgnet..</p>            <p style=\"margin: 0; font-weight: bold\" >Klinik for Infektionssygdomme. Fløj D, plan 0.</p>            <p style=\" margin: 0\" >Hvis du i forbindelse med udskrivelse bliver tilknyttet Klinik for            Infektionssygdomme mhp. opfølgende blodprøvekontrol, kan du kontakte            sygeplejerske i klinikken telefonisk på 7843 6300 i hverdage kl. 8.00 – 15.00.            Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte            sygeplejerske i sengeafsnittet på 7843 1570 (hele døgnet).</p>            <p style=\"margin: 0; font-weight: bold\" >Sengeafsnit for Mave-, Tarm-, Lever- og Infektionssygdomme. Fløj B, plan 4.</p>            <p style=\" margin: 0\" >Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende            blodprøvekontrol i Klinik for Infektionssygdomme, kan du ved behov for hjælp            kontakte sygeplejerske i sengeafsnittet på 7843 1570 (hele døgnet).</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du <b>altid</b> kontakte Sengeafsnittet for Mave-, Tarm-, Lever- og Infektionssygdomme eller Klinik for Infektionssygdomme. Hvis du i forbindelse med udskrivelse bliver tilknyttet Klinik for Infektionssygdomme mhp. opfølgende blodprøvekontrol, kan du kontakte sygeplejerske i klinikken telefonisk på 78 43 63 00 i hverdage kl. 8.00 – 15.00. Ved behov for hjælp udenfor ovenstående tidspunkter, kan du kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). Hvis der i forbindelse med udskrivelse ikke er planlagt opfølgende blodprøvekontrol i Klinik for Infektionssygdomme, kan du ved behov for hjælp kontakte sygeplejerske i sengeafsnittet på 78 43 15 70 (hele døgnet). </Typography><Typography>Med venlig hilsen,</Typography><Typography>Personalet på Sengeafsnittet for Mave-, Tarm-, Lever- og Infektionssygdomme.</Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "900231000016007"
+      } ],
+      "name": "Medicinsk afdeling",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 78 43 15 70",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Hospitalsparken 15" ],
+        "city": "Herning",
+        "postalCode": "7400",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Organization/organization-medicinsk-afdeling/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-11T12:55:49.000+00:00",
+        "source": "#af671e65-9518-49"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-03-11T12:55:49.000+00:00",
+        "source": "#1fb6f090-f5b1-4b"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-mavetarmkirurgi",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#3fc964af-e60c-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Tak for din besvarelse. Den vil blive sendt til Mave- og Tarmkirurgi Overafdeling.</Typography>"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "622471000016003"
+      } ],
+      "name": "Mave- og Tarmkirurgi ",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+78450000",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Palle Juul-Jensens Boulevard 99" ],
+        "city": "Aarhus N",
+        "postalCode": "8200",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Organization/organization-mavetarmkirurgi/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-lungesygdomme",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-lungesygdomme",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#80c6bf4d-bc58-47"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "10:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "904931000016006"
+      } ],
+      "name": "Lungesygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Organization/organization-lungesygdomme/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-infektionsmedicinsk",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-infektionsmedicinsk",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2024-02-21T10:53:36.000+00:00",
+        "source": "#b17abe94-d173-41"
+      },
+      "extension": [ {
+        "url": "http://hjemmebehandling.rm.dk/organisation-blob",
+        "valueString": "            <p style=\" margin: 0\" >Aarhus Universitetshospital</p>            <p style=\" margin: 0\" >Palle Juul-Jensen Boulevard 99, Indgang E eller D3</p>            <p style=\" margin: 0\" >Krydspunkt: Infektionsklinikken E202 eller sengeafsnittet E201</p>            <p style=\" margin: 0\" >8200 Aarhus N</p>            <br/>            <p style=\"margin: 0; font-weight: bold\" >Infektionsklinikken</p>            <p style=\"margin: 0; \" >Infektionsklinikken kan kontaktes telefonisk på 40 45 98 12 hverdage i nedenstående tidsrum</p>            <br/>            <p style=\"margin: 0; font-weight: bold\" >Sekretær</p>            <p style=\"margin: 0\" >Alle hverdage <span>kl. 9.00-12.00</span></p>            <br/>            <p style=\"margin: 0; font-weight: bold\" >Sygeplejerske</p>            <p style=\" margin: 0\" >Mandag  <span>kl. 8.15-9.00 og 13.00-14.30</span></p>            <p style=\" margin: 0\" >Tirsdag <span>kl. 8.15-9.00 og 13.00-14.30</span></p>            <p style=\" margin: 0\" >Onsdag  <span>kl. 8.15-9.00</span></p>            <p style=\" margin: 0\" >Torsdag <span>kl. 8.15-9.00 og 13.00-14.30</span></p>            <p style=\" margin: 0\" >Fredag  <span>kl. 8.15-9.00 og 13.00-14.00</span></p>            <br/>            <p style=\"margin: 0; font-weight: bold\" >Sengeafsnittet</p>            <p style=\" margin: 0\" >Ved behov for hjælp uden for ovenstående tidspunkter, ring på telefon 24 77 78 80 (hele døgnet)</p>            "
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/questionnaire-summary-blob",
+        "valueString": "<Typography>Hvis der er noget, du er i tvivl om, eller du har praktiske problemer, kan du <b>altid</b> kontakte Infektionsklinikken på tlf. 78 45 28 64 på hverdage kl. 8.00 – 15.00. Uden for dette tidspunkt kan du kontakte Sengeafsnittet på tlf. 24 77 78 80.</Typography>"
+      }, {
+        "url": "http://hjemmebehandling.rm.dk/organization-questionnaire-deadline-time-default",
+        "valueTime": "11:00"
+      } ],
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "453071000016001"
+      } ],
+      "name": "Infektionssygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+45 40 45 98 12",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/Organization/organization-infektionsmedicinsk/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/Organization/organization-infektionsmedicinsk",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "organization-infektionsmedicinsk",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:33.000+00:00",
+        "source": "#944b3df3-fee9-47"
+      },
+      "identifier": [ {
+        "system": "1.2.208.176.1.1",
+        "value": "453071000016001"
+      } ],
+      "name": "Infektionssygdomme",
+      "telecom": [ {
+        "extension": [ {
+          "url": "http://hjemmebehandling.rm.dk/phone-hours",
+          "extension": [ {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "MON"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-weekday",
+            "valueString": "FRI"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-from",
+            "valueTime": "08:00"
+          }, {
+            "url": "http://hjemmebehandling.rm.dk/phone-hours-to",
+            "valueTime": "12:00"
+          } ]
+        } ],
+        "system": "phone",
+        "value": "+4512345678",
+        "use": "mobile"
+      } ],
+      "address": [ {
+        "line": [ "Fiskergade 66" ],
+        "city": "Aarhus",
+        "postalCode": "8000",
+        "country": "Danmark"
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/Organization/organization-infektionsmedicinsk/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}

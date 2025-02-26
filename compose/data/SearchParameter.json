@@ -1,0 +1,3134 @@
+{
+  "resourceType": "Bundle",
+  "id": "b9c3d4c6-9c24-4bbf-b732-730ac4f4edaf",
+  "meta": {
+    "lastUpdated": "2025-02-26T12:23:33.680+00:00"
+  },
+  "type": "history",
+  "total": 152,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir/SearchParameter/_history"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:44.000+00:00",
+        "source": "#fa6e8264-2364-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:44.000+00:00",
+        "source": "#5c542ba3-c2df-98"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:44.000+00:00",
+        "source": "#bdff5f19-cdc4-4b"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:44.000+00:00",
+        "source": "#bac8e6fd-b62a-47"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:43.000+00:00",
+        "source": "#576626e8-d127-40"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:43.000+00:00",
+        "source": "#8a96d7c5-4e2b-4c"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:43.000+00:00",
+        "source": "#a05cce85-f07f-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "19",
+        "lastUpdated": "2024-10-09T13:03:43.000+00:00",
+        "source": "#a2e00c15-c178-4b"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/19"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"19\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/18"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"18\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/16"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"16\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#d43a7e38-b188-46"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#02c23f8c-f828-4c"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#5394bc55-3213-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#f2af01b0-2641-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#2be786a4-06fd-4c"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#f1d72242-a3a2-4d"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#965f2d6b-3d72-48"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "17",
+        "lastUpdated": "2024-10-09T11:27:25.000+00:00",
+        "source": "#821fa169-1f1c-44"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/17"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"17\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:35.000+00:00",
+        "source": "#88d9ad1e-6e4c-46"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/14"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"14\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#d7f2ab6d-af78-49"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#76231b3f-b4e9-46"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#25a52744-0aa4-42"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#9c5bca9c-78f4-42"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#f19ac573-c86c-4c"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#25637760-dc23-41"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "15",
+        "lastUpdated": "2024-10-01T10:02:34.000+00:00",
+        "source": "#e9a9fb2b-8d47-42"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/15"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"15\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:24.000+00:00",
+        "source": "#1d130a2c-9b31-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:24.000+00:00",
+        "source": "#55cf401a-4b78-4a"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:24.000+00:00",
+        "source": "#7f0e2612-4def-48"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/12"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"12\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:23.000+00:00",
+        "source": "#1cf1073f-79d8-4b"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:23.000+00:00",
+        "source": "#5ac4e749-b4a9-4e"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:23.000+00:00",
+        "source": "#1f89675a-8443-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:23.000+00:00",
+        "source": "#dc349290-2841-4e"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "13",
+        "lastUpdated": "2024-10-01T09:55:23.000+00:00",
+        "source": "#d6562c67-3c3c-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/13"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"13\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#1962b18f-076d-4c"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#6b726e7d-5fbe-43"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#50ad57fb-50e6-4d"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#36e28687-3a01-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#584fca12-431d-43"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#b2e16236-99a9-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:42.000+00:00",
+        "source": "#ce1ce246-8aa7-46"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/10"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"10\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2024-09-16T13:40:41.000+00:00",
+        "source": "#b65b7856-da17-48"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/11"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"11\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#fc6e50fe-aa11-4d"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#d95cb8dd-1905-44"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#b18eff4e-ad17-43"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#3203b0f9-a3c1-4e"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#a9b2c3d9-cf58-44"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#c122a5f4-6212-4d"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#1628db65-6967-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "9",
+        "lastUpdated": "2024-03-19T08:07:58.000+00:00",
+        "source": "#ad1bf2e4-fdee-9d"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/9"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"9\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/8"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"8\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:13.000+00:00",
+        "source": "#54583b59-0832-44"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/6"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"6\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#6ad60102-b890-44"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#7725433e-fff5-40"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#38c46cce-45ba-4f"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#049aeddd-9df3-4b"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#a0e07caf-d9b7-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#45955c4a-e34d-4f"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2024-03-13T13:55:12.000+00:00",
+        "source": "#fedbf51f-2024-42"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/7"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"7\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/4"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"4\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#20531b1b-941c-47"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#54823fa5-8d9f-4a"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#f08ea599-bb53-4b"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#93a1f644-db2c-48"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#5a9c39fb-fd81-40"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#cbaa7fb3-2c30-48"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#f3d18a47-cfce-41"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-03-11T12:55:50.000+00:00",
+        "source": "#b6d9516d-b7cd-45"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/5"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"5\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#994a3f95-375d-4f"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#e04987b1-d730-48"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#4b3cf9b6-bb86-44"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#eb5ce79b-9529-4c"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#3a8cb32a-b616-4a"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:38.000+00:00",
+        "source": "#a083ae93-fd4e-4f"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "request": {
+      "method": "DELETE",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/2"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"2\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#d02ba44d-5374-49"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2024-02-21T10:53:37.000+00:00",
+        "source": "#ca9338a8-6973-44"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/3"
+    },
+    "response": {
+      "status": "200 OK",
+      "etag": "W/\"3\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-valueset",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:40.000+00:00",
+        "source": "#d3a4189e-12f9-41"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-valueset",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "ValueSet" ],
+      "type": "reference",
+      "expression": "ValueSet.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-valueset/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-cpr",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:40.000+00:00",
+        "source": "#94ccc22b-07b6-40"
+      },
+      "title": "CPR identifier",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-cpr",
+      "name": "Search parameter for the Patient cpr identifie.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "patient_identifier_cpr",
+      "base": [ "Patient" ],
+      "type": "string",
+      "expression": "Patient.identifier.value",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-cpr/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaireresponse",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:39.000+00:00",
+        "source": "#d09f50cf-75e2-4d"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaireresponse",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "reference",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaireresponse/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-questionnaire",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:38.000+00:00",
+        "source": "#4beb4bae-3720-4a"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-questionnaire",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "Questionnaire" ],
+      "type": "reference",
+      "expression": "Questionnaire.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-questionnaire/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-careplan",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:37.000+00:00",
+        "source": "#25eb2e53-ce7f-49"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-careplan",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "CarePlan" ],
+      "type": "reference",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-careplan/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-organization-plandefinition",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:37.000+00:00",
+        "source": "#adc04f78-e173-4d"
+      },
+      "title": "Organization",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-organization-plandefinition",
+      "name": "Search parameter for the organization extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for resources by their organization (ie. access control).",
+      "code": "organization",
+      "base": [ "PlanDefinition" ],
+      "type": "reference",
+      "expression": "PlanDefinition.extension('http://hjemmebehandling.rm.dk/organization')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-organization-plandefinition/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-examination-status",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:36.000+00:00",
+        "source": "#02d21348-f60e-4e"
+      },
+      "title": "Examination Status",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-examination-status",
+      "name": "Search parameter for the Examination Status extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for QuestionnarieResponses by their examination status (implemented using an extension).",
+      "code": "examination_status",
+      "base": [ "QuestionnaireResponse" ],
+      "type": "token",
+      "expression": "QuestionnaireResponse.extension('http://hjemmebehandling.rm.dk/examination-status')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-examination-status/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "searchparameter-careplan-satisfied-until",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-02-21T10:16:35.000+00:00",
+        "source": "#095b702d-2de8-4d"
+      },
+      "title": "CarePlan Satisfied Until",
+      "url": "http://hjemmebehandling.rm.dk/SearchParameter/searchparameter-careplan-satisfied-until",
+      "name": "Search parameter for the careplan-satisfied-until extension.",
+      "status": "active",
+      "publisher": "KvalitetsIT",
+      "purpose": "Searching for CarePlans by their satisfaction period (every activity having been fulfilled within its allotted timeframe).",
+      "code": "careplan_satisfied_until",
+      "base": [ "CarePlan" ],
+      "type": "date",
+      "expression": "CarePlan.extension('http://hjemmebehandling.rm.dk/careplan-satisfied-until')",
+      "xpathUsage": "normal"
+    },
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8080/fhir/SearchParameter/searchparameter-careplan-satisfied-until/_history/1"
+    },
+    "response": {
+      "status": "201 Created",
+      "etag": "W/\"1\""
+    }
+  } ]
+}
