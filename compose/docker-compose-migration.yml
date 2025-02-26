@@ -41,23 +41,23 @@ services:
       - hjemmebehandling
 
 
-  hapi-server-migrator:
-    image: kvalitetsit/hjemmebehandling-migrator:1.0.11
-    container_name: migrator
-    environment:
-      # Note: The resources below has to be in a certain order
-      - resources=CodeSystem,Practitioner,SearchParameter,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse,Organization
-      - origin=http://hapi-server-mariadb:8080
-      - successor=http://hapi-server-postgres:8080
-      - RUST_LOG=Debug
-      - wait=20
-    depends_on:
-      hapi-server-initializer:
-        condition: service_completed_successfully
-    volumes:
-      - ./hapi-server-migrator:/hapi-server-migrator
-    networks:
-      - hjemmebehandling
+  # hapi-server-migrator:
+  #   image: kvalitetsit/hjemmebehandling-migrator:1.0.11
+  #   container_name: migrator
+  #   environment:
+  #     # Note: The resources below has to be in a certain order
+  #     - resources=CodeSystem,Practitioner,SearchParameter,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse,Organization
+  #     - origin=http://hapi-server-mariadb:8080
+  #     - successor=http://hapi-server-postgres:8080
+  #     - RUST_LOG=Debug
+  #     - wait=20
+  #   depends_on:
+  #     hapi-server-initializer:
+  #       condition: service_completed_successfully
+  #   volumes:
+  #     - ./hapi-server-migrator:/hapi-server-migrator
+  #   networks:
+  #     - hjemmebehandling
 
 ################ MariaDB ################
       

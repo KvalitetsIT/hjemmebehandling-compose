@@ -27,7 +27,7 @@ fn main() {
     match (Url::parse(origin.as_str()), Url::parse(successor.as_str())) {
         (Ok(from), Ok(to)) => {
             let migrator = Migrator::new(from, to);
-            migrator.migrate(resources);
+            migrator.start(resources);
         }
         _ => error!(
             "Invalid arguments - Either '{origin}' or '{successor}' could not be parsed as an url"
