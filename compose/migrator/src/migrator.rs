@@ -1,29 +1,28 @@
 use std::{
-    collections::HashMap,
+    collections::{BTreeMap, HashMap},
     env,
     fs::File,
-    io::{Error, Read, Write},
+    io::{Read, Write},
     str::FromStr,
     thread::sleep,
     time::Duration,
 };
 
-use dotenv::Result;
-use log::{error, info};
+use log::{debug, error, info, warn};
 use reqwest::{Method, Url};
 use serde_json::Value;
 
 use crate::client::Client;
 pub struct Migrator {
-    origin: Url,
     successor: Url,
+    origin: Option<Url>,
     client: Client,
 }
 impl Migrator {
-    pub fn new(from: Url, to: Url) -> Self {
+    pub fn new(origin: Option<Url>, successor: Url) -> Self {
         Self {
-            origin: from,
-            successor: to,
+            origin,
+            successor,
             client: Client::new(),
         }
     }
@@ -40,32 +39,43 @@ impl Migrator {
     fn aquire(
         &self,
         resources: Vec<String>,
-    ) -> HashMap<String, HashMap<String, HashMap<u64, Value>>> {
+    ) -> Vec<(String, HashMap<String, HashMap<u64, Value>>)> {
         info!("Aquiring data...");
         resources.into_iter().fold(
-            HashMap::<String, HashMap<String, HashMap<u64, Value>>>::new(),
+            Vec::<(String, HashMap<String, HashMap<u64, Value>>)>::new(),
             |mut a, resource_type| {
-                // let entries = self
-                //     .client
-                //     .get(&Self::get_url(&self.origin, resource_type.as_str()))
-                //     .unwrap()
-                //     .json::<Value>()
-                //     .unwrap();
+                let json = match &self.origin {
+                    Some(origin) => self
+                        .client
+                        .get(&Self::get_url(&origin, resource_type.as_str()))
+                        .unwrap()
+                        .json::<Value>()
+                        .unwrap(),
+                    None => {
+                        warn!(
+                            "Environment variable 'successor' not found falling back to local data"
+                        );
 
-                let entries = File::open(format!("./data/{}.json", resource_type))
-                    .and_then(|mut file| {
-                        info!("Read: {:?}", file);
-                        let mut buf = String::new();
-                        file.read_to_string(&mut buf).map(|_| buf)
-                    })
-                    .and_then(|s| serde_json::from_str::<Value>(s.as_str()).map_err(|e| e.into()))
-                    .unwrap();
+                        let path = format!("./data/{}.json", resource_type);
+                        File::open(&path)
+                            .and_then(|mut file| {
+                                debug!("Read: {:?}", file);
+                                let mut buf = String::new();
+                                file.read_to_string(&mut buf).map(|_| buf)
+                            })
+                            .and_then(|s| {
+                                serde_json::from_str::<Value>(s.as_str()).map_err(|e| e.into())
+                            })
+                            .expect(format!("Expected: {}", path).as_str())
+                    }
+                };
 
-                let entries = entries
+                let empty: Vec<Value> = Vec::new();
+
+                let entries = json
                     .get("entry")
-                    .expect("The expected field 'entry' was not found")
-                    .as_array()
-                    .expect("Could not parse 'entry' as array");
+                    .and_then(|entry| entry.as_array())
+                    .unwrap_or(&empty);
 
                 let resources = entries.iter().fold(
                     HashMap::<String, HashMap<u64, Value>>::new(),
@@ -99,7 +109,7 @@ impl Migrator {
                     },
                 );
 
-                a.insert("resources".to_string(), resources);
+                a.push((resource_type, resources));
                 a
             },
         )
@@ -141,15 +151,18 @@ impl Migrator {
         sleep(duration);
     }
 
-    fn validate_data(&self, resources: HashMap<String, HashMap<String, HashMap<u64, Value>>>) {
+    fn validate_data(&self, resources: Vec<(String, HashMap<String, HashMap<u64, Value>>)>) {
         info!("Validating migration...");
         resources.iter().for_each(|(resource_type, entries)| {
             entries.iter().for_each(|(entry, versions)| {
-                let actual: u64 = versions.len() as u64;
+                let expected: u64 = versions.len() as u64;
 
-                let expected = self
+                let actual = self
                     .client
-                    .get(Self::get_url(&self.successor, resource_type))
+                    .get(Self::get_url(
+                        &self.successor,
+                        format!("{}/{}", resource_type, entry).as_str(),
+                    ))
                     .map(|response| Self::to_value(response))
                     .unwrap()
                     .get("total")
@@ -171,34 +184,50 @@ impl Migrator {
         });
     }
 
-    fn migrate(&self, data: &HashMap<String, HashMap<String, HashMap<u64, Value>>>) {
-        info!("Migrating data from: {} to {}", self.origin, self.successor);
-        data.values().for_each(|entries| {
+    fn migrate(&self, data: &Vec<(String, HashMap<String, HashMap<u64, Value>>)>) {
+        info!(
+            "Migrating data from: {} to {}",
+            self.origin
+                .as_ref()
+                .map(|u| u.to_string())
+                .unwrap_or("./data/<resource>.json".to_string()),
+            self.successor
+        );
+
+        data.iter().for_each(|(resource_type, entries)| {
             entries.values().for_each(|entry| {
-                entry.values().for_each(|version| {
-                    let request = version
+                let mut versions: Vec<(&u64, &Value)> = entry.iter().collect();
+                versions.sort_by_key(|k| k.0);
+
+                versions.iter().for_each(|(_version, value)| {
+                    let request = value
                         .get("request")
                         .expect("Could not extract request from entry");
 
                     let method = request
                         .get("method")
-                        .expect("Could not extract method from request")
-                        .as_str()
+                        .and_then(|m| m.as_str())
                         .and_then(|method| Method::from_str(method).ok())
-                        .unwrap();
+                        .expect("Could not extract method from request");
 
-                    let full_url: Url = version
+                    let full_url: Url = value
                         .get("fullUrl")
                         .and_then(|u| u.as_str())
                         .and_then(|u| Url::parse(u).ok())
-                        .unwrap();
+                        .expect("Could not extract field 'fullUrl'");
+
+                    let url: Url = request
+                        .get("url")
+                        .and_then(|u| u.as_str())
+                        .and_then(|u| Url::parse(u).ok())
+                        .expect("Could not extract field 'url' from request");
 
                     let destination = self.successor.join(full_url.path()).unwrap();
 
                     let response = match method {
                         Method::PUT | Method::POST => {
                             let resource =
-                                version.get("resource").expect("Could not extract resource");
+                                value.get("resource").expect("Could not extract resource");
 
                             self.client.put(destination, resource)
                         }
@@ -210,15 +239,9 @@ impl Migrator {
 
                     match response {
                         Ok(response) => {
-                            if response.status().is_success() {
-                                info!(
-                                    "{}: {}",
-                                    response.status(),
-                                    response.text().unwrap_or("".to_string())
-                                )
-                            } else {
+                            if !response.status().is_success() {
                                 error!(
-                                    "{}: {}",
+                                    "{}\n{}",
                                     response.status(),
                                     response.text().unwrap_or("".to_string())
                                 )

@@ -8,9 +8,7 @@ mod migrator;
 
 fn main() {
     dotenv::dotenv().ok();
-    env_logger::Builder::new()
-        .filter_module("migrator", log::LevelFilter::Debug)
-        .init();
+    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
 
     let resources: Vec<String> = env::var("resources")
         .expect("Expected 'resources' - A comma seperated list of resources")
@@ -18,21 +16,24 @@ fn main() {
         .map(|s| s.trim().to_string())
         .collect();
 
-    let origin = env::var("origin")
-        .expect("Extected 'origin' the address of the service which is to be migrated");
-
+    let origin = match env::var("origin") {
+        Ok(o) => match Url::parse(o.as_str()) {
+            Ok(url) => Some(url),
+            Err(e) => {
+                panic!("{}", e);
+            }
+        },
+        Err(_) => None,
+    };
     let successor = env::var("successor")
+        .map(|s| {
+            Url::parse(s.as_str())
+                .expect("Invalid arguments - '{successor}' could not be parsed as an url")
+        })
         .expect("Extected 'successor' the address of the service which is to be migrated");
 
-    match (Url::parse(origin.as_str()), Url::parse(successor.as_str())) {
-        (Ok(from), Ok(to)) => {
-            let migrator = Migrator::new(from, to);
-            migrator.start(resources);
-        }
-        _ => error!(
-            "Invalid arguments - Either '{origin}' or '{successor}' could not be parsed as an url"
-        ),
-    }
+    let migrator = Migrator::new(origin, successor);
+    migrator.start(resources);
 
     info!("Done");
 }

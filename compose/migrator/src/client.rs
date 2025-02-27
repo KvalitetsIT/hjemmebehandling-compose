@@ -1,6 +1,6 @@
 use std::{error::Error, fmt::Display};
 
-use log::info;
+use log::debug;
 use reqwest::{
     header::{HeaderMap, HeaderValue},
     IntoUrl, Method,
@@ -80,7 +80,7 @@ impl Client {
         &self,
         request: reqwest::blocking::Request,
     ) -> Result<reqwest::blocking::Response, Box<dyn Error>> {
-        info!(
+        debug!(
             "request:\nmethod: {}\nurl: {}\nbody: {}",
             request.method().to_string(),
             request.url().to_string(),
