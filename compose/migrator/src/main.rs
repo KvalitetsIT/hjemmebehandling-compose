@@ -1,14 +1,18 @@
 use log::{error, info};
 use migrator::Migrator;
 use reqwest::{self, Url};
+use serde_json::json;
 use std::env::{self};
 
+mod bundle;
 mod client;
 mod migrator;
 
 fn main() {
     dotenv::dotenv().ok();
-    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
+    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info"))
+        .filter_module("reqwest", log::LevelFilter::Info)
+        .init();
 
     let resources: Vec<String> = env::var("resources")
         .expect("Expected 'resources' - A comma seperated list of resources")

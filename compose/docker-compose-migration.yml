@@ -42,7 +42,7 @@ services:
   
 ############################ BFF ############################
   medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:latest
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
     environment:
       - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - user.context.handler=MOCK
@@ -62,7 +62,7 @@ services:
 
 
   patient-bff:
-    image: kvalitetsit/hjemmebehandling-patient-bff:latest
+    image: kvalitetsit/hjemmebehandling-patient-bff:dev
     environment:
       - user.mock.context.cpr=0104909995
       - cpr.url=http://rm-cpr-service:8080/Patient/
@@ -114,23 +114,23 @@ services:
       - hjemmebehandling
 
 
-  hapi-server-migrator:
-    image: kvalitetsit/hjemmebehandling-migrator:1.0.12
-    container_name: migrator
-    environment:
-      # Note: The resources below has to be in a certain order
-      - resources=CodeSystem,Practitioner,SearchParameter,Organization,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse
-      # - origin=http://hapi-server-mariadb:8080
-      - successor=http://hapi-server:8080
-      - RUST_LOG=Info
-      - wait=20
-    depends_on:
-      hapi-server-initializer:
-        condition: service_completed_successfully
-    volumes:
-      - ./migrator/data:/data
-    networks:
-      - hjemmebehandling
+  # hapi-server-migrator:
+  #   image: kvalitetsit/hjemmebehandling-migrator:1.0.12
+  #   container_name: migrator
+  #   environment:
+  #     # Note: The resources below has to be in a certain order
+  #     - resources=CodeSystem,Practitioner,SearchParameter,Organization,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse
+  #     # - origin=http://hapi-server-mariadb:8080
+  #     - successor=http://hapi-server:8080
+  #     - RUST_LOG=Info
+  #     - wait=20
+  #   depends_on:
+  #     hapi-server-initializer:
+  #       condition: service_completed_successfully
+  #   volumes:
+  #     - ./migrator/data:/data
+  #   networks:
+  #     - hjemmebehandling
   
 
 ################ MariaDB ################

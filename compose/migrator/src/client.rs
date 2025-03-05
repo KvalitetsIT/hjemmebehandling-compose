@@ -1,4 +1,4 @@
-use std::{error::Error, fmt::Display};
+use std::{env, error::Error, fmt::Display};
 
 use log::debug;
 use reqwest::{
@@ -80,16 +80,29 @@ impl Client {
         &self,
         request: reqwest::blocking::Request,
     ) -> Result<reqwest::blocking::Response, Box<dyn Error>> {
-        debug!(
-            "request:\nmethod: {}\nurl: {}\nbody: {}",
-            request.method().to_string(),
-            request.url().to_string(),
-            request
-                .body()
-                .and_then(|b| { b.as_bytes() })
-                .and_then(|b| { String::from_utf8(b.to_vec()).ok() })
-                .unwrap_or(String::from(""))
-        );
+        let verbose = env::var("verbose");
+
+        match verbose.ok() {
+            Some(_) => {
+                debug!(
+                    "request:\nmethod: {}\nurl: {}\nbody: {}",
+                    request.method().to_string(),
+                    request.url().to_string(),
+                    request
+                        .body()
+                        .and_then(|b| { b.as_bytes() })
+                        .and_then(|b| { String::from_utf8(b.to_vec()).ok() })
+                        .unwrap_or(String::from(""))
+                );
+            }
+            None => {
+                debug!(
+                    "request:\nmethod: {}\nurl: {}",
+                    request.method().to_string(),
+                    request.url().to_string(),
+                );
+            }
+        }
 
         match self.client.execute(request) {
             Ok(response) => Ok(response),

@@ -1,5 +1,4 @@
 use std::{
-    collections::{BTreeMap, HashMap},
     env,
     fs::File,
     io::{Read, Write},
@@ -12,7 +11,7 @@ use log::{debug, error, info, warn};
 use reqwest::{Method, Url};
 use serde_json::Value;
 
-use crate::client::Client;
+use crate::{bundle::Bundle, client::Client};
 pub struct Migrator {
     successor: Url,
     origin: Option<Url>,
@@ -36,83 +35,45 @@ impl Migrator {
         self.validate_data(data);
     }
 
-    fn aquire(
-        &self,
-        resources: Vec<String>,
-    ) -> Vec<(String, HashMap<String, HashMap<u64, Value>>)> {
+    fn aquire(&self, resources: Vec<String>) -> Vec<(String, Bundle)> {
         info!("Aquiring data...");
-        resources.into_iter().fold(
-            Vec::<(String, HashMap<String, HashMap<u64, Value>>)>::new(),
-            |mut a, resource_type| {
-                let json = match &self.origin {
-                    Some(origin) => self
-                        .client
-                        .get(&Self::get_url(&origin, resource_type.as_str()))
-                        .unwrap()
-                        .json::<Value>()
-                        .unwrap(),
-                    None => {
-                        warn!(
-                            "Environment variable 'successor' not found falling back to local data"
-                        );
+        resources
+            .into_iter()
+            .fold(Vec::<(String, Bundle)>::new(), |mut a, resource_type| {
+                let json = self.get_history(&resource_type);
 
-                        let path = format!("./data/{}.json", resource_type);
-                        File::open(&path)
-                            .and_then(|mut file| {
-                                debug!("Read: {:?}", file);
-                                let mut buf = String::new();
-                                file.read_to_string(&mut buf).map(|_| buf)
-                            })
-                            .and_then(|s| {
-                                serde_json::from_str::<Value>(s.as_str()).map_err(|e| e.into())
-                            })
-                            .expect(format!("Expected: {}", path).as_str())
-                    }
-                };
-
-                let empty: Vec<Value> = Vec::new();
-
-                let entries = json
-                    .get("entry")
-                    .and_then(|entry| entry.as_array())
-                    .unwrap_or(&empty);
-
-                let resources = entries.iter().fold(
-                    HashMap::<String, HashMap<u64, Value>>::new(),
-                    |mut acc, entry| {
-                        let request = entry.get("request").unwrap();
-                        let version = u64::from_str(
-                            request
-                                .get("url")
-                                .and_then(|url| url.as_str())
-                                .unwrap()
-                                .split('/')
-                                .last()
-                                .unwrap(),
-                        )
-                        .unwrap();
-
-                        let id = entry
-                            .get("fullUrl")
-                            .unwrap()
-                            .as_str()
-                            .unwrap()
-                            .split('/')
-                            .last()
-                            .unwrap()
-                            .to_string();
-
-                        acc.entry(id)
-                            .or_insert_with(HashMap::new)
-                            .insert(version, entry.clone()); // Use `.clone()` since `entries` is borrowed
-                        acc
-                    },
-                );
-
-                a.push((resource_type, resources));
+                let bundle = Bundle::from((resource_type.clone(), &json));
+                a.push((resource_type, bundle));
                 a
-            },
-        )
+            })
+    }
+
+    fn get_history(&self, resource_type: &String) -> Value {
+        let json = match &self.origin {
+            // Fetch data from remote api
+            Some(origin) => self
+                .client
+                .get(&Self::get_url(&origin, resource_type.as_str()))
+                .unwrap()
+                .json::<Value>()
+                .unwrap(),
+
+            // Fetch data from local storage
+            None => {
+                warn!("Environment variable 'successor' not found falling back to local data");
+
+                let path = format!("./data/{}.json", resource_type);
+                File::open(&path)
+                    .and_then(|mut file| {
+                        debug!("Read: {:?}", file);
+                        let mut buf = String::new();
+                        file.read_to_string(&mut buf).map(|_| buf)
+                    })
+                    .and_then(|s| serde_json::from_str::<Value>(s.as_str()).map_err(|e| e.into()))
+                    .expect(format!("Expected: {}", path).as_str())
+            }
+        };
+        json
     }
 
     fn get_url(origin: &Url, resource_type: &str) -> String {
@@ -131,10 +92,6 @@ impl Migrator {
             .expect(ERROR_MESSAGE);
     }
 
-    fn to_value(response: reqwest::blocking::Response) -> Value {
-        response.json::<Value>().unwrap()
-    }
-
     fn wait() {
         let secs: u64 = env::var("wait")
             .map(|secs| {
@@ -151,40 +108,31 @@ impl Migrator {
         sleep(duration);
     }
 
-    fn validate_data(&self, resources: Vec<(String, HashMap<String, HashMap<u64, Value>>)>) {
+    fn validate_data(&self, resources: Vec<(String, Bundle)>) {
         info!("Validating migration...");
-        resources.iter().for_each(|(resource_type, entries)| {
-            entries.iter().for_each(|(entry, versions)| {
-                let expected: u64 = versions.len() as u64;
+        let t = resources.iter().all(|(resource_type, expected)| {
+            let a: Value = self
+                .client
+                .get(Self::get_url(
+                    &self.successor,
+                    format!("{}", resource_type).as_str(),
+                ))
+                .unwrap()
+                .json()
+                .unwrap();
 
-                let actual = self
-                    .client
-                    .get(Self::get_url(
-                        &self.successor,
-                        format!("{}/{}", resource_type, entry).as_str(),
-                    ))
-                    .map(|response| Self::to_value(response))
-                    .unwrap()
-                    .get("total")
-                    .expect(
-                        format!(
-                            "Could not aquire field 'total' for resource: {}",
-                            resource_type
-                        )
-                        .as_str(),
-                    )
-                    .as_u64()
-                    .unwrap();
+            let b: Value = self.get_history(resource_type);
 
-                match actual == expected {
-                    true => info!("{}:{} - {}/{}", resource_type, entry, actual, expected),
-                    false => error!("{}:{} - {}/{}", resource_type, entry, actual, expected),
-                }
-            });
+            a.get("total").unwrap() == b.get("total").unwrap()
         });
+
+        match t {
+            true => info!("Success! 🥳"),
+            false => error!("Failed! 👎"),
+        }
     }
 
-    fn migrate(&self, data: &Vec<(String, HashMap<String, HashMap<u64, Value>>)>) {
+    fn migrate(&self, data: &Vec<(String, Bundle)>) {
         info!(
             "Migrating data from: {} to {}",
             self.origin
@@ -194,10 +142,9 @@ impl Migrator {
             self.successor
         );
 
-        data.iter().for_each(|(resource_type, entries)| {
-            entries.values().for_each(|entry| {
-                let mut versions: Vec<(&u64, &Value)> = entry.iter().collect();
-                versions.sort_by_key(|k| k.0);
+        data.iter().for_each(|(_, bundle)| {
+            bundle.get_entries().for_each(|entry| {
+                let versions: Vec<(&u64, &Value)> = entry.get_versions().collect();
 
                 versions.iter().for_each(|(_version, value)| {
                     let request = value
@@ -216,12 +163,6 @@ impl Migrator {
                         .and_then(|u| Url::parse(u).ok())
                         .expect("Could not extract field 'fullUrl'");
 
-                    let url: Url = request
-                        .get("url")
-                        .and_then(|u| u.as_str())
-                        .and_then(|u| Url::parse(u).ok())
-                        .expect("Could not extract field 'url' from request");
-
                     let destination = self.successor.join(full_url.path()).unwrap();
 
                     let response = match method {
@@ -231,9 +172,7 @@ impl Migrator {
 
                             self.client.put(destination, resource)
                         }
-                        Method::DELETE => self
-                            .client
-                            .delete(self.successor.join(full_url.path()).unwrap()),
+                        Method::DELETE => self.client.delete(destination),
                         _ => Err(String::from("Expected method {}, method").into()),
                     };
 
