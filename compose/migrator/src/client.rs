@@ -1,6 +1,6 @@
-use std::{env, error::Error, fmt::Display};
+use std::{error::Error, fmt::Display};
 
-use log::debug;
+use log::{debug, error};
 use reqwest::{
     header::{HeaderMap, HeaderValue},
     IntoUrl, Method,
@@ -26,7 +26,7 @@ impl Client {
                 .unwrap(),
         }
     }
-    pub fn get<T>(&self, url: T) -> Result<reqwest::blocking::Response, Box<dyn Error>>
+    pub fn get<T>(&self, url: T) -> Result<Value, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
@@ -36,11 +36,7 @@ impl Client {
     }
 
     #[allow(dead_code)]
-    pub fn post<T>(
-        &self,
-        url: T,
-        data: &Value,
-    ) -> Result<reqwest::blocking::Response, Box<dyn Error>>
+    pub fn post<T>(&self, url: T, data: &Value) -> Result<Value, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
@@ -56,11 +52,7 @@ impl Client {
         self.execute(request)
     }
 
-    pub fn put<T>(
-        &self,
-        url: T,
-        value: &Value,
-    ) -> Result<reqwest::blocking::Response, Box<dyn Error>>
+    pub fn put<T>(&self, url: T, value: &Value) -> Result<Value, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {
@@ -76,41 +68,41 @@ impl Client {
         self.execute(request)
     }
 
-    fn execute(
-        &self,
-        request: reqwest::blocking::Request,
-    ) -> Result<reqwest::blocking::Response, Box<dyn Error>> {
-        let verbose = env::var("verbose");
-
-        match verbose.ok() {
-            Some(_) => {
-                debug!(
-                    "request:\nmethod: {}\nurl: {}\nbody: {}",
-                    request.method().to_string(),
-                    request.url().to_string(),
-                    request
-                        .body()
-                        .and_then(|b| { b.as_bytes() })
-                        .and_then(|b| { String::from_utf8(b.to_vec()).ok() })
-                        .unwrap_or(String::from(""))
-                );
-            }
-            None => {
-                debug!(
-                    "request:\nmethod: {}\nurl: {}",
-                    request.method().to_string(),
-                    request.url().to_string(),
-                );
-            }
-        }
+    fn execute(&self, request: reqwest::blocking::Request) -> Result<Value, Box<dyn Error>> {
+        debug!(
+            "Request:\nmethod: {}\nurl: {}\nbody: {}",
+            request.method().to_string(),
+            request.url().to_string(),
+            request
+                .body()
+                .and_then(|b| { b.as_bytes() })
+                .and_then(|b| { String::from_utf8(b.to_vec()).ok() })
+                .unwrap_or(String::from(""))
+        );
 
         match self.client.execute(request) {
-            Ok(response) => Ok(response),
+            Ok(response) => {
+                let status = response.status();
+                let url = response.url().clone();
+                let body: Value = response.json().unwrap();
+
+                debug!(
+                    "Response:\nstatus: {}\nurl: {}\nbody: {}",
+                    status, url, body
+                );
+
+                if !status.is_success() {
+                    error!("");
+                    return Err(body.to_string().into());
+                }
+
+                Ok(body)
+            }
             Err(error) => Err(error.into()),
         }
     }
 
-    pub(crate) fn delete<T>(&self, url: T) -> Result<reqwest::blocking::Response, Box<dyn Error>>
+    pub(crate) fn delete<T>(&self, url: T) -> Result<Value, Box<dyn Error>>
     where
         T: IntoUrl + Display,
     {

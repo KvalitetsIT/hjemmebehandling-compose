@@ -1,5 +1,3 @@
-use log::{debug, info};
-use reqwest::header::ValueDrain;
 use serde_json::Value;
 use std::{
     collections::{BTreeMap, HashMap},
@@ -7,17 +5,10 @@ use std::{
 };
 
 pub struct Bundle {
-    resource: String,
     entries: BTreeMap<String, Entry>,
 }
 
 impl Bundle {
-    pub fn get_amount() {}
-
-    pub fn get(&self, id: &String) -> Option<&Entry> {
-        self.entries.get(id)
-    }
-
     pub fn get_entries(&self) -> impl Iterator<Item = &Entry> {
         self.entries.values().into_iter()
     }
@@ -60,15 +51,12 @@ impl From<(String, &Value)> for Bundle {
                     .to_string();
 
                 acc.entry(id.clone())
-                    .or_insert(Entry::new(id))
+                    .or_insert(Entry::new())
                     .insert(version, entry.clone());
                 acc
             });
 
-        Self {
-            resource: value.0,
-            entries,
-        }
+        Self { entries }
     }
 }
 
@@ -125,9 +113,6 @@ fn clean_resource(resource: &serde_json::Value) -> serde_json::Value {
 
     cleaned
 }
-fn extract_field(value: &serde_json::Value, field: &str) -> Option<String> {
-    value.get(field).and_then(|v| v.as_str()).map(String::from)
-}
 
 /// Recursively normalizes a JSON value by sorting arrays
 fn normalize_json(value: &Value) -> Value {
@@ -150,34 +135,18 @@ fn normalize_json(value: &Value) -> Value {
 
 #[derive(Debug)]
 pub struct Entry {
-    pub id: String,
     versions: HashMap<u64, Value>,
 }
 
 impl Entry {
-    pub fn get_current(&self) -> Option<&Value> {
-        let mut versions: Vec<(&u64, &Value)> = self.versions.iter().collect();
-        versions.sort_by_key(|k| k.0);
-        versions.last().map(|entry| entry.1)
-    }
-
     pub fn get_versions(&self) -> impl Iterator<Item = (&u64, &Value)> {
         let mut versions: Vec<(&u64, &Value)> = self.versions.iter().collect();
         versions.sort_by_key(|k| k.0);
         versions.into_iter()
     }
 
-    pub fn get_version(&self, version: &u64) -> Option<&Value> {
-        self.versions.get(version)
-    }
-
-    pub fn len(&self) -> usize {
-        self.versions.len()
-    }
-
-    pub fn new(id: String) -> Self {
+    pub fn new() -> Self {
         Self {
-            id,
             versions: HashMap::new(),
         }
     }
