@@ -11,8 +11,24 @@ services:
 
 ############################ WEB ############################
 
+  medarbejder-web-mariadb:
+    container_name: medarbejder-web-mariadb
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:3.0.1-2024-03-19
+    restart: always
+    environment:
+     - REACT_APP_BFF_BASE_URL=http://medarbejder-bff-mariadb:8080
+     - REACT_APP_NODE_ENV=dev
+     - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+     - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+     - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    ports:
+     - "4001:80"
+    networks:
+      - hjemmebehandling
+
   medarbejder-web:
-    image: kvalitetsit/hjemmebehandling-medarbejder-web:latest
+    container_name: medarbejder-web-postgres
+    image: kvalitetsit/hjemmebehandling-medarbejder-web:800cd1c6cd4a6694277d77264f270d53b83c88c3
     restart: always
     environment:
      - REACT_APP_BFF_BASE_URL=http://medarbejder-bff:8080
@@ -21,13 +37,28 @@ services:
      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
     ports:
-     - "3005:80"
+     - "4002:80"
     networks:
       - hjemmebehandling
-
+  
+  patient-web-mariadb: 
+    container_name: patient-web-mariadb
+    image: kvalitetsit/hjemmebehandling-patient-web:3.0.1-2024-03-19
+    restart: always
+    environment:
+      - REACT_APP_BFF_BASE_URL=http://patient-bff-mariadb:8080
+      - REACT_APP_NODE_ENV=dev
+      - REACT_APP_KEYCLOAK_URL=https://keycloak.sdn.t0.hosting.kitkube.dk/auth
+      - REACT_APP_KEYCLOAK_REALM=aftaleportal-test
+      - REACT_APP_KEYCLOAK_CLIENTID=aftaleportal-ui
+    networks:
+      - hjemmebehandling
+    ports:
+      - "3001:80"
 
   patient-web: 
-    image: kvalitetsit/hjemmebehandling-patient-web:latest
+    container_name: patient-web-postgres
+    image: kvalitetsit/hjemmebehandling-patient-web:6204cae5f940f90ccc572e03cac07b68f854d903
     restart: always
     environment:
       - REACT_APP_BFF_BASE_URL=http://patient-bff:8080
@@ -38,11 +69,34 @@ services:
     networks:
       - hjemmebehandling
     ports:
-      - "3001:80"
-  
+      - "3002:80"
+ 
 ############################ BFF ############################
+
+  medarbejder-bff-mariadb:
+    container_name: medarbejder-bff-mariadb
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:3.0.1-2024-03-19
+    environment:
+      - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - user.context.handler=MOCK
+      - user.mock.context.organization.id=271231000016008
+      - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server-mariadb:8080/fhir
+      - allowed_origins=http://localhost:4001
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+    ports:
+      - 8001:8080
+      - 5006:5006
+    networks:
+      - hjemmebehandling
+
+
   medarbejder-bff:
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:dev
+    container_name: medarbejder-bff-postgres
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:6c88457c05263eb03450e0cbc2b1592286f87d32
     environment:
       - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - user.context.handler=MOCK
@@ -50,19 +104,18 @@ services:
       - user.mock.context.entitlements=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2 
       - cpr.url=http://rm-cpr-service:8080/Patient/
       - fhir.server.url=http://hapi-server:8080/fhir
-      - allowed_origins=http://localhost:3005
+      - allowed_origins=http://localhost:4002
       - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator, Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
     ports:
-      - 8092:8080
-      - 5006:5006
+      - 8002:8080
     networks:
       - hjemmebehandling
 
-
   patient-bff:
-    image: kvalitetsit/hjemmebehandling-patient-bff:dev
+    container_name: patient-bff-postgres
+    image: kvalitetsit/hjemmebehandling-patient-bff:cedb407d23559bd2e5eb1661913d98064ee5306b
     environment:
       - user.mock.context.cpr=0104909995
       - cpr.url=http://rm-cpr-service:8080/Patient/
@@ -73,11 +126,29 @@ services:
       - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
     ports:
-      - 8091:8080
+      - 7002:8080
       - 5007:5007
     networks:
       - hjemmebehandling
 
+  patient-bff-mariadb:
+    container_name: patient-bff-mariadb
+    image: kvalitetsit/hjemmebehandling-patient-bff:cedb407d23559bd2e5eb1661913d98064ee5306b
+    environment:
+      - user.mock.context.cpr=0104909995
+      - cpr.url=http://rm-cpr-service:8080/Patient/
+      - fhir.server.url=http://hapi-server-mariadb:8080/fhir
+      - user.context.handler=MOCK
+      - allowed_origins=http://localhost:3002
+      - JVM_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007
+      - allowed.roles=DIAS_KoMo_Laege,DIAS_KoMo_Sygeplejerske,DIAS_KoMo_Administrator, DIAS_HJEMMEBEHANDLING_Sygeplejerske2
+      - allowed.admin.roles=Administrator,DIAS_KoMo_Administrator 
+    ports:
+      - 7001:8080
+      - 5008:5007
+    networks:
+      - hjemmebehandling
+ 
 ############################ Infrastructure ############################
   
   rm-cpr-service:
@@ -115,15 +186,26 @@ services:
 
 
   # hapi-server-migrator:
-  #   image: kvalitetsit/hjemmebehandling-migrator:1.0.12
+  #   image: kvalitetsit/hjemmebehandling-migrator:1.0.24
   #   container_name: migrator
   #   environment:
   #     # Note: The resources below has to be in a certain order
-  #     - resources=CodeSystem,Practitioner,SearchParameter,Organization,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse
-  #     # - origin=http://hapi-server-mariadb:8080
-  #     - successor=http://hapi-server:8080
+  #     - RESOURCES=CodeSystem,Practitioner,SearchParameter,Organization,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse
+  #     - ORIGIN=http://hapi-server-mariadb:8080
+  #     - SUCCESSOR=http://hapi-server:8080
   #     - RUST_LOG=Info
-  #     - wait=20
+  #     - WAIT=20
+  #     - MARIADB_USER=hapi
+  #     - MARIADB_PASSWORD=hapi
+  #     - MARIADB_DB=hapi
+  #     - MARIADB_HOST=mariadb
+  #     - MARIADB_PORT=3306
+  #     - POSTGRES_USER=hapi
+  #     - POSTGRES_PASSWORD=hapi
+  #     - POSTGRES_DB=hapi
+  #     - POSTGRES_HOST=postgres
+  #     - POSTGRES_PORT=5432
+  #     - RUST_BACKTRACE=1
   #   depends_on:
   #     hapi-server-initializer:
   #       condition: service_completed_successfully
@@ -154,7 +236,7 @@ services:
     networks:
       - hjemmebehandling
     ports:
-      - "9090:8080"
+      - "9001:8080"
 
   mariadb:
     container_name: mariadb
@@ -164,6 +246,8 @@ services:
       - MARIADB_PASSWORD=hapi
       - MARIADB_ROOT_PASSWORD=hapi
       - MARIADB_DATABASE=hapi
+    ports:
+      - 3306:3306
     networks:
       - hjemmebehandling
 
@@ -171,8 +255,8 @@ services:
 ################ Postgres ################
 
   hapi-server:
-    container_name: hapi-server
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:postgres-1.0.2
+    container_name: hapi-server-postgres
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:567ab2b2bd3edddf06b66c3a5c7d322662681907
     environment:
       - spring.datasource.url=jdbc:postgresql://postgres:5432/hapi
       - spring.datasource.driverClassName=org.postgresql.Driver
@@ -189,7 +273,7 @@ services:
     networks:
       - hjemmebehandling
     ports:
-      - "9091:8080"
+      - "9002:8080"
 
   postgres:
     container_name: postgres
