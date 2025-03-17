@@ -1260,6 +1260,7 @@ dependencies = [
  "dotenv",
  "env_logger",
  "features",
+ "flate2",
  "log",
  "mysql",
  "postgres",
