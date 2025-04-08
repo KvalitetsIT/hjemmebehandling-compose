@@ -41,5 +41,7 @@ fn main() {
     let migrator = Migrator::new(origin, successor);
     migrator.start(resources);
 
+    migrator.quit();
+
     info!("Done");
 }

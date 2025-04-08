@@ -194,7 +194,7 @@ services:
 
 
   hapi-server-migrator:
-    image: kvalitetsit/hjemmebehandling-migrator:1.0.24
+    image: kvalitetsit/hjemmebehandling-migrator:1.0.25
     container_name: migrator
     environment:
       # Note: The resources below has to be in a certain order
@@ -214,6 +214,8 @@ services:
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=5432
       - RUST_BACKTRACE=1
+      - ISTIO_PORT=15020
+      - ISTIO_HOST=localhost
     depends_on:
       hapi-server-initializer:
         condition: service_completed_successfully

@@ -15,7 +15,7 @@ use tokio::runtime::Runtime;
 
 use log::{debug, error, info, warn};
 use reqwest::{Method, Url};
-use serde_json::Value;
+use serde_json::{json, Value};
 use sqlx::{mysql::MySqlRow, MySql, Pool, Postgres};
 
 use crate::{bundle::Bundle, client::Client, record::Record};
@@ -364,6 +364,25 @@ impl Migrator {
 
             Migrator::update_records(postgres, mariadb_records).await;
         });
+    }
+
+    pub fn quit(&self) {
+        let host = std::env::var("ISTIO_HOST").unwrap_or(String::from("localhost"));
+        let port: u16 = std::env::var("ISTIO_PORT")
+            .ok()
+            .and_then(|x| x.parse::<u16>().ok())
+            .unwrap_or(15020);
+
+        info!(
+            "Calling quit on istio sidecar proxy (http://{}:{}/quitquitquit)",
+            host, port
+        );
+
+        let url = format!("http://{}:{}/quitquitquit", host, port);
+        let data = json!({});
+        self.client
+            .post(url, &data)
+            .expect("Something went wrong trying to quit istio sidecar");
     }
 }
 
