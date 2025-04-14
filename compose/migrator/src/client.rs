@@ -5,7 +5,7 @@ use reqwest::{
     header::{HeaderMap, HeaderValue},
     IntoUrl, Method,
 };
-use serde_json::Value;
+use serde_json::{json, Value};
 
 pub struct Client {
     client: reqwest::blocking::Client,
@@ -84,7 +84,7 @@ impl Client {
             Ok(response) => {
                 let status = response.status();
                 let url = response.url().clone();
-                let body: Value = response.json().unwrap();
+                let body: Value = response.json().unwrap_or(json!("{}"));
 
                 debug!(
                     "Response:\nstatus: {}\nurl: {}\nbody: {}",
