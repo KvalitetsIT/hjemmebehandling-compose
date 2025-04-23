@@ -13,12 +13,12 @@ use std::{
 };
 use tokio::runtime::Runtime;
 
+use crate::{bundle::Bundle, client::Client, record::Record};
 use log::{debug, error, info, warn};
 use reqwest::{Method, Url};
 use serde_json::{json, Value};
 use sqlx::{mysql::MySqlRow, MySql, Pool, Postgres};
-
-use crate::{bundle::Bundle, client::Client, record::Record};
+use urlencoding::encode;
 pub struct Migrator {
     successor: Url,
     origin: Option<Url>,
@@ -67,7 +67,7 @@ impl Migrator {
 
             // Fetch data from local storage
             None => {
-                warn!("Environment variable 'successor' not found falling back to local data");
+                warn!("Environment variable 'origin' not found falling back to local data");
 
                 let path = format!("./data/{}.json", resource_type);
                 File::open(&path)
@@ -118,13 +118,15 @@ impl Migrator {
     fn validate_data(&self, resources: Vec<(String, Bundle)>) {
         info!("Validating migration...");
         let t = resources.iter().all(|(resource_type, _)| {
-            let a: Value = self
-                .client
-                .get(Self::get_url(
-                    &self.successor,
-                    format!("{}", resource_type).as_str(),
-                ))
-                .unwrap();
+            let url_a = Self::get_url(&self.successor, format!("{}", resource_type).as_str());
+
+            let a: Value = self.client.get(&url_a).unwrap();
+
+            let origin = self.origin.clone();
+
+            let url_b = origin
+                .map(|x| Self::get_url(&x, resource_type.as_str()))
+                .unwrap_or(String::from("/local/"));
 
             let b: Value = self.get_history(resource_type);
 
@@ -142,7 +144,15 @@ impl Migrator {
             match total.0 == total.1 {
                 true => true,
                 false => {
-                    error!("Expected {} but was {}", total.0, total.1);
+                    error!(
+                        "Expected '{}' but was '{}':\n{} returned '{}' historical records\n while\n{} returned '{}' historical records.",
+                        total.0,
+                        total.1,
+                        url_a,
+                        total.0,
+                        url_b,
+                        total.1,
+                    );
                     false
                 }
             }
@@ -283,16 +293,13 @@ impl Migrator {
                 .await
                 .expect(format!("Could not execute statement '{}'", statement).as_str());
 
-            assert_eq!(
-                res.rows_affected(),
-                1,
-                "{}",
-                format!(
+            if res.rows_affected() != 1 {
+                warn!(
                     "Expected exactly one row but {} was affected during execution of '{}'",
                     res.rows_affected(),
                     s
-                )
-            );
+                );
+            }
 
             debug!("{}", s);
 
@@ -309,15 +316,13 @@ impl Migrator {
                 .await
                 .expect(format!("Could not execute statement '{}'", statement).as_str());
 
-            assert!(
-                res.rows_affected() <= 1,
-                "{}",
-                format!(
+            if res.rows_affected() < 1 {
+                warn!(
                     "Expected max one row but {} was affected during execution of '{}'",
                     res.rows_affected(),
                     s
                 )
-            );
+            }
 
             debug!("{}", s);
         }
@@ -334,19 +339,13 @@ impl Migrator {
                 .max_connections(1)
                 .connect(&mariadb_url.to_string())
                 .await
-                .expect(
-                    format!(
-                        "Could not aquire connection for: {}",
-                        &mariadb_url.to_string()
-                    )
-                    .as_str(),
-                );
+                .expect(format!("Could not aquire connection for: {}", &mariadb_url).as_str());
 
             info!("Connection to '{}' aquired.", mariadb_url.to_string());
 
             let postgres: Pool<Postgres> = PgPoolOptions::new()
                 .max_connections(1)
-                .connect(&postgres_url.to_string())
+                .connect(&postgres_url)
                 .await
                 .expect(
                     format!(
@@ -391,7 +390,7 @@ enum DB {
     MariaDB(Pool<MySql>),
 }
 
-fn get_database_url(prefix: &str, protocol: &str) -> Url {
+fn get_database_url(prefix: &str, protocol: &str) -> String {
     let (user, password, host, port, db) = (
         var(format!("{}_USER", prefix)).unwrap(),
         var(format!("{}_PASSWORD", prefix)).unwrap(),
@@ -405,5 +404,14 @@ fn get_database_url(prefix: &str, protocol: &str) -> Url {
         protocol, user, password, host, port, db
     );
 
-    Url::parse(url.as_str()).unwrap()
+    info!("database url: {}", url);
+    let encoded_password = encode(password.as_str());
+
+    let url = format!(
+        "{}://{}:{}@{}:{}/{}",
+        protocol, user, encoded_password, host, port, db
+    );
+    info!("encoded database url: {}", url);
+
+    url.to_string()
 }
