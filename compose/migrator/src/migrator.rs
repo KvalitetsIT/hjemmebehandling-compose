@@ -35,6 +35,7 @@ impl Migrator {
 
     pub fn start(&self, resources: Vec<String>) {
         let data = self.aquire(resources);
+
         self.migrate(&data);
 
         Self::update_timestamps();
@@ -117,41 +118,39 @@ impl Migrator {
 
     fn validate_data(&self, resources: Vec<(String, Bundle)>) {
         info!("Validating migration...");
-        let t = resources.iter().all(|(resource_type, _)| {
-            let url_a = Self::get_url(&self.successor, format!("{}", resource_type).as_str());
 
-            let a: Value = self.client.get(&url_a).unwrap();
+        let t = resources.iter().all(|(resource_type, _)| {
 
             let origin = self.origin.clone();
+            let origin: (String, Value) = (origin .map(|x| Self::get_url(&x, resource_type.as_str())) .unwrap_or(String::from("/local/")), self.get_history(resource_type));
 
-            let url_b = origin
-                .map(|x| Self::get_url(&x, resource_type.as_str()))
-                .unwrap_or(String::from("/local/"));
+            let successor =  Self::get_url(&self.successor, format!("{}", resource_type).as_str());
+            let successor: (String, Value) = (  successor.clone(), self.client.get(&successor).unwrap());
 
-            let b: Value = self.get_history(resource_type);
-
-            let total: (u64, u64) = (
-                a.get("total")
+            let origin_total: u64 = origin.1.get("total")
                     .unwrap()
                     .as_u64()
-                    .expect("Could not parse value of total as u64"),
-                b.get("total")
+                    .expect("Could not parse value of total as u64");
+
+            let successor_total: u64 = successor.1.get("total")
                     .unwrap()
                     .as_u64()
-                    .expect("Could not parse value of total as u64"),
-            );
+                    .expect("Could not parse value of total as u64");
 
-            match total.0 == total.1 {
+
+            let has_matching_amount_of_entries =  origin_total == successor_total;
+
+            match has_matching_amount_of_entries {
                 true => true,
                 false => {
                     error!(
                         "Expected '{}' but was '{}':\n{} returned '{}' historical records\n while\n{} returned '{}' historical records.",
-                        total.0,
-                        total.1,
-                        url_a,
-                        total.0,
-                        url_b,
-                        total.1,
+                        origin_total,
+                        successor_total,
+                        origin.0,
+                        origin_total,
+                        successor.0,
+                        successor_total,
                     );
                     false
                 }
@@ -281,6 +280,7 @@ impl Migrator {
                 .unwrap_or(mariadb_record.res_id.to_string());
 
             let s = format!("UPDATE hfj_res_ver set res_published = {}, res_updated = {} FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", mariadb_record.res_published, mariadb_record.res_updated, id, mariadb_record.res_ver);
+            debug!("{}", s);
 
             let query = sqlx::query(statement)
                 .bind(mariadb_record.res_published)
@@ -301,10 +301,6 @@ impl Migrator {
                 );
             }
 
-            debug!("{}", s);
-
-            let s = format!("UPDATE hfj_resource SET res_published = {}, res_updated = {} WHERE hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", mariadb_record.res_published, mariadb_record.res_updated, &id, mariadb_record.res_ver);
-
             let query = sqlx::query(statement2)
                 .bind(mariadb_record.res_published)
                 .bind(mariadb_record.res_updated)
@@ -316,14 +312,15 @@ impl Migrator {
                 .await
                 .expect(format!("Could not execute statement '{}'", statement).as_str());
 
-            if res.rows_affected() < 1 {
+            if res.rows_affected() > 1 {
                 warn!(
                     "Expected max one row but {} was affected during execution of '{}'",
                     res.rows_affected(),
                     s
-                )
+                );
             }
 
+            let s = format!("UPDATE hfj_resource SET res_published = {}, res_updated = {} WHERE hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", mariadb_record.res_published, mariadb_record.res_updated, &id, mariadb_record.res_ver);
             debug!("{}", s);
         }
     }
