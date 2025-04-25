@@ -216,10 +216,10 @@ impl Migrator {
         });
     }
 
-    async fn fetch_records(pool: DB) -> BTreeMap<String, Record> {
+    async fn fetch_records(pool: DB) -> BTreeMap<String, BTreeMap<i64, Record>> {
         match pool {
             DB::Postgres(pg) => {
-                let statement = "SELECT hfj_res_ver.res_id, hfj_res_ver.res_ver, hfj_res_ver.res_type, hfj_resource.fhir_id, hfj_res_ver.res_text_vc, hfj_res_ver.res_published, hfj_res_ver.res_updated FROM hfj_res_ver JOIN hfj_resource ON hfj_res_ver.res_id = hfj_resource.res_id;";
+                let statement = "SELECT hfj_res_ver.res_id, hfj_res_ver.res_ver, hfj_res_ver.res_type, hfj_resource.fhir_id, hfj_res_ver.res_deleted_at, hfj_res_ver.res_text_vc, hfj_res_ver.res_published, hfj_res_ver.res_updated FROM hfj_res_ver JOIN hfj_resource ON hfj_res_ver.res_id = hfj_resource.res_id;";
                 let query = sqlx::query(statement);
                 let response = query.fetch_all(&pg).await.expect(
                     format!(
@@ -229,21 +229,29 @@ impl Migrator {
                     .as_str(),
                 );
 
-                let result = response
-                    .iter()
-                    .map(|row: &PgRow| {
-                        let row = Record::from(row);
-                        let id = row.fhir_id.clone().unwrap_or(row.res_id.to_string());
-                        (id, row)
-                    })
-                    .collect::<BTreeMap<String, Record>>();
+                let mut result: BTreeMap<String, BTreeMap<i64, Record>> = BTreeMap::new();
+
+                for row in response {
+                    let row = Record::from(&row);
+                    let id = row.fhir_id.clone().unwrap_or(row.res_id.to_string());
+
+                    let version = row.res_ver;
+
+                    if let Some(versions) = result.get_mut(&id) {
+                        versions.insert(version, row);
+                    } else {
+                        let mut versions = BTreeMap::new();
+                        versions.insert(version, row);
+                        result.insert(id, versions);
+                    }
+                }
 
                 info!("Postgres records: {}", result.len());
 
                 result
             }
             DB::MariaDB(maria) => {
-                let statement = "SELECT HFJ_RES_VER.RES_ID, HFJ_RES_VER.RES_VER, HFJ_RES_VER.RES_TYPE, HFJ_FORCED_ID.FORCED_ID, HFJ_RES_VER.RES_PUBLISHED, HFJ_RES_VER.RES_UPDATED, HFJ_RES_VER.RES_TEXT FROM HFJ_RES_VER LEFT JOIN HFJ_FORCED_ID ON HFJ_RES_VER.RES_ID = HFJ_FORCED_ID.RESOURCE_PID ORDER BY HFJ_RES_VER.RES_ID, HFJ_RES_VER.RES_VER;";
+                let statement = "SELECT HFJ_RES_VER.RES_ID, HFJ_RES_VER.RES_VER, HFJ_RES_VER.RES_TYPE, HFJ_FORCED_ID.FORCED_ID, HFJ_RES_VER.RES_DELETED_AT, HFJ_RES_VER.RES_PUBLISHED, HFJ_RES_VER.RES_UPDATED, HFJ_RES_VER.RES_TEXT FROM HFJ_RES_VER LEFT JOIN HFJ_FORCED_ID ON HFJ_RES_VER.RES_ID = HFJ_FORCED_ID.RESOURCE_PID ORDER BY HFJ_RES_VER.RES_ID, HFJ_RES_VER.RES_VER;";
                 let query = sqlx::query(statement);
                 let response = query.fetch_all(&maria).await.expect(
                     format!(
@@ -253,14 +261,23 @@ impl Migrator {
                     .as_str(),
                 );
 
-                let result = response
-                    .iter()
-                    .map(|row: &MySqlRow| {
-                        let row = Record::from(row);
-                        let id = row.fhir_id.clone().unwrap_or(row.res_id.to_string());
-                        (id, row)
-                    })
-                    .collect::<BTreeMap<String, Record>>();
+                let mut result: BTreeMap<String, BTreeMap<i64, Record>> = BTreeMap::new();
+
+                for row in response {
+                    let row = Record::from(&row);
+                    let id = row.fhir_id.clone().unwrap_or(row.res_id.to_string());
+
+                    let version = row.res_ver;
+
+                    if let Some(versions) = result.get_mut(&id) {
+                        versions.insert(version, row);
+                    } else {
+                        let mut versions = BTreeMap::new();
+                        versions.insert(version, row);
+                        result.insert(id, versions);
+                    }
+                }
+
                 info!("MariaDB records: {}", result.len());
 
                 result
@@ -268,62 +285,66 @@ impl Migrator {
         }
     }
 
-    async fn update_records(pool: Pool<Postgres>, mariadb_records: BTreeMap<String, Record>) {
-        let statement = "UPDATE hfj_res_ver set  res_published = $1, res_updated= $2 FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = $3 AND hfj_res_ver.res_ver = $4;";
-        let statement2 = "UPDATE hfj_resource SET res_published = $1, res_updated = $2 WHERE hfj_resource.fhir_id = $3 AND hfj_resource.res_ver = $4;";
+    async fn update_records(
+        pool: Pool<Postgres>,
+        mariadb_records: BTreeMap<String, BTreeMap<i64, Record>>,
+    ) {
+        let statement = "UPDATE hfj_res_ver set  res_published = $1, res_updated= $2, res_deleted_at = $3 FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = $4 AND hfj_res_ver.res_ver = $5;";
+        let statement2 = "UPDATE hfj_resource SET res_published = $1, res_updated = $2, res_deleted_at = $3 WHERE hfj_resource.fhir_id = $4 AND hfj_resource.res_ver = $5;";
 
-        for entry in mariadb_records {
-            let mariadb_record = entry.1;
+        for (id, versions) in mariadb_records {
+            for (version, entry) in versions {
+                let id = entry.fhir_id.unwrap_or(entry.res_id.to_string());
 
-            let id = mariadb_record
-                .fhir_id
-                .unwrap_or(mariadb_record.res_id.to_string());
+                let s = format!("UPDATE hfj_res_ver SET res_published = {}, res_updated = {}, res_deleted_at = {} FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", entry.res_published, entry.res_updated, entry.res_deleted_at.map(|x| x.to_string()).unwrap_or(String::from("NULL")), id, entry.res_ver);
+                debug!("{}", s);
 
-            let s = format!("UPDATE hfj_res_ver set res_published = {}, res_updated = {} FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", mariadb_record.res_published, mariadb_record.res_updated, id, mariadb_record.res_ver);
-            debug!("{}", s);
+                let query = sqlx::query(statement)
+                    .bind(entry.res_published)
+                    .bind(entry.res_updated)
+                    .bind(entry.res_deleted_at)
+                    .bind(&id)
+                    .bind(entry.res_ver);
 
-            let query = sqlx::query(statement)
-                .bind(mariadb_record.res_published)
-                .bind(mariadb_record.res_updated)
-                .bind(&id)
-                .bind(mariadb_record.res_ver);
+                let res = query
+                    .execute(&pool)
+                    .await
+                    .expect(format!("Could not execute statement '{}'", statement).as_str());
 
-            let res = query
-                .execute(&pool)
-                .await
-                .expect(format!("Could not execute statement '{}'", statement).as_str());
+                if res.rows_affected() != 1 {
+                    warn!(
+                        "Expected exactly one row but {} was affected during execution of '{}'",
+                        res.rows_affected(),
+                        s
+                    );
+                }
 
-            if res.rows_affected() != 1 {
-                warn!(
-                    "Expected exactly one row but {} was affected during execution of '{}'",
-                    res.rows_affected(),
-                    s
-                );
+                let query = sqlx::query(statement2)
+                    .bind(entry.res_published)
+                    .bind(entry.res_updated)
+                    .bind(entry.res_deleted_at)
+                    .bind(&id)
+                    .bind(entry.res_ver);
+
+                let res = query
+                    .execute(&pool)
+                    .await
+                    .expect(format!("Could not execute statement '{}'", statement).as_str());
+
+                if res.rows_affected() > 1 {
+                    warn!(
+                        "Expected max one row but {} was affected during execution of '{}'",
+                        res.rows_affected(),
+                        s
+                    );
+                }
+
+                let s = format!("UPDATE hfj_resource SET res_published = {}, res_updated = {}, res_deleted_at = {} WHERE hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", entry.res_published, entry.res_updated,entry.res_deleted_at.map(|x| x.to_string()).unwrap_or(String::from("NULL")), &id, entry.res_ver);
+                debug!("{}", s);
             }
-
-            let query = sqlx::query(statement2)
-                .bind(mariadb_record.res_published)
-                .bind(mariadb_record.res_updated)
-                .bind(&id)
-                .bind(mariadb_record.res_ver);
-
-            let res = query
-                .execute(&pool)
-                .await
-                .expect(format!("Could not execute statement '{}'", statement).as_str());
-
-            if res.rows_affected() > 1 {
-                warn!(
-                    "Expected max one row but {} was affected during execution of '{}'",
-                    res.rows_affected(),
-                    s
-                );
-            }
-
-            let s = format!("UPDATE hfj_resource SET res_published = {}, res_updated = {} WHERE hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", mariadb_record.res_published, mariadb_record.res_updated, &id, mariadb_record.res_ver);
-            debug!("{}", s);
         }
     }
+
     fn update_timestamps() {
         info!("Updating timestamps");
         let rt = Runtime::new().unwrap();

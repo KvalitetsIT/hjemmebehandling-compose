@@ -6,6 +6,7 @@ pub struct Record {
     pub res_ver: i64,
     #[allow(dead_code)]
     pub res_type: String,
+    pub res_deleted_at: Option<NaiveDateTime>,
     pub res_published: NaiveDateTime,
     pub res_updated: NaiveDateTime,
     pub fhir_id: Option<String>,
@@ -25,6 +26,10 @@ impl From<&MySqlRow> for Record {
             .try_get("RES_TYPE")
             .expect("Could not aquire 'RES_TYPE' from the database response");
 
+        let res_deleted_at: Option<NaiveDateTime> = row
+            .try_get("RES_DELETED_AT")
+            .expect("Could not aquire 'RES_DELETED_AT' from the database response");
+
         let res_published: NaiveDateTime = row
             .try_get("RES_PUBLISHED")
             .expect("Could not aquire 'RES_PUBLISHED' from the database response");
@@ -41,6 +46,7 @@ impl From<&MySqlRow> for Record {
             res_id,
             res_ver,
             res_type,
+            res_deleted_at,
             res_published,
             res_updated,
             fhir_id,
@@ -62,6 +68,10 @@ impl From<&PgRow> for Record {
             .try_get("res_type")
             .expect("Could not aquire 'res_type' from the database response");
 
+        let res_deleted_at: Option<NaiveDateTime> = row
+            .try_get("res_deleted_at")
+            .expect("Could not aquire 'res_deleted_at' from the database response");
+
         let res_published: NaiveDateTime = row
             .try_get("res_published")
             .expect("Could not aquire 'res_published' from the database response");
@@ -78,6 +88,7 @@ impl From<&PgRow> for Record {
             res_id,
             res_ver,
             res_type,
+            res_deleted_at,
             res_published,
             res_updated,
             fhir_id,
