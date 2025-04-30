@@ -1,7 +1,4 @@
-use sqlx::{
-    mysql::MySqlPoolOptions,
-    postgres::{PgPoolOptions, PgRow},
-};
+use sqlx::{mysql::MySqlPoolOptions, postgres::PgPoolOptions};
 use std::{
     collections::BTreeMap,
     env::{self, var},
@@ -17,7 +14,7 @@ use crate::{bundle::Bundle, client::Client, record::Record};
 use log::{debug, error, info, warn};
 use reqwest::{Method, Url};
 use serde_json::{json, Value};
-use sqlx::{mysql::MySqlRow, MySql, Pool, Postgres};
+use sqlx::{MySql, Pool, Postgres};
 use urlencoding::encode;
 pub struct Migrator {
     successor: Url,
@@ -289,58 +286,79 @@ impl Migrator {
         pool: Pool<Postgres>,
         mariadb_records: BTreeMap<String, BTreeMap<i64, Record>>,
     ) {
-        let statement = "UPDATE hfj_res_ver set  res_published = $1, res_updated= $2, res_deleted_at = $3 FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = $4 AND hfj_res_ver.res_ver = $5;";
-        let statement2 = "UPDATE hfj_resource SET res_published = $1, res_updated = $2, res_deleted_at = $3 WHERE hfj_resource.fhir_id = $4 AND hfj_resource.res_ver = $5;";
+        for (_, versions) in mariadb_records {
+            let mut index: i64 = versions.len() as i64;
+            for (_, record) in versions.iter().rev() {
+                let fhir_id = record.fhir_id.clone();
+                let resource_id = record.res_id;
 
-        for (id, versions) in mariadb_records {
-            for (version, entry) in versions {
-                let id = entry.fhir_id.unwrap_or(entry.res_id.to_string());
+                let sql: String = match &fhir_id.is_some() {
+                    true => String::from(
+                        "WITH ranked_rows AS (
+                                SELECT pid, ROW_NUMBER() OVER () AS row_num
+                                FROM hfj_res_ver
+                                LEFT JOIN hfj_resource
+                                on hfj_res_ver.res_id = hfj_resource.res_id
+                                WHERE hfj_resource.fhir_id = $1
+                            )
+                            UPDATE hfj_res_ver
+                            SET res_published = $2, res_updated = $3, res_deleted_at = $4
+                            WHERE pid = (SELECT pid FROM ranked_rows WHERE row_num = $5);",
+                    ),
+                    false => String::from(
+                        "WITH ranked_rows AS (
+                                SELECT pid, ROW_NUMBER() OVER () AS row_num
+                                FROM hfj_res_ver
+                                LEFT JOIN hfj_resource
+                                on hfj_res_ver.res_id = hfj_resource.res_id
+                                WHERE hfj_resource.fhir_id = $1
+                            )
+                            UPDATE hfj_res_ver
+                            SET res_published = $2, res_updated= $3, res_deleted_at = $4
+                            WHERE pid = (SELECT pid FROM ranked_rows WHERE row_num = $5);",
+                    ),
+                };
 
-                let s = format!("UPDATE hfj_res_ver SET res_published = {}, res_updated = {}, res_deleted_at = {} FROM hfj_resource WHERE hfj_res_ver.res_id = hfj_resource.res_id AND hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", entry.res_published, entry.res_updated, entry.res_deleted_at.map(|x| x.to_string()).unwrap_or(String::from("NULL")), id, entry.res_ver);
-                debug!("{}", s);
+                let deleted = record
+                    .res_deleted_at
+                    .map(|x| x.to_string())
+                    .unwrap_or(String::from("null"));
 
-                let query = sqlx::query(statement)
-                    .bind(entry.res_published)
-                    .bind(entry.res_updated)
-                    .bind(entry.res_deleted_at)
-                    .bind(&id)
-                    .bind(entry.res_ver);
+                let substituted_sql = sql
+                    .replace(
+                        "$1",
+                        fhir_id.clone().unwrap_or(resource_id.to_string()).as_str(),
+                    )
+                    .replace("$2", record.res_published.to_string().as_str())
+                    .replace("$3", record.res_updated.to_string().as_str())
+                    .replace("$4", deleted.as_str())
+                    .replace("$5", index.to_string().as_str());
 
-                let res = query
-                    .execute(&pool)
-                    .await
-                    .expect(format!("Could not execute statement '{}'", statement).as_str());
+                let query = sqlx::query(sql.as_str())
+                    .bind(fhir_id.unwrap_or(resource_id.to_string()))
+                    .bind(record.res_published)
+                    .bind(record.res_updated)
+                    .bind(record.res_deleted_at)
+                    .bind(index);
 
-                if res.rows_affected() != 1 {
-                    warn!(
-                        "Expected exactly one row but {} was affected during execution of '{}'",
-                        res.rows_affected(),
-                        s
-                    );
-                }
+                debug!("subject:\n{:?}", record);
+                match query.execute(&pool).await {
+                    Ok(res) => {
+                        debug!("{}", substituted_sql);
+                        if res.rows_affected() != 1 {
+                            warn!(
+                                "Expected exactly one row but '{}' was affected.",
+                                res.rows_affected()
+                            );
+                        }
+                    }
+                    Err(_) => error!(
+                        "something went wrong during execution of:\n{}",
+                        substituted_sql
+                    ),
+                };
 
-                let query = sqlx::query(statement2)
-                    .bind(entry.res_published)
-                    .bind(entry.res_updated)
-                    .bind(entry.res_deleted_at)
-                    .bind(&id)
-                    .bind(entry.res_ver);
-
-                let res = query
-                    .execute(&pool)
-                    .await
-                    .expect(format!("Could not execute statement '{}'", statement).as_str());
-
-                if res.rows_affected() > 1 {
-                    warn!(
-                        "Expected max one row but {} was affected during execution of '{}'",
-                        res.rows_affected(),
-                        s
-                    );
-                }
-
-                let s = format!("UPDATE hfj_resource SET res_published = {}, res_updated = {}, res_deleted_at = {} WHERE hfj_resource.fhir_id = {} AND hfj_resource.res_ver = {};", entry.res_published, entry.res_updated,entry.res_deleted_at.map(|x| x.to_string()).unwrap_or(String::from("NULL")), &id, entry.res_ver);
-                debug!("{}", s);
+                index = index - 1;
             }
         }
     }
