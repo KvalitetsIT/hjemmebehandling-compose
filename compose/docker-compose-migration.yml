@@ -81,7 +81,7 @@ services:
 
   medarbejder-bff-postgres:
     container_name: medarbejder-bff-postgres
-    image: kvalitetsit/hjemmebehandling-medarbejder-bff:84f1eeb873de13bbb2fe531a918e0113ce020d67
+    image: kvalitetsit/hjemmebehandling-medarbejder-bff:111f9e689167b762db5ba1dc59ed50dcff515872
     environment:
       - userattributes_role_key=DIAS_HJEMMEBEHANDLING_Sygeplejerske2
       - user.context.handler=MOCK
@@ -101,7 +101,7 @@ services:
 
   patient-bff-postgres:
     container_name: patient-bff-postgres
-    image: kvalitetsit/hjemmebehandling-patient-bff:cedb407d23559bd2e5eb1661913d98064ee5306b
+    image: kvalitetsit/hjemmebehandling-patient-bff:04b0a208a00c14cf3c145a75a102bb8301c3e77d
     environment:
       - user.mock.context.cpr=0104909995
       - cpr.url=http://rm-cpr-service:8080/Patient/
@@ -141,7 +141,7 @@ services:
 
   patient-bff-mariadb:
     container_name: patient-bff-mariadb
-    image: kvalitetsit/hjemmebehandling-patient-bff:3be4e9beb8bba1f4e7bd073aa30962bf7b47d43c
+    image: kvalitetsit/hjemmebehandling-patient-bff:3.0.0
     environment:
       - user.mock.context.cpr=0104909995
       - cpr.url=http://rm-cpr-service:8080/Patient/
@@ -194,14 +194,14 @@ services:
 
 
   hapi-server-migrator:
-    image: kvalitetsit/hjemmebehandling-migrator:1.0.25
+    image: kvalitetsit/hjemmebehandling-migrator:1.0.45
     container_name: migrator
     environment:
       # Note: The resources below has to be in a certain order
       - RESOURCES=CodeSystem,Practitioner,SearchParameter,Organization,ValueSet,Patient,Questionnaire,PlanDefinition,CarePlan,QuestionnaireResponse
       - ORIGIN=http://hapi-server-mariadb:8080
       - SUCCESSOR=http://hapi-server-postgres:8080
-      - RUST_LOG=Info
+      - RUST_LOG=Debug
       - WAIT=20
       - MARIADB_USER=hapi
       - MARIADB_PASSWORD=hapi
@@ -266,7 +266,7 @@ services:
 
   hapi-server-postgres:
     container_name: hapi-server-postgres
-    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:567ab2b2bd3edddf06b66c3a5c7d322662681907
+    image: kvalitetsit/hjemmebehandling-hapi-fhir-server:080b8604514401d12cb6507f82ea0a469b2eec9d
     environment:
       - spring.datasource.url=jdbc:postgresql://postgres:5432/hapi
       - spring.datasource.driverClassName=org.postgresql.Driver
