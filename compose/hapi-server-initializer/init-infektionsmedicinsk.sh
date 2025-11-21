@@ -57,6 +57,7 @@ function create {
 
 
 ## infektionsmedicinsk
+echo "Processing organisation: 453071000016001"
 delete 'ValueSet/valueset-npu-infektionsmedicinsk'
 if [ $init_questionnaire_and_plandefinition_infektionsmedicinsk = 'true' ]
 then 
@@ -75,6 +76,7 @@ fi
 create 'valueset-npu-infektionsmedicinsk.xml' 'ValueSet/valueset-npu-infektionsmedicinsk'
 
 ## Lungesygdomme
+echo "Processing organisation: 904931000016006"
 delete 'ValueSet/valueset-npu-lungesygdomme'
 delete 'PlanDefinition/plandefinition-lungesygdomme-1'
 delete 'Questionnaire/questionnaire-lungesygdomme-1'
@@ -86,6 +88,7 @@ create 'plandefinition-lungesygdomme-1.xml' 'PlanDefinition/plandefinition-lunge
 create 'valueset-npu-lungesygdomme.xml' 'ValueSet/valueset-npu-lungesygdomme'
 
 ## Mave- og Tarmkirurgi Overafdeling
+echo "Processing organisation: 622471000016003"
 delete 'ValueSet/valueset-npu-mavetarmkirurgi'
 delete 'Organization/organization-mavetarmkirurgi'
 
@@ -93,29 +96,28 @@ create 'organization-mavetarmkirurgi.xml' 'Organization/organization-mavetarmkir
 create 'valueset-npu-mavetarmkirurgi.xml' 'ValueSet/valueset-npu-mavetarmkirurgi'
 
 ## Medicinsk afdeling
+
+echo "Processing organisation: 900231000016007"
 delete 'ValueSet/valueset-npu-medicinsk-afdeling'
 delete 'Organization/organization-medicinsk-afdeling'
 
 create 'organization-medicinsk-afdeling.xml' 'Organization/organization-medicinsk-afdeling'
 create 'valueset-npu-medicinsk-afdeling.xml' 'ValueSet/valueset-npu-medicinsk-afdeling'
 
-## Medicinsk afdeling - randers
-delete 'ValueSet/valueset-271231000016008'
-delete 'Organization/organization-271231000016008'
+# Loop through all subfolders under ./data and load the organisation
+for organisation in $(ls data); do
+  echo "Processing organisation: $organisation"
 
-create 'data/271231000016008/organization.xml' 'Organization/organization-271231000016008'
-create 'data/271231000016008/valueset.xml' 'ValueSet/valueset-271231000016008'
+  # Delete old resources
+  delete "ValueSet/valueset-$organisation"
+  delete "Organization/organization-$organisation"
 
-## Ovenstående burde skrives om til noget det minder om dette
-## Så fremtidige organisationer oprettes ved tilføjelse af subfolder ./data/<SOR-kode>
-# for organisation in `cat filenames.txt`; do
-#   delete 'ValueSet/valueset-$organisation'
-#   delete 'Organization/organization-$organisation'
+  # Create new resources
+  create "data/$organisation/organization.xml" "Organization/organization-$organisation"
+  create "data/$organisation/valueset.xml" "ValueSet/valueset-$organisation"
 
-#   create 'data/$organisation/organization.xml' 'Organization/organization-$organisation'
-#   create 'data/$organisation/valueset.xml' 'ValueSet/valueset-$organisation'
-# done
-##
+done
+
 
 
 ## Genrelt
